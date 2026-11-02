@@ -9,9 +9,17 @@
   <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=Unbounded:wght@400..900&family=JetBrains+Mono:wght@400;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=Unbounded:wght@400..900&family=JetBrains+Mono:wght@400;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=Unbounded:wght@400..900&family=JetBrains+Mono:wght@400;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="../assets/redesign/css/site.css">
   <script type="importmap">{ "imports": { "three": "../assets/redesign/vendor/three.module.min.js" } }</script>
+  <!-- fetch the hero's module graph in parallel instead of one import at a time -->
+  <link rel="modulepreload" href="../assets/redesign/js/main.js">
+  <link rel="modulepreload" href="../assets/redesign/js/util.js">
+  <link rel="modulepreload" href="../assets/redesign/vendor/three.module.min.js">
+  <link rel="modulepreload" href="../assets/redesign/vendor/RoomEnvironment.js">
+  <link rel="modulepreload" href="../assets/redesign/js/eye.js">
+  <link rel="modulepreload" href="../assets/redesign/js/europe-dots.js">
 </head>
 <body>
 <a class="skip" href="#manifesto">Skip to content</a>
@@ -19,12 +27,10 @@
 <header class="nav" id="nav">
   <a class="nav__logo" href="index.html" aria-label="Fundacja Patrz Globalnie, home"><img src="../assets/images/logos/logo-white.svg" alt="Fundacja Patrz Globalnie"></a>
   <nav class="nav__links" aria-label="Main">
-    <a href="#map">Map</a>
-    <a href="#worlds">Projects</a>
-    <a href="#impact">Impact</a>
-    <a href="about-us.html">About</a>
+    <a href="about-us.html">About Us</a>
+    <a href="#projects">Projects</a>
+    <a href="contact.html">Contact</a>
     <a href="reports.html">Reports</a>
-    <a class="nav__cta" href="contact.html">Contact</a>
   </nav>
   <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </header>
@@ -32,7 +38,7 @@
 <main>
 
 <!-- 1 · HERO: the glass eye -->
-<section class="hero scrolly" id="hero" data-scrolly="hero" style="--len:260vh">
+<section class="hero scrolly" id="hero" data-scrolly="hero" style="--len:340vh">
   <div class="sticky">
     <canvas class="hero__canvas" aria-hidden="true"></canvas>
     <div class="hero__veil"></div>
@@ -45,25 +51,21 @@
   </div>
 </section>
 
-<!-- 2 · MANIFESTO: tagline shards + lens -->
-<section class="manifesto scrolly" id="manifesto" data-scrolly="manifesto" style="--len:220vh">
+<!-- 2 · MANIFESTO: tagline shards -->
+<section class="manifesto scrolly" id="manifesto" data-scrolly="manifesto" style="--len:300vh">
   <div class="sticky">
-    <div class="manifesto__box lens-target" data-lens>
+    <div class="manifesto__box">
       <p class="manifesto__text" aria-label="When Curiosity Meets Action, Change Becomes Art.">When <b class="k k1">Curiosity</b> Meets <b class="k k2">Action</b>, <b class="k k3">Change</b> Becomes <b class="k k4">Art.</b></p>
-      <div class="lens-under" aria-hidden="true">
-        <p class="manifesto__text manifesto__text--pl">Kiedy <b class="k k1">ciekawość</b> spotyka <b class="k k2">działanie</b>, <b class="k k3">zmiana</b> staje się <b class="k k4">sztuką.</b></p>
-      </div>
     </div>
     <ol class="steps" aria-hidden="true">
       <li class="s1">Curiosity</li><li class="s2">Action</li><li class="s3">Change</li><li class="s4">Art</li>
     </ol>
     <p class="manifesto__about">We are a youth-driven foundation. We turn challenges like climate change and digital ethics into chances for young people to learn, collaborate and lead.</p>
-    <p class="lens-tip">Move the glass lens over the sentence to read it in Polish.</p>
   </div>
 </section>
 
 <!-- 3 · LIVING MAP -->
-<section class="map scrolly" id="map" data-scrolly="map" style="--len:520vh">
+<section class="map scrolly" id="map" data-scrolly="map" style="--len:680vh">
   <div class="sticky">
     <canvas class="map__canvas" aria-label="Map of Europe showing where participants come from"></canvas>
     <div class="map__head">
@@ -92,7 +94,7 @@
 </section>
 
 <!-- 4 · TRASH → TREASURE -->
-<section class="transform scrolly" id="transform" data-scrolly="transform" style="--len:620vh">
+<section class="transform scrolly" id="transform" data-scrolly="transform" style="--len:820vh">
   <div class="sticky">
     <canvas class="transform__canvas" aria-hidden="true"></canvas>
     <div class="transform__intro stage-label" data-at="0">
@@ -100,19 +102,19 @@
       <h2>This is a pile of trash.</h2>
       <p>Bottles, cans, caps, scraps. Keep scrolling.</p>
     </div>
-    <div class="stage-label" data-at="1" style="--c:var(--eco)">
+    <div class="stage-label" data-at="1">
       <p class="eyebrow">01 · EcoArt · Krosno · 6–14 April 2025</p>
       <h2>It became a tree.</h2>
       <p>28 young people from Poland, Hungary, Lithuania and Romania visited MPGK Krosno's recycling centre. Then, inspired by local artist Piotr Burger, they turned waste into sculptures, mosaics and toys.</p>
       <a href="ecoart.html">Read the EcoArt story →</a>
     </div>
-    <div class="stage-label" data-at="3" style="--c:var(--fashion)">
+    <div class="stage-label" data-at="3">
       <p class="eyebrow">02 · Fashion Forward · Krosno · 29 Mar – 6 Apr 2025</p>
       <h2>It became a dress.</h2>
       <p>Participants from Poland, Portugal, North Macedonia and Hungary took on fast fashion. They ended with a recycled runway at the Youth Centre in Krosno.</p>
       <a href="fashionforward.html">Read the Fashion Forward story →</a>
     </div>
-    <div class="stage-label" data-at="5" style="--c:var(--drums)">
+    <div class="stage-label" data-at="5">
       <p class="eyebrow">03 · Follow Your Drums! · Krosno · 17–25 Sept 2025</p>
       <h2>It became a band.</h2>
       <p>Collected waste was sanitised, decorated and turned into percussion. Youth from five countries then wrote one big group song together.</p>
@@ -123,197 +125,134 @@
   </div>
 </section>
 
-<!-- 5 · LOOK CLOSER: lens before/after -->
-<section class="closer" id="closer">
+<!-- 5 · POSTERS: the original project posters -->
+<section class="posters" id="posters">
   <div class="wrap">
-    <p class="eyebrow">Look closer</p>
-    <h2>Every photo hides its “after”.</h2>
-    <p class="lede">Move the lens over a photo, or tap it on a phone, to see what the project turned it into.</p>
-    <div class="ba-grid">
-      <figure class="ba lens-target" data-lens>
-        <img src="../assets/redesign/img/eco-before.jpg" alt="Participants sorting a pile of collected trash" loading="lazy">
-        <div class="lens-under"><img src="../assets/redesign/img/eco-after.jpg" alt="" loading="lazy"></div>
-        <figcaption><b>EcoArt</b> · a pile of trash → recycled art</figcaption>
-      </figure>
-      <figure class="ba lens-target" data-lens>
-        <img src="../assets/redesign/img/fash-before.jpg" alt="Participants in hard hats touring a recycling facility" loading="lazy">
-        <div class="lens-under"><img src="../assets/redesign/img/fash-after.jpg" alt="" loading="lazy"></div>
-        <figcaption><b>Fashion Forward</b> · recycling plant → runway</figcaption>
-      </figure>
-      <figure class="ba lens-target" data-lens>
-        <img src="../assets/redesign/img/drum-before.jpg" alt="Participants cleaning buckets outdoors" loading="lazy">
-        <div class="lens-under"><img src="../assets/redesign/img/drum-after.jpg" alt="" loading="lazy"></div>
-        <figcaption><b>Follow Your Drums!</b> · buckets → a band</figcaption>
-      </figure>
-      <figure class="ba lens-target" data-lens>
-        <img src="../assets/redesign/img/aid-before.jpg" alt="First aid practice on the floor" loading="lazy">
-        <div class="lens-under"><img src="../assets/redesign/img/aid-after.jpg" alt="" loading="lazy"></div>
-        <figcaption><b>First Aid</b> · practice → confidence on stage</figcaption>
-      </figure>
+    <p class="eyebrow">The posters</p>
+    <h2>Every project started with a poster.</h2>
+    <p class="lede">The original posters, from the first Art Meets AI to First Aid. Open one to read the project’s story.</p>
+    <div class="poster-wall">
+      <a class="poster" href="/aiart/aiartindex.html">
+        <img src="../assets/redesign/img/poster-ai.jpg" alt="Poster for Art Meets AI" width="309" height="343" loading="lazy" decoding="async">
+        <span><b>Art Meets AI</b> · 2024</span>
+      </a>
+      <a class="poster" href="fashionforward.html">
+        <img src="../assets/redesign/img/poster-fashion.jpg" alt="Poster for Fashion Forward: Recycled Runway" width="281" height="343" loading="lazy" decoding="async">
+        <span><b>Fashion Forward: Recycled Runway</b> · 29 Mar – 6 Apr 2025</span>
+      </a>
+      <a class="poster" href="ecoart.html">
+        <img src="../assets/redesign/img/poster-ecoart.jpg" alt="Poster for EcoArt: Turning Trash into Treasure" width="268" height="343" loading="lazy" decoding="async">
+        <span><b>EcoArt: Turning Trash into Treasure</b> · 6–14 Apr 2025</span>
+      </a>
+      <a class="poster" href="eye2025.html">
+        <img src="../assets/redesign/img/poster-eye2025.jpg" alt="Poster for EYE 2025 @ European Parliament" width="455" height="343" loading="lazy" decoding="async">
+        <span><b>EYE 2025 @ European Parliament</b> · 13–14 June 2025</span>
+      </a>
+      <a class="poster" href="followyourdrums.html">
+        <img src="../assets/redesign/img/poster-drums.jpg" alt="Poster for Follow Your Drums!" width="251" height="343" loading="lazy" decoding="async">
+        <span><b>Follow Your Drums!</b> · 17–25 Sept 2025</span>
+      </a>
+      <a class="poster" href="aiart2-blog.html">
+        <img src="../assets/redesign/img/poster-ai2.jpg" alt="Poster for Art Meets AI 2.0: The Next Act" width="241" height="342" loading="lazy" decoding="async">
+        <span><b>Art Meets AI 2.0: The Next Act</b> · 2025 – 2026</span>
+      </a>
+      <a class="poster" href="razemprzeciwuzaleznieniom.html">
+        <img src="../assets/redesign/img/poster-together.jpg" alt="Poster for Together Against Addictions" width="720" height="1019" loading="lazy" decoding="async">
+        <span><b>Together Against Addictions</b> · 2025 – 2026</span>
+      </a>
+      <a class="poster" href="firstaid-blog.html">
+        <img src="../assets/redesign/img/poster-firstaid.jpg" alt="Poster for First Aid – Don’t Ignore!" width="243" height="343" loading="lazy" decoding="async">
+        <span><b>First Aid – Don’t Ignore!</b> · 24–31 March 2026</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- 6 · PROJECT WORLDS -->
-<div id="worlds">
-
-<!-- 6a · Art Meets AI -->
-<section class="world ai scrolly" id="ai" data-scrolly="ai" style="--len:260vh">
-  <div class="sticky">
-    <div class="stage">
-      <img class="stage__bg" src="../assets/redesign/img/ai-stage.jpg" alt="" loading="lazy">
-      <div class="narrator" data-form="0" aria-hidden="true">
-        <div class="narrator__crt"><div class="screen"><span class="type"></span></div><i class="knob"></i></div>
-        <div class="narrator__flat"><div class="screen"><span class="type"></span></div></div>
-        <div class="narrator__neural"><img src="../assets/redesign/img/ai-face.jpg" alt=""><span class="type"></span></div>
-      </div>
-      <div class="curtain curtain--l"></div><div class="curtain curtain--r"></div>
-      <div class="stage__valance"></div>
-    </div>
-    <div class="world__copy">
-      <p class="eyebrow">Art Meets AI · 1 & 2</p>
-      <h2>A play directed by an AI narrator</h2>
-      <p class="ai__line" aria-live="polite"></p>
-      <p class="small">Our first show was performed for 600+ students and teachers in Krosno by 28 young people from Poland, Romania, Slovakia and the Czech Republic. <em>The Next Act</em> brings performers from Poland, Bulgaria, Türkiye and Moldova to an audience of 1,000+.</p>
-      <p class="links"><a href="/aiart/aiartindex.html">Art Meets AI →</a> <a href="aiart2-blog.html">Art Meets AI 2.0 →</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- 6b · EYE 2025 -->
-<section class="world eye25" id="eye2025">
-  <svg class="hemicycle" viewBox="0 0 1000 520" aria-hidden="true"></svg>
-  <div class="wrap eye25__grid">
-    <div>
-      <p class="eyebrow">EYE 2025 · European Parliament, Strasbourg · 13–14 June</p>
-      <h2>Human, or <span class="glitch" data-text="John Doe">John Doe</span>?</h2>
-      <p>At the European Youth Event we led workshops on <b>Democracy Under Digital Siege</b>. We introduced a packed room to John Doe, a deepfake persona made with AI tools, to ask: what's real, and how can we know?</p>
-      <p class="small">Try it yourself. Some of these lines are real quotes from our participants. The rest were written by an AI to imitate them.</p>
-      <a class="small" href="eye2025.html">Read about EYE 2025 →</a>
-    </div>
-    <div class="quiz glass" aria-live="polite">
-      <div class="quiz__face"><img src="../assets/redesign/img/ai-face.jpg" alt="" loading="lazy"></div>
-      <p class="quiz__count"></p>
-      <blockquote class="quiz__q"></blockquote>
-      <div class="quiz__btns">
-        <button data-a="human">A human wrote it</button>
-        <button data-a="ai">John Doe (AI) wrote it</button>
-      </div>
-      <p class="quiz__reveal"></p>
-      <button class="quiz__next" hidden>Next →</button>
-    </div>
-  </div>
-</section>
-
-<!-- 6c · Follow Your Drums -->
-<section class="world drums" id="drums">
+<!-- 6 · PROJECTS: one calm row per project -->
+<section class="projects" id="projects">
   <div class="wrap">
-    <p class="eyebrow">Follow Your Drums! · Krosno · 17–25 Sept 2025</p>
-    <h2>Play the trash kit.</h2>
-    <p class="lede">These instruments started as waste picked up around Krosno. Tap them, or use the keys <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> <kbd>F</kbd> <kbd>G</kbd>. Play the pattern to unlock the group song.</p>
-    <div class="kit" role="group" aria-label="Trash drum kit">
-      <button class="pad" data-sound="bucket" data-key="a"><svg viewBox="0 0 120 120"><path d="M22 30h76l-9 76H31z" fill="#ffb020"/><ellipse cx="60" cy="30" rx="38" ry="10" fill="#ffd27a"/><path d="M27 52h66M29 74h62" stroke="#c97c00" stroke-width="4"/></svg><span>Bucket<kbd>A</kbd></span></button>
-      <button class="pad" data-sound="pot" data-key="s"><svg viewBox="0 0 120 120"><rect x="24" y="44" width="72" height="46" rx="8" fill="#9fb4c4"/><ellipse cx="60" cy="44" rx="36" ry="9" fill="#d9e4ec"/><path d="M12 56h12M96 56h12" stroke="#9fb4c4" stroke-width="7" stroke-linecap="round"/></svg><span>Pot<kbd>S</kbd></span></button>
-      <button class="pad" data-sound="bottle" data-key="d"><svg viewBox="0 0 120 120"><path d="M52 12h16v20c0 6 14 12 14 26v46a6 6 0 0 1-6 6H44a6 6 0 0 1-6-6V58c0-14 14-20 14-26z" fill="#3ecf8e" opacity=".85"/><rect x="50" y="8" width="20" height="8" rx="2" fill="#2a8f61"/></svg><span>Bottle<kbd>D</kbd></span></button>
-      <button class="pad" data-sound="can" data-key="f"><svg viewBox="0 0 120 120"><rect x="36" y="24" width="48" height="76" rx="7" fill="#ff4f5e"/><rect x="36" y="44" width="48" height="26" fill="#fff" opacity=".85"/><ellipse cx="60" cy="24" rx="24" ry="6" fill="#ffd1d6"/></svg><span>Can<kbd>F</kbd></span></button>
-      <button class="pad" data-sound="lid" data-key="g"><svg viewBox="0 0 120 120"><ellipse cx="60" cy="58" rx="48" ry="14" fill="#e8c35a"/><ellipse cx="60" cy="54" rx="40" ry="9" fill="#f7dd8c"/><rect x="56" y="38" width="8" height="10" rx="3" fill="#a5852d"/><path d="M60 72v38" stroke="#7a8794" stroke-width="4"/></svg><span>Lid<kbd>G</kbd></span></button>
-    </div>
-    <div class="pattern" aria-label="Pattern to unlock">
-      <span data-s="bucket">Bucket</span><span data-s="bucket">Bucket</span><span data-s="pot">Pot</span><span data-s="can">Can</span><span data-s="bucket">Bucket</span><span data-s="bucket">Bucket</span><span data-s="pot">Pot</span><span data-s="lid">Lid</span>
-    </div>
-    <div class="song" hidden>
-      <p><b>You found the group song.</b> In Krosno, youth from Portugal, Hungary, Romania, North Macedonia and Poland wrote one song together and played it as one band. This is a groove inspired by it.</p>
-      <button class="song__toggle">Stop the groove</button>
-    </div>
-    <a class="small" href="followyourdrums.html">Read the Follow Your Drums! story →</a>
-  </div>
-</section>
+    <p class="eyebrow">Projects</p>
+    <h2>What we have made together.</h2>
 
-<!-- 6d · Fashion Forward catwalk -->
-<section class="world catwalk scrolly" id="catwalk" data-scrolly="catwalk" style="--len:340vh">
-  <div class="sticky">
-    <div class="catwalk__lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="catwalk__track">
-      <div class="catwalk__intro">
-        <p class="eyebrow">Fashion Forward · Recycled Runway</p>
-        <h2>The runway was made of waste.</h2>
-        <p>On 4 April 2025 the Youth Centre in Krosno hosted a catwalk of upcycled designs. Before it, guests watched an AI-made short film on fast fashion, created with Sora, Kling, FakeYou and InVideo.</p>
-        <p class="small">Hover over (or tap) a look to see what it was made from.</p>
+    <article class="proj" id="ai">
+      <img class="proj__media" src="../assets/redesign/img/ai-audience.jpg" alt="The audience at the Art Meets AI show in Krosno" width="900" height="505" loading="lazy" decoding="async">
+      <div class="proj__body">
+        <p class="eyebrow">Art Meets AI · 1 & 2 · Krosno · 2024 – 2026</p>
+        <h3>A play directed by an AI narrator</h3>
+        <p>Our first show was performed for 600+ students and teachers in Krosno by 28 young people from Poland, Romania, Slovakia and the Czech Republic. <em>The Next Act</em> brings performers from Poland, Bulgaria, Türkiye and Moldova to an audience of 1,000+.</p>
+        <p class="proj__btns"><a class="btn btn--accent" href="/aiart/aiartindex.html">Art Meets AI →</a> <a class="btn btn--ghost" href="aiart2-blog.html">Art Meets AI 2.0 →</a></p>
       </div>
-      <figure class="look"><div class="look__in"><img src="../assets/redesign/img/fash-1.jpg" alt="Model in an upcycled outfit on the runway" loading="lazy"><figcaption>Made from discarded clothing sorted at MPGK Krosno and trash collected around the venue.</figcaption></div></figure>
-      <figure class="look"><div class="look__in"><img src="../assets/redesign/img/fash-2.jpg" alt="Close-up of an upcycled garment" loading="lazy"><figcaption>Scraps no one wanted, stitched into something people stopped to look at.</figcaption></div></figure>
-      <figure class="look"><div class="look__in"><img src="../assets/redesign/img/fash-3.jpg" alt="Line-up of models in recycled designs" loading="lazy"><figcaption>28 designers from Poland, Portugal, North Macedonia and Hungary.</figcaption></div></figure>
-      <figure class="look"><div class="look__in"><img src="../assets/redesign/img/fash-4.jpg" alt="Models walking down stairs in recycled outfits" loading="lazy"><figcaption>Every look was a message about the true cost of fast fashion.</figcaption></div></figure>
-      <figure class="look"><div class="look__in"><img src="../assets/redesign/img/fash-after.jpg" alt="Model in a transparent recycled dress" loading="lazy"><figcaption>Turning waste into something beautiful: “it gave me hope that change is possible.” Andra, Romania</figcaption></div></figure>
-      <div class="catwalk__end"><a class="btn" href="fashionforward.html">Read the Fashion Forward story →</a></div>
-    </div>
-    <div class="catwalk__floor" aria-hidden="true"></div>
-  </div>
-</section>
+    </article>
 
-<!-- 6e · First Aid -->
-<section class="world aid" id="first-aid">
-  <canvas class="ecg" aria-hidden="true"></canvas>
-  <div class="wrap aid__grid">
-    <div>
-      <p class="eyebrow">First Aid – Don't Ignore! · Murzasichle · 24–31 March 2026</p>
-      <h2 class="pulse-text">Can you keep a heart going?</h2>
-      <p>33 participants from Poland, Hungary and Romania trained with a professional paramedic in CPR, AED use and the recovery position. They practised compressions to a metronome and then used forum theatre to teach others.</p>
-      <p>Chest compressions should be <b>100–120 per minute</b>. Tap the button 30 times (or focus it and press <kbd>Space</kbd>) and see how steady you are.</p>
-      <p class="small note">This is a rhythm game, not training. Please take a real first aid course.</p>
-      <a class="small" href="firstaid-blog.html">Read the First Aid story →</a>
-    </div>
-    <div class="cpr glass">
-      <button class="cpr__btn" aria-label="Compress"><span class="cpr__heart">♥</span><span class="cpr__label">Push</span></button>
-      <div class="cpr__gauge"><div class="zone"></div><i class="needle"></i><span>60</span><span>100</span><span>120</span><span>160</span></div>
-      <p class="cpr__bpm"><b>—</b> BPM · <span class="cpr__n">0</span>/30</p>
-      <p class="cpr__msg" aria-live="polite">Start pushing.</p>
-      <label class="cpr__metro"><input type="checkbox"> Metronome at 110 BPM</label>
-    </div>
-  </div>
-</section>
+    <article class="proj" id="fashion">
+      <img class="proj__media" src="../assets/redesign/img/fash-3.jpg" alt="Line-up of models in recycled designs" width="527" height="343" loading="lazy" decoding="async">
+      <div class="proj__body">
+        <p class="eyebrow">Fashion Forward: Recycled Runway · Krosno · 29 Mar – 6 Apr 2025</p>
+        <h3>The runway was made of waste.</h3>
+        <p>28 young designers from Poland, Portugal, North Macedonia and Hungary took on fast fashion. On 4 April 2025 the Youth Centre in Krosno hosted a catwalk of their upcycled designs, made from discarded clothing sorted at MPGK Krosno and trash collected around the venue.</p>
+        <p class="proj__btns"><a class="btn btn--accent" href="fashionforward.html">Read the Fashion Forward story →</a></p>
+      </div>
+    </article>
 
-<!-- 6f · Together Against Addictions -->
-<section class="world taa" id="together">
-  <svg class="taa__map" viewBox="0 0 800 600" aria-hidden="true"></svg>
-  <div class="wrap taa__grid">
-    <div>
-      <p class="eyebrow">Razem Przeciw Uzależnieniom · Together Against Addictions · 2025–2026</p>
-      <h2>Quiet work, real change.</h2>
-      <p>15 young people, some directly or indirectly affected by addiction, turned lived experience into civic action in their own town.</p>
-      <img class="taa__photo" src="../assets/redesign/img/taa-work.jpg" alt="Participants working together around a table" loading="lazy">
-      <a class="small" href="razemprzeciwuzaleznieniom.html">Read the full story →</a>
-    </div>
-    <ol class="taa__steps">
-      <li><b>Learn</b> Workshops with therapists, experts and prevention professionals.</li>
-      <li><b>Travel</b> A mobility to Opole to meet addiction specialists and youth mental health advocates.</li>
-      <li><b>Research</b> Field research and surveys on alcohol availability in Krosno.</li>
-      <li><b>Map</b> A digital Alcohol Danger Zone Map of the city.</li>
-      <li><b>Advocate</b> Recommendations taken to local decision-makers and public institutions.</li>
-      <li><b>Perform</b> A Theatre of the Oppressed show at the State Academy of Applied Sciences and BWA Art Gallery in Krosno.</li>
-      <li><b>Gather</b> A public conference on addiction prevention attended by over 350 people.</li>
-    </ol>
-  </div>
-</section>
+    <article class="proj" id="ecoart">
+      <img class="proj__media" src="../assets/redesign/img/eco-after.jpg" alt="Artworks made from recycled materials on display" width="527" height="343" loading="lazy" decoding="async">
+      <div class="proj__body">
+        <p class="eyebrow">EcoArt: Turning Trash into Treasure · Krosno · 6–14 Apr 2025</p>
+        <h3>Waste, turned into art.</h3>
+        <p>28 young people from Poland, Hungary, Lithuania and Romania visited MPGK Krosno's recycling centre. Then, inspired by local artist Piotr Burger, they turned waste into sculptures, mosaics and toys.</p>
+        <p class="proj__btns"><a class="btn btn--accent" href="ecoart.html">Read the EcoArt story →</a></p>
+      </div>
+    </article>
 
-</div>
+    <article class="proj proj--quiz" id="eye2025">
+      <div class="quiz glass proj__media" aria-live="polite">
+        <p class="quiz__count"></p>
+        <blockquote class="quiz__q"></blockquote>
+        <div class="quiz__btns">
+          <button data-a="human">A human wrote it</button>
+          <button data-a="ai">John Doe (AI) wrote it</button>
+        </div>
+        <p class="quiz__reveal"></p>
+        <button class="quiz__next" hidden>Next →</button>
+      </div>
+      <div class="proj__body">
+        <p class="eyebrow">EYE 2025 · European Parliament, Strasbourg · 13–14 June 2025</p>
+        <h3>Human, or John Doe?</h3>
+        <p>At the European Youth Event we led workshops on <b>Democracy Under Digital Siege</b>. We introduced a packed room to John Doe, a deepfake persona made with AI tools, to ask: what's real, and how can we know?</p>
+        <p class="small">Try it: some of these lines are real quotes from our participants. The rest were written by an AI to imitate them.</p>
+        <p class="proj__btns"><a class="btn btn--accent" href="eye2025.html">Read about EYE 2025 →</a></p>
+      </div>
+    </article>
 
-<!-- 7 · STATS YOU CAN TOUCH -->
-<section class="impact" id="impact">
-  <div class="wrap">
-    <p class="eyebrow">Impact</p>
-    <h2>Numbers you can touch.</h2>
-    <div class="stats">
-      <figure class="stat"><canvas data-stat="particles"></canvas><figcaption><b>1000+</b> young people directly impacted. Move your cursor through them.</figcaption></figure>
-      <figure class="stat"><canvas data-stat="vessel"></canvas><figcaption><b>95.1%</b> participant satisfaction. Tilt it by moving across.</figcaption></figure>
-      <figure class="stat"><canvas data-stat="ripple"></canvas><figcaption><b class="count" data-to="500000">500,000</b>+ people reached online. Tap to send a ripple.</figcaption></figure>
-      <figure class="stat"><canvas data-stat="beads"></canvas><figcaption><b>50+</b> partners across Europe. Drag one; they hold together.</figcaption></figure>
-    </div>
-    <ul class="minor-stats">
-      <li><b>10+</b> international projects</li>
-      <li><b>200+</b> international participants</li>
-      <li><b>14</b> countries on our map</li>
-    </ul>
+    <article class="proj" id="drums">
+      <img class="proj__media" src="../assets/redesign/img/drum-after.jpg" alt="Participants playing together as one band" width="527" height="343" loading="lazy" decoding="async">
+      <div class="proj__body">
+        <p class="eyebrow">Follow Your Drums! · Krosno · 17–25 Sept 2025</p>
+        <h3>Trash that became a band.</h3>
+        <p>Collected waste was sanitised, decorated and turned into percussion. Youth from Portugal, Hungary, Romania, North Macedonia and Poland then wrote one song together and played it as one band.</p>
+        <p class="proj__btns"><a class="btn btn--accent" href="followyourdrums.html">Read the Follow Your Drums! story →</a></p>
+      </div>
+    </article>
+
+    <article class="proj" id="together">
+      <img class="proj__media" src="../assets/redesign/img/taa-work.jpg" alt="Participants working together around a table" width="527" height="343" loading="lazy" decoding="async">
+      <div class="proj__body">
+        <p class="eyebrow">Razem Przeciw Uzależnieniom · Together Against Addictions · Krosno & Opole · 2025 – 2026</p>
+        <h3>Quiet work, real change.</h3>
+        <p>15 young people, some directly or indirectly affected by addiction, turned lived experience into civic action in their own town: workshops with therapists, a mobility to Opole, field research, a digital Alcohol Danger Zone Map of Krosno, a Theatre of the Oppressed show, and a public conference attended by over 350 people.</p>
+        <p class="proj__btns"><a class="btn btn--accent" href="razemprzeciwuzaleznieniom.html">Read the full story →</a></p>
+      </div>
+    </article>
+
+    <article class="proj" id="first-aid">
+      <img class="proj__media" src="../assets/redesign/img/aid-cpr.jpg" alt="Participants practising CPR" width="527" height="343" loading="lazy" decoding="async">
+      <div class="proj__body">
+        <p class="eyebrow">First Aid – Don't Ignore! · Murzasichle · 24–31 March 2026</p>
+        <h3>Ready to help.</h3>
+        <p>33 participants from Poland, Hungary and Romania trained with a professional paramedic in CPR, AED use and the recovery position. They practised compressions to a metronome and then used forum theatre to teach others.</p>
+        <p class="proj__btns"><a class="btn btn--accent" href="firstaid-blog.html">Read the First Aid story →</a></p>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -325,14 +264,14 @@
     <p class="lede">Click a polaroid to turn it over.</p>
   </div>
   <div class="board">
-    <button class="pola" style="--r:-7deg;--x:6%;--y:8%;--d:7s"><span class="pola__f"><img src="../assets/redesign/img/eco-group.jpg" alt="" loading="lazy"><i>EcoArt · Krosno</i></span><span class="pola__b"><q>EcoArt showed me how something as simple as trash can become meaningful art, and how our actions can truly make a difference for the planet.</q><i>Dawid · Poland</i></span></button>
-    <button class="pola" style="--r:5deg;--x:28%;--y:2%;--d:8s"><span class="pola__f"><img src="../assets/redesign/img/ai-audience.jpg" alt="" loading="lazy"><i>Art Meets AI · 600+ audience</i></span><span class="pola__b"><q>This project opened my eyes to the power of creativity and technology. I never imagined AI could be used for art!</q><i>Lukas · Slovakia</i></span></button>
-    <button class="pola" style="--r:-3deg;--x:50%;--y:10%;--d:6.5s"><span class="pola__f"><img src="../assets/redesign/img/fash-1.jpg" alt="" loading="lazy"><i>Recycled Runway</i></span><span class="pola__b"><q>The fashion show was unforgettable. Turning waste into something beautiful gave me hope that change is possible.</q><i>Andra · Romania</i></span></button>
-    <button class="pola" style="--r:8deg;--x:72%;--y:4%;--d:7.5s"><span class="pola__f"><img src="../assets/redesign/img/eye-group.jpg" alt="" loading="lazy"><i>Strasbourg · EYE 2025</i></span><span class="pola__b"><q>This experience completely changed my perspective. Combining art, AI, and activism was inspiring.</q><i>Stefan Jieanu · Art Meets AI</i></span></button>
-    <button class="pola" style="--r:-9deg;--x:16%;--y:46%;--d:8.5s"><span class="pola__f"><img src="../assets/redesign/img/drum-flag.jpg" alt="" loading="lazy"><i>Follow Your Drums!</i></span><span class="pola__b"><q>We felt like a real band, learning how to listen, synchronize, and support each other.</q><i>Follow Your Drums! participants</i></span></button>
-    <button class="pola" style="--r:4deg;--x:40%;--y:50%;--d:6.8s"><span class="pola__f"><img src="../assets/redesign/img/aid-group.jpg" alt="" loading="lazy"><i>First Aid · Murzasichle</i></span><span class="pola__b"><q>Not only to learn how to react in emergency situations, but also to confidently share this knowledge with others.</q><i>First Aid – Don't Ignore!</i></span></button>
-    <button class="pola" style="--r:-4deg;--x:63%;--y:46%;--d:7.2s"><span class="pola__f"><img src="../assets/redesign/img/eco-mpgk.jpg" alt="" loading="lazy"><i>MPGK Krosno visit</i></span><span class="pola__b"><q>For many, this visit was an eye-opener, bridging the gap between theory and real-world solutions.</q><i>EcoArt</i></span></button>
-    <button class="pola" style="--r:7deg;--x:82%;--y:52%;--d:9s"><span class="pola__f"><img src="../assets/redesign/img/taa-conf.jpg" alt="" loading="lazy"><i>Conference · 350+ people</i></span><span class="pola__b"><q>They transformed their lived experiences and motivation for change into meaningful civic engagement.</q><i>Razem Przeciw Uzależnieniom</i></span></button>
+    <button class="pola" style="--r:-7deg;--x:6%;--y:8%;--d:7s"><span class="pola__f"><img src="../assets/redesign/img/eco-group.jpg" alt="" loading="lazy" decoding="async"><i>EcoArt · Krosno</i></span><span class="pola__b"><q>EcoArt showed me how something as simple as trash can become meaningful art, and how our actions can truly make a difference for the planet.</q><i>Dawid · Poland</i></span></button>
+    <button class="pola" style="--r:5deg;--x:28%;--y:2%;--d:8s"><span class="pola__f"><img src="../assets/redesign/img/ai-audience.jpg" alt="" loading="lazy" decoding="async"><i>Art Meets AI · 600+ audience</i></span><span class="pola__b"><q>This project opened my eyes to the power of creativity and technology. I never imagined AI could be used for art!</q><i>Lukas · Slovakia</i></span></button>
+    <button class="pola" style="--r:-3deg;--x:50%;--y:10%;--d:6.5s"><span class="pola__f"><img src="../assets/redesign/img/fash-1.jpg" alt="" loading="lazy" decoding="async"><i>Recycled Runway</i></span><span class="pola__b"><q>The fashion show was unforgettable. Turning waste into something beautiful gave me hope that change is possible.</q><i>Andra · Romania</i></span></button>
+    <button class="pola" style="--r:8deg;--x:72%;--y:4%;--d:7.5s"><span class="pola__f"><img src="../assets/redesign/img/eye-group.jpg" alt="" loading="lazy" decoding="async"><i>Strasbourg · EYE 2025</i></span><span class="pola__b"><q>This experience completely changed my perspective. Combining art, AI, and activism was inspiring.</q><i>Stefan Jieanu · Art Meets AI</i></span></button>
+    <button class="pola" style="--r:-9deg;--x:16%;--y:46%;--d:8.5s"><span class="pola__f"><img src="../assets/redesign/img/drum-flag.jpg" alt="" loading="lazy" decoding="async"><i>Follow Your Drums!</i></span><span class="pola__b"><q>We felt like a real band, learning how to listen, synchronize, and support each other.</q><i>Follow Your Drums! participants</i></span></button>
+    <button class="pola" style="--r:4deg;--x:40%;--y:50%;--d:6.8s"><span class="pola__f"><img src="../assets/redesign/img/aid-group.jpg" alt="" loading="lazy" decoding="async"><i>First Aid · Murzasichle</i></span><span class="pola__b"><q>Not only to learn how to react in emergency situations, but also to confidently share this knowledge with others.</q><i>First Aid – Don't Ignore!</i></span></button>
+    <button class="pola" style="--r:-4deg;--x:63%;--y:46%;--d:7.2s"><span class="pola__f"><img src="../assets/redesign/img/eco-mpgk.jpg" alt="" loading="lazy" decoding="async"><i>MPGK Krosno visit</i></span><span class="pola__b"><q>For many, this visit was an eye-opener, bridging the gap between theory and real-world solutions.</q><i>EcoArt</i></span></button>
+    <button class="pola" style="--r:7deg;--x:82%;--y:52%;--d:9s"><span class="pola__f"><img src="../assets/redesign/img/taa-conf.jpg" alt="" loading="lazy" decoding="async"><i>Conference · 350+ people</i></span><span class="pola__b"><q>They transformed their lived experiences and motivation for change into meaningful civic engagement.</q><i>Razem Przeciw Uzależnieniom</i></span></button>
   </div>
 </section>
 
@@ -365,7 +304,7 @@
     <a href="about-us.html">About</a><a href="projects.html">All projects</a><a href="reports.html">Reports</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy policy</a>
   </nav>
   <p class="foot__social"><a href="https://www.facebook.com/profile.php?id=100095043654160" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/patrz.globalnie/" target="_blank" rel="noopener">Instagram</a></p>
-  <img class="foot__eu" src="../assets/redesign/img/eu-cofunded.png" alt="Co-funded by the European Union" width="270" height="60" loading="lazy">
+  <img class="foot__eu" src="../assets/redesign/img/eu-cofunded.png" alt="Co-funded by the European Union" width="270" height="60" loading="lazy" decoding="async">
   <p class="foot__legal">© Fundacja Patrz Globalnie <span class="year">2026</span> · All rights reserved</p>
 </footer>
 
@@ -376,7 +315,6 @@
   <button class="guide__x" aria-label="Dismiss the narrator">×</button>
 </aside>
 
-<div class="lens-cursor" aria-hidden="true"></div>
 <div class="webgl-fallback" hidden>3D is not available in this browser. Everything below still works.</div>
 
 <script type="module" src="../assets/redesign/js/main.js"></script>

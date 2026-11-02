@@ -18,7 +18,7 @@ export function webglOK() {
 
 export function makeRenderer(canvas, { alpha = true } = {}) {
   const r = new THREE.WebGLRenderer({ canvas, antialias: true, alpha, powerPreference: 'high-performance' });
-  r.setPixelRatio(Math.min(window.devicePixelRatio || 1, isSmall() ? 1.5 : 1.75));
+  r.setPixelRatio(Math.min(window.devicePixelRatio || 1, isSmall() ? 1.25 : 1.5));
   r.toneMapping = THREE.ACESFilmicToneMapping;
   r.outputColorSpace = THREE.SRGBColorSpace;
   r.setClearColor(0x000000, 0);
@@ -30,6 +30,25 @@ export function envFor(renderer) {
   const tex = pm.fromScene(new RoomEnvironment(renderer), 0.04).texture;
   pm.dispose();
   return tex;
+}
+
+/**
+ * Compile a scene's shaders and resolve once the GPU has linked them, without blocking the page.
+ * (three r160's own compileAsync can throw from its polling timer, so this polls the programs itself.)
+ */
+export function compileScene(renderer, scene, camera) {
+  renderer.compile(scene, camera);
+  if (renderer.extensions.get('KHR_parallel_shader_compile') === null) return Promise.resolve();
+  const mats = new Set();
+  scene.traverse(o => { if (o.material) [].concat(o.material).forEach(m => mats.add(m)); });
+  const t0 = performance.now();
+  return new Promise(resolve => {
+    const check = () => {
+      for (const m of mats) { const prog = renderer.properties.get(m).currentProgram; if (!prog || prog.isReady()) mats.delete(m); }
+      if (!mats.size || performance.now() - t0 > 3000) resolve(); else setTimeout(check, 16);
+    };
+    check();
+  });
 }
 
 /** Keep renderer + camera sized to the canvas' CSS box. Returns true if it changed. */

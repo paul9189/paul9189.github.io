@@ -23,35 +23,47 @@ journey through a 3D glass eye-globe. Brand: blue `#2e73c2`, dark `#1F2A2E`/`#07
 fonts Unbounded (display), Manrope (body), JetBrains Mono, Caveat (polaroids).
 
 Home page sections, in order (ids in brackets):
-1. Hero (`hero`): three.js glass eye; iris = rotating Europe dot map + ring of 12 EU stars;
-   follows cursor, blinks, dilates on click; scrolling dives into the pupil.
+1. Hero (`hero`): three.js eye, made realistic in round 2 (veined sclera, hazel-to-blue iris with
+   crypts seen through a refracting cornea, lashes, wet additive reflections instead of a
+   transmission pass); the EU stars are gold flecks on the collarette and the Europe map is a faint
+   overlay. Follows cursor, blinks, dilates on click; scrolling dives into the pupil.
 2. Manifesto (`manifesto`): tagline "When Curiosity Meets Action, Change Becomes Art." assembles
-   from 3D letter shards; a glass lens cursor reveals the Polish version.
+   from 3D letter shards. (The owner removed the Polish-translation lens here; don't bring it back.)
 3. Living map (`map`): Europe as glowing dots, arcs from partner countries to each project,
    scroll- or slider-driven timeline; click a country for its projects/quote.
 4. Trash -> Treasure (`transform`): instanced 3D junk pile rebuilds into the EcoArt tree,
-   Fashion Forward dress, Follow Your Drums kit; cursor pushes the pile.
-5. Look closer (`closer`): before/after photos revealed by the lens (tap on touch).
-6. Project worlds: Art Meets AI theatre with evolving AI narrator (`ai`), "Human or John Doe?"
-   deepfake quiz for EYE 2025 (`eye2025`), playable trash drum kit with WebAudio + unlockable
-   groove (`drums`), horizontal recycled-runway catwalk (`catwalk`), CPR rhythm game +
-   110 BPM metronome (`first-aid`), deliberately calm Together Against Addictions (`together`).
-7. Touchable stats (`impact`): 1000 particles form "1000+", sloshing 95.1% vessel,
-   500,000 ripples, 50 draggable partner beads.
+   Fashion Forward dress, Follow Your Drums kit; cursor pushes the pile. Dress and drums are built
+   per piece type (`build()` in `trash.js`): pieces lie flat on surfaces and may be tinted/resized
+   (dress = patchwork ball gown on a paper dress form + can stand; drums = red shells, fabric
+   skins, brass cap cymbals, bottle stands, rug).
+5. Posters (`posters`): wall of the original project posters (cropped copies in
+   `assets/redesign/img/poster-*.jpg`), each linking to its story page. The owner removed the
+   before/after lens photos that used to be here, and the lens cursor with them.
+6. Projects (`projects`): simple, classic alternating photo/text rows, one per project, in date
+   order, each with a story button in the project's colour. The owner found the old animated
+   "project worlds" (AI curtain theatre, drum kit, sideways catwalk, CPR game) overwhelming; keep
+   this calm. The only interactive piece kept is the "Human or John Doe?" quiz in the EYE 2025 row.
+7. (The owner removed the Impact / touchable stats section; don't bring it back.)
 8. Polaroid testimonials that flip (`voices`), FAQ/join (`join`), footer eye that closes at the
    bottom (`foot`). An "AI Narrator" guide in the corner comments per section (dismissible).
 
-Owner decisions: NO "Erasmus+ passport" feature. Reports page must stay simple and calm
+Owner decisions: nav order is About Us, Projects, Contact, Reports (no Map link). Scrolling must feel slow:
+mouse-wheel scrolling is eased at half speed (`slowWheel` in `main.js`, `SPEED`), and the scroll-driven
+sections were lengthened (`--len` on each `.scrolly`). Only two accent colours: brand blue and EU gold
+(`--blue-hi`, `--gold`). NO "Erasmus+ passport" feature. Reports page must stay simple and calm
 (it is there because the government requires it), no fancy effects.
 
 ## Code map
 - `html/index.html` - new home page markup; `html/reports.html` - simple reports list.
 - `assets/redesign/css/site.css` - all styles (tokens on `:root`, reduced-motion rules at bottom).
 - `assets/redesign/js/main.js` - bootstrap: scroll engine (sticky `.scrolly` sections report
-  0..1 progress), nav, manifesto, lens cursor, narrator guide, lazy 3D init.
+  0..1 progress), nav, manifesto, narrator guide, lazy 3D init. Only the hero eye is
+  built at load; map, trash and footer eye are imported and built when their section is about a
+  screen away (`whenNear`). Scenes compile shaders without blocking via `compileScene` in `util.js`
+  (do not use three r160's `compileAsync`: it throws from its polling timer).
 - `eye.js` (hero + footer eye), `map.js`, `trash.js` - three.js scenes.
-- `worlds.js` - AI narrator, quiz, drums, catwalk, CPR, Together section.
-- `stats.js` - 2D canvas stat toys. `util.js` - shared helpers. `europe-dots.js` - generated
+- `worlds.js` - the EYE 2025 "Human or John Doe?" quiz.
+- `util.js` - shared helpers. `europe-dots.js` - generated
   Natural Earth land dots (lon, lat, partner index).
 - `assets/redesign/vendor/` - three.js r160 + RoomEnvironment, vendored (no CDN).
 - `assets/redesign/img/` - optimised copies of project photos used by the new pages.

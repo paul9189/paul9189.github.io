@@ -11,15 +11,17 @@ export const COUNTRIES = {
 };
 const PLACES = { krosno: ['Krosno', 21.77, 49.69], strasbourg: ['Strasbourg', 7.75, 48.58], murzasichle: ['Murzasichle', 20.05, 49.33], opole: ['Opole', 17.93, 50.67] };
 
+// Two accents only: brand blue for every project, EU gold for the one at the European Parliament.
+const BLUE = '#74b4ff', GOLD = '#ffcc00';
 export const PROJECTS = [
-  { tick: 'Art Meets AI', name: 'Art Meets AI', date: '2024', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'RO', 'SK', 'CZ'], color: '#a77bff', meta: '28 participants. An AI-directed show for 600+ students and teachers.', link: '/aiart/aiartindex.html' },
-  { tick: 'Fashion', name: 'Fashion Forward: Recycled Runway', date: '29 Mar – 6 Apr 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'PT', 'MK', 'HU'], color: '#ff5fae', meta: '28 participants. Waste turned into a catwalk.', link: 'fashionforward.html' },
-  { tick: 'EcoArt', name: 'EcoArt: Turning Trash into Treasure', date: '6–14 Apr 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'HU', 'LT', 'RO'], color: '#3ecf8e', meta: '28 participants. Recycling centre visit and junk sculptures.', link: 'ecoart.html' },
-  { tick: 'EYE 2025', name: 'EYE 2025 @ European Parliament', date: '13–14 June 2025', place: 'Strasbourg, France', to: 'strasbourg', from: ['PL', 'LU', 'CY', 'RO'], venue: 'FR', color: '#ffcc00', meta: 'Workshops on deepfakes and democracy, with Digital Dreamers Luxembourg, Waves of Change Cyprus and Colțul Tinerilor din Vest Romania.', link: 'eye2025.html' },
-  { tick: 'Drums', name: 'Follow Your Drums!', date: '17–25 Sept 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'PT', 'HU', 'RO', 'MK'], color: '#ffb020', meta: 'Waste turned into percussion, and one group song.', link: 'followyourdrums.html' },
-  { tick: 'AI 2.0', name: 'Art Meets AI 2.0: The Next Act', date: '2025 – 2026', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'BG', 'TR', 'MD'], color: '#a77bff', meta: 'AI-enhanced live theatre for an audience of 1,000+.', link: 'aiart2-blog.html' },
-  { tick: 'Together', name: 'Together Against Addictions', date: '2025 – 2026', place: 'Krosno & Opole, Poland', to: 'opole', from: ['PL'], color: '#8fb3c9', meta: '15 local young people, research, a Danger Zone Map and a conference for 350+.', link: 'razemprzeciwuzaleznieniom.html' },
-  { tick: 'First Aid', name: 'First Aid – Don\'t Ignore!', date: '24–31 March 2026', place: 'Murzasichle, Poland', to: 'murzasichle', from: ['PL', 'HU', 'RO'], color: '#ff4757', meta: '33 participants. CPR, AED and forum theatre.', link: 'firstaid-blog.html' }
+  { tick: 'Art Meets AI', name: 'Art Meets AI', date: '2024', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'RO', 'SK', 'CZ'], color: BLUE, meta: '28 participants. An AI-directed show for 600+ students and teachers.', link: '/aiart/aiartindex.html' },
+  { tick: 'Fashion', name: 'Fashion Forward: Recycled Runway', date: '29 Mar – 6 Apr 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'PT', 'MK', 'HU'], color: BLUE, meta: '28 participants. Waste turned into a catwalk.', link: 'fashionforward.html' },
+  { tick: 'EcoArt', name: 'EcoArt: Turning Trash into Treasure', date: '6–14 Apr 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'HU', 'LT', 'RO'], color: BLUE, meta: '28 participants. Recycling centre visit and junk sculptures.', link: 'ecoart.html' },
+  { tick: 'EYE 2025', name: 'EYE 2025 @ European Parliament', date: '13–14 June 2025', place: 'Strasbourg, France', to: 'strasbourg', from: ['PL', 'LU', 'CY', 'RO'], venue: 'FR', color: GOLD, meta: 'Workshops on deepfakes and democracy, with Digital Dreamers Luxembourg, Waves of Change Cyprus and Colțul Tinerilor din Vest Romania.', link: 'eye2025.html' },
+  { tick: 'Drums', name: 'Follow Your Drums!', date: '17–25 Sept 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'PT', 'HU', 'RO', 'MK'], color: BLUE, meta: 'Waste turned into percussion, and one group song.', link: 'followyourdrums.html' },
+  { tick: 'AI 2.0', name: 'Art Meets AI 2.0: The Next Act', date: '2025 – 2026', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'BG', 'TR', 'MD'], color: BLUE, meta: 'AI-enhanced live theatre for an audience of 1,000+.', link: 'aiart2-blog.html' },
+  { tick: 'Together', name: 'Together Against Addictions', date: '2025 – 2026', place: 'Krosno & Opole, Poland', to: 'opole', from: ['PL'], color: BLUE, meta: '15 local young people, research, a Danger Zone Map and a conference for 350+.', link: 'razemprzeciwuzaleznieniom.html' },
+  { tick: 'First Aid', name: 'First Aid – Don\'t Ignore!', date: '24–31 March 2026', place: 'Murzasichle, Poland', to: 'murzasichle', from: ['PL', 'HU', 'RO'], color: BLUE, meta: '33 participants. CPR, AED and forum theatre.', link: 'firstaid-blog.html' }
 ];
 
 const QUOTES = {
