@@ -14,8 +14,8 @@ importmap do not work from `file://`). Report links use `../assets/docs/...`.
 
 ## The redesign ("The Glass Eye"), on branch `claudiu/vigilant-clarke-b9ew6z`
 The owner asked for the most unique, 3D, animated Erasmus+ site possible, built from real content
-of the old site. Only `html/index.html` and `html/reports.html` were redesigned; the other pages
-(about-us, projects, contact, project story pages, privacy-policy, blog) still use the OLD
+of the old site. Only `html/index.html`, `html/reports.html` and `html/contact.html` were redesigned; the other
+pages (about-us, projects, project story pages, privacy-policy, blog) still use the OLD
 ThemeWagon/WrapPixel template. Restyling them to match is the obvious next step.
 
 Big idea: the name means "Look Globally" and Krosno is Poland's "City of Glass", so the site is a
@@ -39,22 +39,25 @@ Home page sections, in order (ids in brackets):
 5. Posters (`posters`): wall of the original project posters (cropped copies in
    `assets/redesign/img/poster-*.jpg`), each linking to its story page. The owner removed the
    before/after lens photos that used to be here, and the lens cursor with them.
-6. Projects (`projects`): simple, classic alternating photo/text rows, one per project, in date
-   order, each with a story button in the project's colour. The owner found the old animated
-   "project worlds" (AI curtain theatre, drum kit, sideways catwalk, CPR game) overwhelming; keep
-   this calm. The only interactive piece kept is the "Human or John Doe?" quiz in the EYE 2025 row.
+6. Projects (`projects`): simple, classic alternating poster/text rows, one per project, in date
+   order, each showing the project's original poster and a story button. The owner found the old
+   animated "project worlds" (AI curtain theatre, drum kit, sideways catwalk, CPR game) overwhelming
+   and also removed the "Human or John Doe?" quiz; keep this calm and static.
 7. (The owner removed the Impact / touchable stats section; don't bring it back.)
 8. Polaroid testimonials that flip (`voices`), FAQ/join (`join`), footer eye that closes at the
    bottom (`foot`). An "AI Narrator" guide in the corner comments per section (dismissible).
 
 Owner decisions: nav order is About Us, Projects, Contact, Reports (no Map link). Scrolling must feel slow:
-mouse-wheel scrolling is eased at half speed (`slowWheel` in `main.js`, `SPEED`), and the scroll-driven
+mouse-wheel scrolling is eased, at 90% of normal speed (`slowWheel` in `main.js`, `SPEED`; the owner found .5 too slow), and the scroll-driven
 sections were lengthened (`--len` on each `.scrolly`). Only two accent colours: brand blue and EU gold
 (`--blue-hi`, `--gold`). NO "Erasmus+ passport" feature. Reports page must stay simple and calm
 (it is there because the government requires it), no fancy effects.
 
 ## Code map
 - `html/index.html` - new home page markup; `html/reports.html` - simple reports list.
+- `html/contact.html` - calm contact page in the reports style. The old form never sent anything and
+  the old email/phone were template placeholders, so it lists Instagram, Facebook and Krosno only.
+  Add a real email or a working form here once the owner provides an address.
 - `assets/redesign/css/site.css` - all styles (tokens on `:root`, reduced-motion rules at bottom).
 - `assets/redesign/js/main.js` - bootstrap: scroll engine (sticky `.scrolly` sections report
   0..1 progress), nav, manifesto, narrator guide, lazy 3D init. Only the hero eye is
@@ -62,7 +65,6 @@ sections were lengthened (`--len` on each `.scrolly`). Only two accent colours: 
   screen away (`whenNear`). Scenes compile shaders without blocking via `compileScene` in `util.js`
   (do not use three r160's `compileAsync`: it throws from its polling timer).
 - `eye.js` (hero + footer eye), `map.js`, `trash.js` - three.js scenes.
-- `worlds.js` - the EYE 2025 "Human or John Doe?" quiz.
 - `util.js` - shared helpers. `europe-dots.js` - generated
   Natural Earth land dots (lon, lat, partner index).
 - `assets/redesign/vendor/` - three.js r160 + RoomEnvironment, vendored (no CDN).
@@ -70,6 +72,5 @@ sections were lengthened (`--len` on each `.scrolly`). Only two accent colours: 
 
 ## Content rules
 - Use only real facts from the old pages (dates, places, participant counts, countries, quotes).
-- Quiz lines marked `a: 'ai'` in `worlds.js` were written by AI on purpose and are revealed as such.
 - Keep the white EU "Co-funded by the European Union" logo (`assets/redesign/img/eu-cofunded.png`).
 - Respect `prefers-reduced-motion` and keep mobile layouts working (16px gutters, no sideways scroll).

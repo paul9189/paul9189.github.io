@@ -1,6 +1,5 @@
 // Fundacja Patrz Globalnie · "The Glass Eye" — page bootstrap
 import { clamp, smooth, reduced, onVisible, webglOK, rng } from './util.js';
-import { initQuiz } from './worlds.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -185,7 +184,7 @@ const guide = (function () {
     transform: 'Everything you see here was trash once. Try pushing the pile with your cursor.',
     posters: 'The original posters. Open one for the full story.',
     ai: 'Oh, this was my show. Watch me evolve.',
-    eye2025: 'Careful. Some of these quotes were written by something like me.',
+    eye2025: 'This one took us all the way to the European Parliament.',
     voices: 'Turn the photos over. Those words are human. I checked.',
     join: 'Aged 18–30? Open calls go up on Instagram first.',
     foot: 'See you in Krosno. I’ll keep an eye on things.'
@@ -202,9 +201,6 @@ const guide = (function () {
   Object.keys(lines).forEach(id => { const s = document.getElementById(id); if (s) io.observe(s); });
   return api;
 })();
-
-// ---------- projects ----------
-initQuiz($('#eye2025'));
 
 // ---------- polaroids ----------
 $$('.pola').forEach(p => p.addEventListener('click', () => {
