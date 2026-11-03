@@ -14,8 +14,8 @@ importmap do not work from `file://`). Report links use `../assets/docs/...`.
 
 ## The redesign ("The Glass Eye"), on branch `claudiu/vigilant-clarke-b9ew6z`
 The owner asked for the most unique, 3D, animated Erasmus+ site possible, built from real content
-of the old site. Only `html/index.html`, `html/reports.html` and `html/contact.html` were redesigned; the other
-pages (about-us, projects, project story pages, privacy-policy, blog) still use the OLD
+of the old site. Only `html/index.html`, `html/reports.html`, `html/contact.html` and `html/about-us.html` were
+redesigned; the other pages (projects, project story pages, privacy-policy, blog) still use the OLD
 ThemeWagon/WrapPixel template. Restyling them to match is the obvious next step.
 
 Big idea: the name means "Look Globally" and Krosno is Poland's "City of Glass", so the site is a
@@ -40,12 +40,13 @@ Home page sections, in order (ids in brackets):
    `assets/redesign/img/poster-*.jpg`), each linking to its story page. The owner removed the
    before/after lens photos that used to be here, and the lens cursor with them.
 6. Projects (`projects`): simple, classic alternating poster/text rows, one per project, in date
-   order, each showing the project's original poster and a story button. The owner found the old
+   order, each showing the project's original poster and a story button. (A redesigned HTML
+   poster series was tried and the owner rejected it; keep the original poster images.) The owner found the old
    animated "project worlds" (AI curtain theatre, drum kit, sideways catwalk, CPR game) overwhelming
    and also removed the "Human or John Doe?" quiz; keep this calm and static.
 7. (The owner removed the Impact / touchable stats section; don't bring it back.)
 8. Polaroid testimonials that flip (`voices`), FAQ/join (`join`), footer eye that closes at the
-   bottom (`foot`). An "AI Narrator" guide in the corner comments per section (dismissible).
+   bottom (`foot`). (The owner removed the corner "AI Narrator" guide and its comments; don't bring it back.)
 
 Owner decisions: nav order is About Us, Projects, Contact, Reports (no Map link). Scrolling must feel slow:
 mouse-wheel scrolling is eased, at 90% of normal speed (`slowWheel` in `main.js`, `SPEED`; the owner found .5 too slow), and the scroll-driven
@@ -58,9 +59,11 @@ sections were lengthened (`--len` on each `.scrolly`). Only two accent colours: 
 - `html/contact.html` - calm contact page in the reports style. The old form never sent anything and
   the old email/phone were template placeholders, so it lists Instagram, Facebook and Krosno only.
   Add a real email or a working form here once the owner provides an address.
+- `html/about-us.html` - calm About page in the same style: the old page's text and figures, plus
+  six clean photos cut out of the old collage (`assets/redesign/img/about-1..6.jpg`), shown as a plain grid.
 - `assets/redesign/css/site.css` - all styles (tokens on `:root`, reduced-motion rules at bottom).
 - `assets/redesign/js/main.js` - bootstrap: scroll engine (sticky `.scrolly` sections report
-  0..1 progress), nav, manifesto, narrator guide, lazy 3D init. Only the hero eye is
+  0..1 progress), nav, manifesto, lazy 3D init. Only the hero eye is
   built at load; map, trash and footer eye are imported and built when their section is about a
   screen away (`whenNear`). Scenes compile shaders without blocking via `compileScene` in `util.js`
   (do not use three r160's `compileAsync`: it throws from its polling timer).

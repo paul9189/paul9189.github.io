@@ -94,7 +94,6 @@ async function init3D() {
       $('h3', card).textContent = info.name;
       const q = info.quote ? `<q>${info.quote[0]}</q><p class="small">${info.quote[1]}</p>` : '';
       $('.body', card).innerHTML = `${q}<p class="small">Projects:</p><ul>${info.projects.map(p => `<li><a href="${p.link}">${p.name}</a></li>`).join('')}</ul>`;
-      guide.say(info.quote ? 'That quote is real. A participant said it.' : `${info.name}: ${info.projects.length} project${info.projects.length > 1 ? 's' : ''} so far.`);
     });
     $('.x', card).addEventListener('click', () => { card.hidden = true; });
     onVisible(mapSec, v => map.setVisible(v), '0%');
@@ -161,45 +160,6 @@ async function init3D() {
     }
     steps.forEach((s, i) => s.classList.toggle('on', P >= (i + 1) / 4 - .001));
   });
-})();
-
-// ---------- the AI Narrator guide ----------
-const guide = (function () {
-  const el = $('.guide'), bubble = $('.guide__bubble', el);
-  let off = false, form = 0, timer = 0;
-  try { off = localStorage.getItem('pg-guide-off') === '1'; } catch { /* storage unavailable */ }
-  const api = {
-    say(text, ms = 6500) {
-      if (off) return;
-      el.hidden = false; bubble.textContent = text; el.classList.add('talking');
-      clearTimeout(timer); timer = setTimeout(() => el.classList.remove('talking'), ms);
-    },
-    evolve(f) { if (f > form) { form = f; el.dataset.form = f; } }
-  };
-  $('.guide__x', el).addEventListener('click', () => { off = true; el.hidden = true; try { localStorage.setItem('pg-guide-off', '1'); } catch { /* ignore */ } });
-  $('.guide__face', el).addEventListener('click', () => api.say(['I started life as an old computer in Art Meets AI.', 'Patrz Globalnie means “Look Globally”.', 'Krosno is Poland’s City of Glass. Hence all the glass.', 'Open calls are posted on Instagram: @patrz.globalnie.'][(Math.random() * 4) | 0]));
-  const lines = {
-    manifesto: 'Hello. I’m the Narrator from Art Meets AI. I started life as an old computer. I’ll be your guide.',
-    map: 'Scroll, or drag the timeline. Each arc is a group of young people travelling to a project.',
-    transform: 'Everything you see here was trash once. Try pushing the pile with your cursor.',
-    posters: 'The original posters. Open one for the full story.',
-    ai: 'Oh, this was my show. Watch me evolve.',
-    eye2025: 'This one took us all the way to the European Parliament.',
-    voices: 'Turn the photos over. Those words are human. I checked.',
-    join: 'Aged 18–30? Open calls go up on Instagram first.',
-    foot: 'See you in Krosno. I’ll keep an eye on things.'
-  };
-  const seen = new Set();
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting || seen.has(e.target.id)) return;
-    seen.add(e.target.id);
-    api.say(lines[e.target.id]);
-    // the guide grows up as you meet the projects it came from
-    if (e.target.id === 'ai') api.evolve(1);
-    if (e.target.id === 'eye2025') api.evolve(2);
-  }), { threshold: .35 });
-  Object.keys(lines).forEach(id => { const s = document.getElementById(id); if (s) io.observe(s); });
-  return api;
 })();
 
 // ---------- polaroids ----------

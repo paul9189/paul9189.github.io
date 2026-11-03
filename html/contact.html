@@ -33,17 +33,29 @@
     <h1>Let’s talk.</h1>
     <p class="lede">Ready to start something great? Reach out, we’d love to hear from you.</p>
 
+    <!-- the two social channels: glass cards, each icon ringed by the twelve EU stars -->
+    <div class="socials">
+      <a class="social" href="https://www.instagram.com/patrz.globalnie/" target="_blank" rel="noopener">
+        <span class="social__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6" fill="currentColor"/></svg>
+        </span>
+        <span class="social__k">Instagram</span>
+        <span class="social__t">@patrz.globalnie</span>
+        <span class="social__s">The quickest way to reach us. Open calls are posted here first.</span>
+        <span class="social__go">Follow us <i aria-hidden="true">↗</i></span>
+      </a>
+      <a class="social" href="https://www.facebook.com/profile.php?id=100095043654160" target="_blank" rel="noopener">
+        <span class="social__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.6 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21z"/></svg>
+        </span>
+        <span class="social__k">Facebook</span>
+        <span class="social__t">Fundacja Patrz Globalnie</span>
+        <span class="social__s">Send us a message on Messenger.</span>
+        <span class="social__go">Message us <i aria-hidden="true">↗</i></span>
+      </a>
+    </div>
+
     <ul class="contact__list">
-      <li><a href="https://www.instagram.com/patrz.globalnie/" target="_blank" rel="noopener">
-        <span class="k">Instagram</span>
-        <span class="t">@patrz.globalnie<small>The quickest way to reach us. Open calls are posted here first.</small></span>
-        <span class="d" aria-hidden="true">↗</span>
-      </a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=100095043654160" target="_blank" rel="noopener">
-        <span class="k">Facebook</span>
-        <span class="t">Fundacja Patrz Globalnie<small>Send us a message on Messenger.</small></span>
-        <span class="d" aria-hidden="true">↗</span>
-      </a></li>
       <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Krosno%2C+Poland" target="_blank" rel="noopener">
         <span class="k">Where</span>
         <span class="t">Krosno, Poland<small>Poland’s City of Glass, home of most of our projects.</small></span>
@@ -83,6 +95,13 @@
     var nav = document.getElementById('nav'), t = nav.querySelector('.nav__toggle');
     t.addEventListener('click', function () { var o = nav.classList.toggle('is-open'); t.setAttribute('aria-expanded', o); });
     document.querySelectorAll('.year').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+    // the soft light inside each social card follows the cursor
+    document.querySelectorAll('.social').forEach(function (c) {
+      c.addEventListener('pointermove', function (e) {
+        var r = c.getBoundingClientRect();
+        c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
   })();
 </script>
 </body>
