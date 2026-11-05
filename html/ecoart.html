@@ -1,481 +1,178 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EcoArt</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg" />
-  <link rel="stylesheet" href="../assets/libs/owl.carousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="../assets/libs/aos-master/dist/aos.css">
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <title>EcoArt: Turning Trash into Treasure · Fundacja Patrz Globalnie</title>
+  <meta name="description" content="EcoArt: Turning Trash into Treasure, an Erasmus+ Youth Exchange (6–14 April 2025) where 28 young people from Poland, Hungary, Lithuania and Romania turned waste into art.">
+  <meta name="theme-color" content="#070d11">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+  <link rel="stylesheet" href="../assets/redesign/css/fonts.css">
+  <link rel="stylesheet" href="../assets/redesign/css/site.css">
 </head>
+<body class="page-story">
+<a class="skip" href="#story">Skip to content</a>
 
-<body>
+<header class="nav is-solid" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Fundacja Patrz Globalnie, home"><img src="../assets/images/logos/logo-white.svg" alt="Fundacja Patrz Globalnie"></a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="about-us.html">About Us</a>
+    <a href="index.html#projects" aria-current="page">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="reports.html">Reports</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</header>
 
-  <!-- Header -->
-   <header class="header border-4 border-primary border-top position-fixed start-0 top-0 w-100">
-    <div class="container">
-      <div class="header-wrapper d-flex align-items-center justify-content-between">
-        <div class="logo">
-          <a href="index.html" class="logo-white">
-            <img src="../assets/images/logos/logo-white.svg" alt="logo" class="img-fluid">
-          </a>
-          <a href="index.html" class="logo-dark">
-            <img src="../assets/images/logos/logo-dark.svg" alt="logo" class="img-fluid">
-          </a>
-        </div>
-        <div class="d-flex align-items-center gap-4">
+<main class="story" id="story">
+  <!-- the original project banner, kept as it was -->
+  <figure class="story__banner">
+    <img src="../assets/redesign/img/eco/banner.jpg" alt="Collage of photos from EcoArt 6–14 April 2025: the recycling centre visit, workshops, artworks and the exhibition" width="1760" height="750">
+  </figure>
 
-          <div class="btn-group">
-            <button
-              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
-              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end p-4">
-              <div class="d-flex flex-column gap-6">
-                <div class="hstack justify-content-between border-bottom pb-6">
-                  <p class="mb-0 fs-5 text-dark">Menu</p>
-                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
-                </div>
-                <div class="d-flex flex-column gap-3">
-                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Home</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="about-us.html" aria-current="true"
-                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">About</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="projects.html" class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Projects</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="blog.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">News</a>
-                    </li>
-<!-- 
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Services</a>
-                    </li> -->
-                    <li class="header-item">
-                      <a href="contact.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Contact</a>
-                    </li>
-                    <!-- <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Docs</a>
-                    </li> -->
-                  </ul>
-                  <!-- <div class="hstack gap-3">
-                    <a href="sign-in.html"
-                      class="btn btn-outline-light fs-6 bg-white px-3 py-2 text-dark w-50 hstack justify-content-center">Sign
-                      In</a>
-                    <a href="sign-up.html"
-                      class="btn btn-dark text-white fs-6 bg-dark px-3 py-2 w-50 hstack justify-content-center">Sign
-                      Up</a>
-                  </div> -->
-                </div>
-                <!-- <div>
-                  <a class="text-dark" href="tel:+1-212-456-7890">+1-212-456-7890</a>
-                  <a class="fs-8 text-dark fw-bold" href="mailto:info@wrappixel.com">info@wrappixel.com</a>
-                </div> -->
-              </div>
-            </ul>
-          </div>
-        </div>
+  <div class="wrap story__wrap">
+    <a class="story__back" href="projects.html">← All projects</a>
+    <p class="eyebrow">Erasmus+ Youth Exchange · Project story</p>
+    <h1>EcoArt: <span>Turning Trash into Treasure</span></h1>
+    <p class="lede">Transforming trash into art, raising environmental awareness and inspiring action through creativity.</p>
+
+    <dl class="story__facts">
+      <div><dt>When</dt><dd>6–14 April 2025</dd></div>
+      <div><dt>Where</dt><dd>Krosno, Poland</dd></div>
+      <div><dt>Who</dt><dd>28 young people</dd></div>
+      <div><dt>From</dt><dd>Poland, Hungary, Lithuania, Romania</dd></div>
+      <div><dt>Subjects</dt><dd>Upcycled art, digital skills</dd></div>
+    </dl>
+
+    <!-- 01 -->
+    <section class="chapter fade" aria-labelledby="c1">
+      <p class="chapter__no">01</p>
+      <div class="chapter__text">
+        <h2 id="c1">The mission</h2>
+        <p>From 6 to 14 April 2025, Krosno became a hub of <b>creativity, sustainability and international friendship</b> through EcoArt: Turning Trash into Treasure, an Erasmus+ Youth Exchange organised by Fundacja Patrz Globalnie. The project brought together 28 young people from <b>Poland, Hungary, Lithuania and Romania</b> to address one of today’s most pressing issues: <b>non-biodegradable waste</b>.</p>
+        <p>Our mission was clear: transform trash into art, raise environmental awareness, and inspire action through creativity. Beyond the workshops, EcoArt gave participants the chance to develop <b>digital skills, embrace AI-powered creativity, and take part in inclusive, intercultural learning</b>.</p>
       </div>
-    </div>
-  </header>
-
-  <!--  Page Wrapper -->
-  <div class="page-wrapper overflow-hidden">
-
-    <!--  Banner Section -->
-    <section class="banner-section banner-inner-section position-relative overflow-hidden d-flex align-items-end"
-      style="background-image: url(../assets/images/backgrounds/ecoartbanner.png);">
-      <div class="container">
-        <div class="d-flex flex-column gap-4 pb-5 pb-xl-10 position-relative z-1">
-          <div class="row align-items-center">
-            <div class="col-xl-4">
-              <div class="d-flex align-items-center gap-4" data-aos="fade-up" data-aos-delay="100"
-                data-aos-duration="1000">
-                <img src="../assets/images/svgs/primary-leaf.svg" style="max-width:10%;" alt="" class="img-fluid animate-spin" style="max-width:10%;">
-                <p class="mb-0 text-white fs-5 text-opacity-70">A <span class="text-primary">showcase of
-                    creativity</span>, strategy, and results explore the projects that define us.</p>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex align-items-end gap-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            <h1 class="mb-0 fs-16 text-white lh-1" style="font-size: 3.5rem !important;">EcoArt: Transforming Trash into Treasure</h1>
-          </div>
-        </div>
+      <div class="chapter__media shots shots--2">
+        <figure class="shot shot--wide"><img src="../assets/redesign/img/eco/eco-13.jpg" alt="The whole group holding their certificates" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/eco/eco-02.jpg" alt="Participants working on artwork together on the floor" width="257" height="343" loading="lazy"></figure>
       </div>
     </section>
 
-    <!--  Project Detail Section -->
-    <section class="project-detail py-5 py-lg-11 py-xl-12">
-      <div class="container">
-        <div class="d-flex flex-column gap-5 gap-xl-11">
-          <div class="d-flex flex-column gap-8">
-            <a href="projects.html" class="btn py-2 ps-3 pe-5" data-aos="fade-up" data-aos-delay="100"
-              data-aos-duration="1000">
-              <span class="btn-text pe-1">Back</span>
-              <iconify-icon icon="lucide:arrow-up-right"
-                class="btn-icon bg-white text-dark round-36 rounded-circle hstack justify-content-center fs-5 shadow-sm"></iconify-icon>
-            </a>
-            <div class="d-md-flex align-items-center gap-4 gap-lg-8" data-aos="fade-up" data-aos-delay="200"
-              data-aos-duration="1000">
-              <div class="d-flex flex-column gap-2 py-2 pe-4 pe-lg-8 border-end">
-                <p class="mb-0">Subjects</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">Brand identity, Digital design</p>
-              </div>
-              <div class="d-flex flex-column gap-2 py-2 pe-4 pe-lg-8 border-end">
-                <p class="mb-0">Where</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">Krosno, Poland</p>
-              </div>
-              <!-- <div class="d-flex flex-column gap-2 py-2 pe-4 pe-lg-8 border-end">
-                <p class="mb-0">Raised</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">$1.1M</p>
-              </div> -->
-              <div class="d-flex flex-column gap-2 py-2">
-                <p class="mb-0">When</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">6 - 14 April 2025</p>
-              </div>
-            </div>
-          </div>
-          <div class="row gap-4 gap-lg-0">
-            <div class="col-lg-4">
-              <h2 class="fs-13 mb-0" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">Description
-              </h2>
-            </div>
-            <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                <p class="fs-5 mb-6">
-                 From April 6–14, 2025, Krosno became the hub of creativity,
-                  sustainability, and international friendship 
-                  through EcoArt: Turning Trash Into Treasure,
-                   an Erasmus+ Youth Exchange organized by Fundacja Patrz Globalnie.
-                The project brought together 28 young people from <b>Poland, Hungary, Lithuania, and Romania,</b>
-                , to address one of today’s most pressing issues: <b>non-biodegradable waste</b>.
-                <br> Our mission was clear - transform trash into art, raise environmental awareness, and
-                 inspire action through creativity.
-                <br>Beyond just workshops, EcoArt offered participants the opportunity to develop <b> digital skills, embrace AI-powered creativity, and engage in inclusive, intercultural learning</b>.
-                </p>
-                
-                <!-- <h4>1. PurseBlog</h4> -->
-                <p class="fs-5 mb-6">
-                 One of the project’s highlights was an educational <b>visit to MPGK Krosno</b>,
-                  the city’s municipal waste management and recycling center.
-                   Here, we explored the entire waste processing cycle, 
-                   from sorting recyclables to treating organic waste, and 
-                   discovered how advanced composting and fermentation systems
-                    produce biogas and renewable electricity. 
-                    At the center’s interactive Education Point, we
-                     learned how small lifestyle choices affect the
-                      environment and experienced firsthand how circular economy 
-                      principles operate in practice. 
-                      <br>For many,
-                  this visit was an eye-opener, bridging the gap between theory and real-world solutions.
-                </p>
-                <!-- <h4>2. The MyBag Blog</h4>
-                <p class="fs-5 mb-0">
-                  The MyBag Blog is a hub for designer handbag inspiration, trends, and style guides. Packed with the
-                  latest trends, blogger styles, and, of course, handbags, it serves as a valuable resource for fashion
-                  enthusiasts seeking to stay updated on current styles.
-                </p> -->
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart1.jpg" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart2.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart3.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart4.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart5.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart6.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="row justify-content-end">
-            <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <p class="fs-5 mb-0">
-                 Back at our workshop space, creativity flourished as participants 
-                 rolled up their sleeves and <b>turned discarded materials into art</b>. 
-                 From colorful mosaics and playful toys to thought-provoking sculptures,
-                  every piece told a story of transformation and hope. 
-                  Guided by facilitators and inspired by local artist <a href="https://pl.wikipedia.org/wiki/Piotr_Burger" target="_blank"> Piotr Burger</a>,
-                   participants discovered how <B>upcycling</B> can become an educational 
-                   tool and a powerful message about environmental responsibility.
-                    Piotr praised the works for their playful forms and strong themes,
-                  saying they could be a key element in teaching younger generations about sustainability.
-                </p>
-               
-                <!-- <h4>1. Define Your Goals:</h4> -->
-                <p class="fs-5 mb-6">
-                    <br>
-                To share these powerful messages with the community, 
-                we organized a public event at the Krosno Youth Centre
-                ,together with <a href="https://www.instagram.com/burgerpiotr/?hl=en" target="_blank"> Piotr Burger</a>, 
-                attracting over <b>100 attendees </b>,
-                including local youth and children from orphanages. 
-                <br>
-                Participants proudly exhibited their creations,
-                explained the concept behind each piece,
-                and <b>led interactive activities promoting recycling and creative reuse</b>. Piotr also brought 
-                some his creations, and inspired us for our future endeavours. 
-                This event proved that art can be more than decoration, it can spark dialogue,
-                educate, and inspire change. 
-                <br>
-                Our works now remain on <b>permanent display at the MPGK Education Point</b>, 
-                ensuring EcoArt’s impact continues well beyond the project.
-                </p>
-                <!-- <h4>2. Identify Relevant Bloggers:</h4>
-                <p class="fs-5 mb-6">
-                  Research and compile a list of bloggers whose audience aligns with your target demographic. Utilize
-                  tools like BuzzSumo to discover key influencers in your industry.
-                </p>
-                <h4>Engage Authentically:</h4>
-                <p class="fs-5 mb-0">
-                  Prior to outreach, engage with the bloggers' content by commenting on posts or sharing their articles.
-                  This establishes a genuine connection and familiarity.
-                </p>
-                <p class="fs-5 mb-0">
-                  Craft Personalized Outreach Messages: Develop tailored emails that acknowledge the blogger's work and
-                  propose a mutually beneficial collaboration. Avoid generic templates to increase response rates.
-                </p> -->
-              </div>
-            </div>
-            <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart7.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart8.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart9.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart11.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart10.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart3.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <!-- <h4>1. Define Your Goals:</h4> -->
-                <p class="fs-5 mb-6">
-                    <br>
-                Beyond environmental action, EcoArt was also about <b>people and culture</b>.
-                 Through engaging intercultural evenings, traditional foods, shared dances, we
-                  and learned about each other’s heritage.
-                  <br> 
-                  These moments of laughter and exchange created <b>friendships that crossed borders and broke stereotypes</b>.
-                   Together, we didn’t just create art, we built a community of young changemakers
-                   , ready to take these ideas home and launch future initiatives like our upcoming 
-                   <b>Green Week </b>campaign in schools. 
-                   <br>
-                EcoArt proved that when creativity meets responsibility, trash truly can become treasure.
-                </p>
-              </div>
-            </div>
-             <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/13.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart14.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart15.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-           <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart16.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart17.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/ecoart/ecoart18.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-               
-                <p class="fs-5 mb-6">
-                    <br>
-               EcoArt was more than a project, it was a <b> movement toward creativity,
-                sustainability, and unity</b>.
-                <br>We are proud of the impact it created in Krosno and beyond,
-                 and deeply grateful to everyone who supported and amplified our message.
-                 <br> Special thanks go to the local media and institutions who shared our story,
-                  helping us spread awareness and inspire more people to act for the planet. 
-                  Your coverage ensures that the voices of young changemakers are heard far and wide.</p>
-              </div>
-              <ul>
-                <li> <a href="https://www.krosno.pl/aktualnosci/mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym,23986"
-                    target="_blank"> <h5> City of Krosno (Municipality)</h4></a></li>
-
-                <li> <a href="https://www.krosno112.pl/artykul/25216,krosnienski-holding-komunalny-odwiedzili-mlodzi-ekolodzy-z-europy"
-                    target="_blank"> <h5> Krosno 112 (Local Newspaper)</h4></a></li>
-                <li> <a href="https://www.facebook.com/mpgk.krosno/posts/pfbid02q7bbKZDxWJ8jJh5ZLv2ox6ueCFxaCNRmkpJUEqGYntCmaHN2LinM2NHTJexSw6L8l"
-                    target="_blank"> <h5> MPGK Krosno (Facebook)</h4></a></li>
-                <li> <a href="https://aukcje.ekrosno.pl/aktualnosci1/1339-mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym"
-                    target="_blank"> <h5> MPGK Krosno (Website)</h4></a></li>
-                    <br>
-                    <br>
-
-              </ul>
-
-              
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <iframe width="100%" height="100%" 
-                        src="https://www.youtube.com/embed/NuaCSmciXYY?si=H7eLYl4-ELekjFjv" 
-                        title="EcoArt AI Cartoon" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen 
-                        class="w-100 object-fit-cover">
-                    </iframe>            
-                </div>
-           
-
-
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                <iframe width="100%" height="100%" 
-                    src="https://www.youtube.com/embed/V1J3w3XFK2Q?si=DV3D8QjhkJ6adxNc" 
-                    title="EcoArt AI RAP" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen 
-                    class="w-100 object-fit-cover">
-                </iframe>               
-            </div>
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                <iframe width="100%" height="100%" 
-                    src="https://youtube.com/embed/ExnoUfRjP5w?feature=share" 
-                    title="EcoArt AI RAP" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen 
-                    class="w-100 object-fit-cover">
-                </iframe>               
-            </div>
-            <br>
-         <a href="https://drive.google.com/drive/folders/1X1ep3dNxRBGVjgImNe0Mo4aIT-G2jYtC?usp=sharing" target="_blank" class="btn py-2 ps-3 pe-5" data-aos="fade-up" data-aos-delay="100"
-              data-aos-duration="1000">
-              <span class="btn-text pe-1">See All Resources and Photos</span>
-              <iconify-icon icon="lucide:arrow-up-right"
-                class="btn-icon bg-white text-dark round-36 rounded-circle hstack justify-content-center fs-5 shadow-sm"></iconify-icon>
-            </a>
-
-             <div class="row">
-            <div class="col-lg-7 mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/co-funded-black.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            </div>
+    <!-- 02 -->
+    <section class="chapter chapter--flip fade" aria-labelledby="c2">
+      <p class="chapter__no">02</p>
+      <div class="chapter__text">
+        <h2 id="c2">Inside the recycling centre</h2>
+        <p>One of the project’s highlights was an educational <b>visit to MPGK Krosno</b>, the city’s municipal waste management and recycling centre. We explored the entire waste processing cycle, from sorting recyclables to treating organic waste, and discovered how advanced composting and fermentation systems produce biogas and renewable electricity.</p>
+        <p>At the centre’s interactive Education Point, we learned how small lifestyle choices affect the environment and saw first-hand how circular economy principles work in practice. For many, this visit was an eye-opener, bridging the gap between theory and real-world solutions.</p>
+      </div>
+      <div class="chapter__media shots shots--stack">
+        <figure class="shot"><img src="../assets/redesign/img/eco/eco-01.jpg" alt="The group in hard hats and hi-vis vests in front of bales of sorted waste" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/eco/eco-03.jpg" alt="Participants in hard hats touring the inside of the recycling centre" width="527" height="343" loading="lazy"></figure>
       </div>
     </section>
 
-  </div>
-
-  <footer class="footer bg-dark py-5 py-lg-11 py-xl-12">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-5 mb-8 mb-xl-0">
-          <div class="d-flex flex-column gap-8 pe-xl-5">
-            <h2 class="mb-0 text-white">Join Us on Our Journey!</h2>
-            <!-- <div class="d-flex flex-column gap-2">
-              <a href="https://www.wrappixel.com/" target="_blank" class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:arrow-up-right" class="fs-7 text-primary"></iconify-icon>
-                facebook.com/patrz.globalnie
-              </a>
-              <a href="https://maps.app.goo.gl/hpDp81fqzGt5y4bC8" target="_blank"
-                class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:map-pin" class="fs-7 text-primary"></iconify-icon>
-                instagram.com/patrz.globalnie
-              </a> 
-            </div> -->
-          </div>
-        </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
-          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="index.html">Home</a></li>
-            <li><a class="link-hover fs-5 text-white" href="about-us.html">About</a></li>
-            <!-- <li><a class="link-hover fs-5 text-white" id="services" href="#services">Services</a></li> -->
-            <li><a class="link-hover fs-5 text-white" href="projects.html">Projects</a></li>
-            <li><a class="link-hover fs-5 text-white" href="reports.html">Reports</a></li>
-            <!-- <li><a class="link-hover fs-5 text-white" href="privacy-policy.html">Privacy Policy</a></li> -->
-            <!-- <li><a class="link-hover fs-5 text-white" href="404.html">Error 404</a></li> -->
-          </ul>
-        </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
-          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="https://www.facebook.com/profile.php?id=100095043654160">Facebook</a></li>
-            <li><a class="link-hover fs-5 text-white" href="https://www.instagram.com/patrz.globalnie/">Instagram</a></li>
-            <!-- <li><a class="link-hover fs-5 text-white" href="#!">Twitter</a></li> -->
-          </ul>
-        </div>
-        <div class="col-md-4 col-xl-3 mb-8 mb-xl-0">
-          <p class="mb-0 text-white text-opacity-70 text-md-end">©  Fundacja Patrz Globalnie 2025 | All Rights Reserved</p>
-        </div>
+    <!-- 03 -->
+    <section class="chapter fade" aria-labelledby="c3">
+      <p class="chapter__no">03</p>
+      <div class="chapter__text">
+        <h2 id="c3">The workshop</h2>
+        <p>Back at our workshop space, creativity flourished as participants rolled up their sleeves and <b>turned discarded materials into art</b>. From colourful mosaics and playful toys to thought-provoking sculptures, every piece told a story of transformation and hope.</p>
+        <p>Guided by facilitators and inspired by local artist <a href="https://pl.wikipedia.org/wiki/Piotr_Burger" target="_blank" rel="noopener">Piotr Burger</a>, participants discovered how upcycling can become an educational tool and a powerful message about environmental responsibility. Piotr praised the works for their playful forms and strong themes, saying they could be a key element in teaching younger generations about sustainability.</p>
       </div>
-    </div>
-  <!-- <p class="mb-0 text-white text-opacity-70 text-md-center mt-10">Distributed by <a class="text-white" href="https://www.themewagon.com" target="_blank">ThemeWagon</a></p> -->
-  </footer>
+      <div class="chapter__media shots shots--3">
+        <figure class="shot shot--wide"><img src="../assets/redesign/img/eco/eco-15.jpg" alt="Participants building a mosaic from bottle caps" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/eco/eco-14.jpg" alt="Two participants assembling a sculpture" width="193" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/eco/eco-06.jpg" alt="Participants shaping a sculpture from wire and branches" width="258" height="343" loading="lazy"></figure>
+        <figure class="shot shot--wide"><img src="../assets/redesign/img/eco/eco-17.jpg" alt="Participants celebrating next to their finished sculptures" width="527" height="343" loading="lazy"></figure>
+      </div>
+    </section>
 
-  <div class="get-template hstack gap-2">
-    
-    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
-      id="scrollToTopBtn">
-      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
-    </button>
+    <!-- 04 -->
+    <section class="chapter chapter--full fade" aria-labelledby="c4">
+      <p class="chapter__no">04</p>
+      <div class="chapter__text">
+        <h2 id="c4">The exhibition</h2>
+        <p>To share these messages with the community, we organised a public event at the Krosno Youth Centre together with <a href="https://www.instagram.com/burgerpiotr/" target="_blank" rel="noopener">Piotr Burger</a>, attracting <b>over 100 attendees</b>, including local young people and children from orphanages. Participants proudly exhibited their creations, explained the idea behind each piece, and <b>led interactive activities promoting recycling and creative reuse</b>. Piotr also brought some of his own creations and inspired us for our future work.</p>
+        <p>The event proved that art can be more than decoration: it can spark dialogue, educate and inspire change. Our works are now on <b>permanent display at the MPGK Education Point</b>, so EcoArt’s impact continues well beyond the project.</p>
+      </div>
+    </section>
   </div>
 
+  <!-- artworks and exhibition: a strip of photos that scrolls sideways -->
+  <div class="runway fade" role="region" aria-label="Artworks and exhibition photos, scroll sideways" tabindex="0">
+    <ol class="runway__track">
+      <li><img src="../assets/redesign/img/eco/eco-08.jpg" alt="The public event in a brick cellar, with the artworks on show" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/eco/eco-10.jpg" alt="A tree sculpture made from waste, outdoors" width="258" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/eco/eco-11.jpg" alt="Paintings made by participants displayed on easels" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/eco/eco-04.jpg" alt="A sculpture made from recycled materials on a plinth" width="257" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/eco/eco-05.jpg" alt="Upcycled sculptures displayed outside a brick building" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/eco/eco-18.jpg" alt="A participant with a large upcycled sculpture" width="257" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/eco/eco-16.jpg" alt="Participants posing with their creations" width="193" height="343" loading="lazy"></li>
+    </ol>
+  </div>
+  <p class="wrap story__wrap runway__credit">Artworks and exhibition · scroll sideways for more →</p>
 
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="../assets/libs/aos-master/dist/aos.js"></script>
-  <script src="../assets/js/custom.js"></script>
-  <!-- solar icons -->
-  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <div class="wrap story__wrap">
+    <div class="story__videos fade">
+      <figure class="story__video"><div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=NuaCSmciXYY" data-yt="NuaCSmciXYY" data-title="EcoArt AI Cartoon Network video"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">EcoArt AI Cartoon Network video</span><span class="yt__n">Play video · loads YouTube</span></a></div></figure>
+      <figure class="story__video"><div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=V1J3w3XFK2Q" data-yt="V1J3w3XFK2Q" data-title="Save the planet: AI rap"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">Save the planet: AI rap</span><span class="yt__n">Play video · loads YouTube</span></a></div></figure>
+      <figure class="story__video"><div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=ExnoUfRjP5w" data-yt="ExnoUfRjP5w" data-title="EcoArt Simpsons special"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">EcoArt Simpsons special</span><span class="yt__n">Play video · loads YouTube</span></a></div></figure>
+    </div>
+    <p class="yt__privacy">Videos come from YouTube (Google) and load only when you press play. <a href="privacy-policy.html#youtube">How we handle this</a></p>
+
+    <!-- 05 -->
+    <section class="chapter chapter--flip fade" aria-labelledby="c5">
+      <p class="chapter__no">05</p>
+      <div class="chapter__text">
+        <h2 id="c5">People and culture</h2>
+        <p>Beyond environmental action, EcoArt was also about <b>people and culture</b>. Through intercultural evenings, traditional food and shared dances, we learned about each other’s heritage. These moments of laughter and exchange created <b>friendships that crossed borders and broke stereotypes</b>.</p>
+        <p>Together, we didn’t just create art: we built a community of young changemakers, ready to take these ideas home and launch future initiatives like our upcoming <b>Green Week</b> campaign in schools.</p>
+      </div>
+      <div class="chapter__media shots shots--stack">
+        <figure class="shot"><img src="../assets/redesign/img/eco/eco-09.jpg" alt="Participants gathered in a room for a group session" width="258" height="343" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <blockquote class="story__quote fade">
+      <p>EcoArt proved that when creativity meets responsibility, trash truly can become treasure.</p>
+    </blockquote>
+
+    <section class="story__thanks" aria-labelledby="thanks">
+      <h2 id="thanks" class="contact__h">Thank you</h2>
+      <p class="lede">We are proud of the impact EcoArt created in Krosno and beyond, and grateful to the local media and institutions who shared our story and helped us inspire more people to act for the planet.</p>
+      <ul class="reports__list story__press">
+        <li><a href="https://www.krosno.pl/aktualnosci/mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym,23986" target="_blank" rel="noopener"><span class="t">City of Krosno</span><span class="f">Municipality</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.krosno112.pl/artykul/25216,krosnienski-holding-komunalny-odwiedzili-mlodzi-ekolodzy-z-europy" target="_blank" rel="noopener"><span class="t">Krosno 112</span><span class="f">Local newspaper</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.facebook.com/mpgk.krosno/posts/pfbid02q7bbKZDxWJ8jJh5ZLv2ox6ueCFxaCNRmkpJUEqGYntCmaHN2LinM2NHTJexSw6L8l" target="_blank" rel="noopener"><span class="t">MPGK Krosno</span><span class="f">Facebook</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://aukcje.ekrosno.pl/aktualnosci1/1339-mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym" target="_blank" rel="noopener"><span class="t">MPGK Krosno</span><span class="f">Website</span><span class="d" aria-hidden="true">↗</span></a></li>
+      </ul>
+      <p class="links"><a class="btn" href="https://drive.google.com/drive/folders/1X1ep3dNxRBGVjgImNe0Mo4aIT-G2jYtC?usp=sharing" target="_blank" rel="noopener">All resources and photos ↗</a> <a class="btn btn--ghost" href="projects.html">Back to all projects</a></p>
+    </section>
+
+    <img class="story__eu" src="../assets/redesign/img/eu-cofunded.png" alt="Co-funded by the European Union" width="270" height="60" loading="lazy">
+  </div>
+</main>
+
+<footer class="foot foot--simple">
+  <nav class="foot__links" aria-label="Footer">
+    <a href="index.html">Home</a><a href="about-us.html">About</a><a href="projects.html">All projects</a><a href="contact.html">Contact</a><a href="reports.html">Reports</a><a href="privacy-policy.html">Privacy policy</a>
+  </nav>
+  <p class="foot__social"><a href="https://www.facebook.com/profile.php?id=100095043654160" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/patrz.globalnie/" target="_blank" rel="noopener">Instagram</a></p>
+  <p class="foot__legal">© Fundacja Patrz Globalnie <span class="year">2026</span></p>
+</footer>
+
+<script>
+  (function () {
+    var nav = document.getElementById('nav'), t = nav.querySelector('.nav__toggle');
+    t.addEventListener('click', function () { var o = nav.classList.toggle('is-open'); t.setAttribute('aria-expanded', o); });
+    document.querySelectorAll('.year').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' });
+      document.querySelectorAll('.story .fade').forEach(function (el) { el.classList.add('pre'); io.observe(el); });
+    }
+  })();
+</script>
+<script src="../assets/redesign/js/yt-consent.js" defer></script>
 </body>
-
 </html>

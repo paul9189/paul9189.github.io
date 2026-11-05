@@ -1,463 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ART Meets AI</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet" >
-	<link href="css/font-awesome.min.css" rel="stylesheet" >
-	<link href="css/global.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-
-	<style>
-        .heading-spacing {
-            margin-top: 1rem; /* Adjust this value as needed */
-        }
-		.col-md-4 {
-			margin-top: 2 rem!important;
-			margin-bottom: 1 rem;
-		}
-		.full-width-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100vw; /* Full width of the viewport */
-            height: 50vh; /* Full height of the viewport */
-            padding: 2rem;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        .supporting-text {
-            margin-bottom: 1rem;
-            font-size: 18px;
-            color: #fff;
-        }
-
-        .download-button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            font-size: 16px;
-            color: #02024f;
-            background-color: #9cbee3; /* Bootstrap primary color */
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            text-align: center;
-            cursor: pointer;
-			gap: 0.5rem;
-        }
-		.download-button img {
-            width: 24px; /* Adjust the size of the logo */
-            height: auto;
-        }
-
-        .download-button:hover {
-            background-color: #ca2424; /* Darker shade for hover effect */
-        }
-		.main3{
-font-family: "Caudex", serif!important;
-color: #7A7A7A!important;
-background-color: #171616!important;
-}
-
-        body {
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-		.section-title {
-            font-size: 2.5rem; /* Large title size */
-            margin-bottom: 1rem;
-        }
-        .section-subtitle {
-            font-size: 1.5rem; /* Smaller title size */
-            margin-bottom: 1rem;
-        }
-        .section-content {
-            margin-bottom: 2rem;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            margin: 0 auto; /* Center container horizontally */
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        @media (max-width: 767px) {
-            .section-title {
-                font-size: 1.75rem; /* Smaller title size for mobile */
-            }
-            .section-subtitle {
-                font-size: 1.25rem; /* Smaller subtitle size for mobile */
-            }
-            .section-content {
-                font-size: 0.875rem; /* Smaller text size for mobile */
-            }
-            .video-container {
-                padding-bottom: 75%; /* 4:3 Aspect Ratio for better fit on mobile */
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The AI tools behind Art Meets AI · Fundacja Patrz Globalnie</title>
+  <meta name="description" content="The AI tools that shaped the Art Meets AI theatre production: SoundRaw, ChatGPT, Leonardo AI, FakeYou, Parrot AI, D-ID, ClickUp and a retro Linux terminal narrator, with scripts and animations to download.">
+  <meta name="theme-color" content="#070d11">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+  <link rel="stylesheet" href="../assets/redesign/css/fonts.css">
+  <link rel="stylesheet" href="../assets/redesign/css/site.css">
 </head>
-<body>
+<body class="page-story">
+<a class="skip" href="#story">Skip to content</a>
 
-<div class="main3">
- <div class="main_1 bg_black">
- <div class="container-fluid">
-   <div class="row top_1">
-     <div class="col-md-8">
-	   <div class="top_1l">
-	   </div>
-	 </div>
-	 <div class="col-md-4">
-	   <div class="top_1r float-end pt-1">
-	   </div>
-	 </div>
-   </div>
- </div>
-<section id="header">
-	<div class="main4">
-<nav class="navbar navbar-expand-md navbar-light  p-0 px-4" id="navbar_sticky">
-  <div class="container-fluid">
-    <a class="col_lighto p-0 navbar-brand fw-bold me-0" href="../index.html"><img src="img/logo_patrz-removebg-preview.png" style="width: 3rem; background-color: transparent;"> 
-	
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mb-0 ms-auto">
-			<li class="nav-item">
-			  <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="about.html">About </a>
-			  </li>
-			  <li class="nav-item">
-				  <a class="nav-link" href="resources.html">Materials </a>
-				</li>
-	  
-			  <li class="nav-item">
-				<a class="nav-link" href="contact.html">Contact </a>
-			  </li>
-		  </ul>
-    </div>
+<header class="nav is-solid" id="nav">
+  <a class="nav__logo" href="../html/index.html" aria-label="Fundacja Patrz Globalnie, home"><img src="../assets/images/logos/logo-white.svg" alt="Fundacja Patrz Globalnie"></a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="../html/about-us.html">About Us</a>
+    <a href="../html/index.html#projects" aria-current="page">Projects</a>
+    <a href="../html/contact.html">Contact</a>
+    <a href="../html/reports.html">Reports</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main class="story story--nobanner" id="story">
+  <div class="wrap story__wrap">
+    <a class="story__back" href="aiartindex.html">← Art Meets AI</a>
+    <p class="eyebrow">Art Meets AI · Materials</p>
+    <h1>The AI tools <span>behind the show</span></h1>
+    <p class="lede">How each tool helped bring our theatre production to life, from music and scripts to voices, animations and project management, with our materials to download.</p>
+
+    <section class="chapter fade" aria-labelledby="t1">
+      <p class="chapter__no">01</p>
+      <div class="chapter__text">
+        <h2 id="t1">SoundRaw AI <small>Music &amp; sound</small></h2>
+        <p>For Snow White’s coronation scene and throughout the performance, we used <a href="https://soundraw.io/" target="_blank" rel="noopener">SoundRaw AI</a> to generate a bespoke musical score that adds grandeur to the coronation and blends into the atmosphere of the whole show.</p>
+        <figure class="story__audio">
+          <audio controls preload="none" src="img/coronation%20song.m4a"></audio>
+          <figcaption>The coronation song</figcaption>
+        </figure>
+      </div>
+      <div class="chapter__media shots shots--stack"><figure class="shot"><img src="../assets/redesign/img/ai1/soundraw.jpg" alt="SoundRaw logo above a crown" width="1100" height="733" loading="lazy"></figure></div>
+    </section>
+
+    <section class="chapter chapter--flip fade" aria-labelledby="t2">
+      <p class="chapter__no">02</p>
+      <div class="chapter__text">
+        <h2 id="t2">ChatGPT <small>Dialogues</small></h2>
+        <p>To bring the group’s original story to life, we used <a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT-4</a> to turn the narrative into a full script with detailed dialogues and stage directions, giving the actors a polished script for rehearsals and the performance.</p>
+        <p><a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1aGlRvFYP-DRfcVeXq4IPMJRddnkX1XBr?usp=sharing" target="_blank" rel="noopener">Go to the scripts ↗</a></p>
+      </div>
+      <div class="chapter__media shots shots--stack"><figure class="shot"><img src="../assets/redesign/img/ai1/chatgpt.jpg" alt="Illustration of a small robot talking with Snow White in a forest" width="1100" height="1100" loading="lazy"></figure></div>
+    </section>
+
+    <section class="chapter fade" aria-labelledby="t3">
+      <p class="chapter__no">03</p>
+      <div class="chapter__text">
+        <h2 id="t3">Leonardo AI <small>Images</small></h2>
+        <p><a href="https://leonardo.ai/" target="_blank" rel="noopener">Leonardo AI</a> generated the images we used in videos and animations, including the poster that captures the essence of the story, defining the look of the whole show.</p>
+      </div>
+      <div class="chapter__media shots shots--stack"><figure class="shot"><img src="../assets/redesign/img/ai1/leonardo.jpg" alt="A glowing wireframe face made of light" width="1076" height="1100" loading="lazy"></figure></div>
+    </section>
+
+    <section class="chapter chapter--flip fade" aria-labelledby="t4">
+      <p class="chapter__no">04</p>
+      <div class="chapter__text">
+        <h2 id="t4">FakeYou &amp; Parrot AI <small>Voices</small></h2>
+        <p>To give our characters distinct, memorable voices, we used <a href="https://fakeyou.com/" target="_blank" rel="noopener">FakeYou</a> to create a range of expressive voices and <a href="https://www.tryparrotai.com/" target="_blank" rel="noopener">Parrot AI</a> for voice modulation and adaptation.</p>
+      </div>
+      <div class="chapter__media shots shots--stack"><figure class="shot"><img src="../assets/redesign/img/ai1/fakeyou-parrot.jpg" alt="The FakeYou fox mask logo and the Parrot AI parrot logo" width="1100" height="733" loading="lazy"></figure></div>
+    </section>
+
+    <section class="chapter fade" aria-labelledby="t5">
+      <p class="chapter__no">05</p>
+      <div class="chapter__text">
+        <h2 id="t5">D-ID <small>Animations</small></h2>
+        <p>With <a href="https://www.d-id.com/" target="_blank" rel="noopener">D-ID</a> we animated images from Leonardo AI and synchronised them with voices from Parrot AI, so faces moved and spoke the dialogue. D-ID produced all the narrator videos, the Evil Billionaire scene, the Mirror on the Wall and several other key moments.</p>
+        <p><a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1DzePC7C2eMzvsYtzwdxKTd5JL4PA0aPV?usp=sharing" target="_blank" rel="noopener">See the animations ↗</a></p>
+      </div>
+      <div class="chapter__media shots shots--stack"><figure class="shot"><img src="../assets/redesign/img/ai1/d-id.jpg" alt="D-ID logo" width="1100" height="733" loading="lazy"></figure></div>
+    </section>
+
+    <section class="chapter chapter--flip fade" aria-labelledby="t6">
+      <p class="chapter__no">06</p>
+      <div class="chapter__text">
+        <h2 id="t6">ClickUp <small>Agile project management</small></h2>
+        <p>To manage the production we used <a href="https://clickup.com/" target="_blank" rel="noopener">ClickUp</a> with an agile method, as used across the IT world. Each task had a description, an owner and the tool to use, and moved through three columns: To Do, In Progress and Completed. Materials produced for each task went into its comments.</p>
+        <p>We kept separate backlogs for each act, the narrator, the music and the dances.</p>
+      </div>
+      <div class="chapter__media shots shots--stack"><figure class="shot"><img src="../assets/redesign/img/ai1/clickup.jpg" alt="ClickUp logo" width="1100" height="733" loading="lazy"></figure></div>
+    </section>
+
+    <figure class="story__wide fade">
+      <img src="../assets/redesign/img/ai1/clickup-board.jpg" alt="Screenshot of our ClickUp board with tasks in To Do, In Progress and Completed columns" width="1760" height="709" loading="lazy">
+      <figcaption>Our ClickUp board during the production.</figcaption>
+    </figure>
+
+    <section class="chapter fade" aria-labelledby="t7">
+      <p class="chapter__no">07</p>
+      <div class="chapter__text">
+        <h2 id="t7">A retro terminal narrator <small>Linux &amp; Python</small></h2>
+        <p>We set up a Linux virtual machine in VirtualBox and wrote a Python script that printed the narration in <a href="https://github.com/Swordfish90/cool-retro-term" target="_blank" rel="noopener">Cool Retro Term</a>, giving us precise control of the narrator throughout the show.</p>
+        <p>The narrator starts as a simple, primitive entity in the early scenes and grows more complex until it dominates by the end of Act 3, tracking its rising influence over the story.</p>
+      </div>
+      <div class="chapter__media shots shots--stack"><figure class="shot"><img src="../assets/redesign/img/ai1/linux.jpg" alt="Illustration of the Linux penguin" width="1100" height="1100" loading="lazy"></figure></div>
+    </section>
+
+    <figure class="story__video fade">
+      <div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=No_k2jUY0y0" data-yt="No_k2jUY0y0" data-title="Primitive Narrator"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">Primitive Narrator</span><span class="yt__n">Play video · loads YouTube</span></a></div>
+      <figcaption>The narrator’s first steps in the retro terminal.</figcaption>
+    </figure>
+    <p class="yt__privacy">Videos come from YouTube (Google) and load only when you press play. <a href="../html/privacy-policy.html#youtube">How we handle this</a></p>
+
+    <section class="story__thanks" aria-labelledby="dl">
+      <h2 id="dl" class="contact__h">All production materials</h2>
+      <p class="lede">Explore and download all the materials for the play.</p>
+      <p class="links"><a class="btn" href="https://drive.google.com/drive/folders/19FYKo1FIywS4604F1MUxnL4-KPczAtzQ?usp=sharing" target="_blank" rel="noopener">Art Meets AI Drive ↗</a> <a class="btn btn--ghost" href="aiartindex.html">Back to Art Meets AI</a></p>
+    </section>
+
+    <img class="story__eu" src="../assets/redesign/img/eu-cofunded.png" alt="Co-funded by the European Union" width="270" height="60" loading="lazy">
   </div>
-</div>
-</nav>
-</section>
+</main>
 
-<!-- <div class="container-xl">
-   <div class="row center_h1">
-     <div class="col-md-6">
-	   <div class="center_h1l">
-	     <h1 class="text-white mb-3">AI Tools and Resources</h1>
-		 <h5 class="px-5 text-light">A Technical Story</h5>
-		</div>
-	 </div>
-	 <div class="col-md-6">
-	   <div class="center_h1r">
-	     <h3 class="text-white mb-3">Discover the Fusion of Art and Technology</h3>
-		 <p class="mb-4 text-light">Integrating AI into our theatrical production involved meticulous planning and execution. Our team harnessed the power of AI tools to streamline workflows, enhance creativity, and push the boundaries of traditional theater. From generating scripts to creating lifelike animations and original music, AI was an invaluable partner in our artistic journey.
-		 </p>
-		 <div class="center_h1ri row">
-		   <div class="col-md-7">
-		     <div class="center_h1ril position-relative">
-			   <div class="center_h1rili">
-	     <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-				  </figure>
-			  </div>
-	   </div>
-	   <iframe width="560" height="315" src="https://www.youtube.com/embed/F-HYZH2PoLo?si=HVOksTEFAgAOlCwB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>			 </div>
-		   </div>
+<footer class="foot foot--simple">
+  <nav class="foot__links" aria-label="Footer">
+    <a href="../html/index.html">Home</a><a href="../html/about-us.html">About</a><a href="../html/projects.html">All projects</a><a href="../html/contact.html">Contact</a><a href="../html/reports.html">Reports</a><a href="../html/privacy-policy.html">Privacy policy</a>
+  </nav>
+  <p class="foot__social"><a href="https://www.facebook.com/profile.php?id=100095043654160" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/patrz.globalnie/" target="_blank" rel="noopener">Instagram</a></p>
+  <p class="foot__legal">© Fundacja Patrz Globalnie <span class="year">2026</span></p>
+</footer>
 
-		   <div class="center_h1ri row">
-			<div class="col-md-7">
-			  <div class="center_h1ril position-relative">
-				<div class="center_h1rili">
-		  <div class="grid clearfix">
-				   <figure class="effect-jazz mb-0">
-				   </figure>
-			   </div>
-		</div>
-		<p class="mb-4 text-light">We created a unique scene where Elon Musk interacts with the King of Krosno via video call on stage. In the scene, Musk invites the king to test his new AI-powered car, which sets off the central plot when it explodes. To bring this to life, we used LeonardoAI to generate Elon Musk’s image, D-ID to animate his facial movements, and FakeYou to synthesize his voice for the dialogue.</p>
-
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/xZQB8QqqwA0?si=QRg89irgDfpelj0x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-	</div>   
-		 </div>
-	   </div>
-	 </div>
-   </div>
-  </div>
-</section> -->
-<!-- <div class="main3">  -->
-
-<section id="testim" class="p_3 bg_dark" style="border-bottom: 5 rem;">
-  <div class="container-xl">
-   <div class="row testim_1">
-     <div class="col-md-6">
-	   <div class="testim_1l position-relative">
-	     <div class="testim_1l1 text-left">
-		   <img src="img/poster550x550.png" alt="abc">
-		 </div>
-		 <div class="testim_1l2 bg_darko p-5 px-4 position-absolute">
-		   <p class="fs-6 fst-italic mb-4 col_lighto">The fusion of creativity and technology in this theater production showcases how AI can elevate storytelling, transforming a traditional art form into an immersive and innovative experience.</p>
-		   <h4 class="col_lighto">Chat GPT 4</h4>
-		   <h6 class="mb-0 col_lighto">Director & Founder</h6>
-		 </div>
-	   </div>
-	 </div>
-	 <div class="col-md-6">
-	   <div class="testim_1r bg_darko p-5 px-4">
-	     <h1 class="col_lighto font_50">Unveiling the AI Tools that Shaped Our Theatrical Experience"</h1>
-		 <p class="mt-3">
-			Welcome to our comprehensive overview of the AI tools that played a pivotal role in bringing our theater production to life. This page details the cutting-edge technologies we employed, showcasing how each tool contributed to various aspects of the project—from generating captivating visuals and music to crafting dynamic scripts and character animations. Here, you'll find in-depth descriptions of the tools we used, including their specific applications and the innovative ways they enhanced our production. Explore how these advanced solutions helped us achieve a seamless and immersive theatrical experience. </p>
-	   </div>
-	 </div>
-   </div>
-  
-  </div>
-</section>
-
-<section id="list_h" class="p_3">
-  <div class="container-xl">
-   <div class="list_h1 row" style="border-bottom: 3 rem;">
-      <div class="col-md-4">
-	   <div class="list_h1i">
-	     <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="https://soundraw.io/" target="_blank"><img src="img/crown_img.png" class="w-100" alt="abc" style="bottom: 2 rem;"></a>
-				  </figure>
-				  <p>Play</p>
-    <audio controls>
-	
-        <source src="img/coronation song.m4a" type="audio/mpeg" style="margin-top: 2 rem;">
-    </audio>
-			  </div>
-	     <a href="https://soundraw.io/" target="_blank"><h4 class="mt-3">SoundRaw AI</h4></a>
-		 <h6 class="mt-3 mb-3">Music & Sounds Generation</h6>
-		 <p>For Snow White's Coronation scene and throughout the performance, we employed SoundRaw AI to craft an immersive auditory experience. This advanced tool was instrumental in generating a bespoke musical score that not only enhances the grandeur of Snow White's coronation but also seamlessly integrates into the overall ambiance of the show. By leveraging SoundRaw AI's capabilities, we achieved a dynamic and evocative soundscape that elevates the emotional impact and atmosphere of the production.</p>
-	   </div>
-	 </div>
-	 <div class="col-md-4">
-	   <div class="list_h1i">
-	     <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="https://chatgpt.com/" target="_blank"><img src="img/gpt_snow_white.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-	     <a href="https://chatgpt.com/" target="_blank"><h4 class="mt-3">ChatGPT</h4></a>
-		 <h6 class="mt-3 mb-3">Creating Dialogues</h6>
-        <p>To bring the group's original story to life, we utilized ChatGPT-4 to meticulously transform the narrative into a fully-realized script. This advanced AI tool was employed to craft detailed dialogues and stage directions, ensuring that the characters' interactions and lines are both engaging and true to the vision of the story. By harnessing ChatGPT-4's sophisticated language capabilities, we provided the actors with a polished script that captures the essence of the tale, facilitating a seamless rehearsal and performance process.</p>
-		 <h5 class="text-uppercase mb-0 fs-6"><a target="_blank" href="https://drive.google.com/drive/folders/1aGlRvFYP-DRfcVeXq4IPMJRddnkX1XBr?usp=sharing">Go To Scripts</a></h5>
-	   </div>
-	 </div>
-	 <div class="col-md-4">
-	   <div class="list_h1i">
-	     <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="https://leonardo.ai/" target="_blank"><img src="img/neural_face.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-			  <a href="https://leonardo.ai/" target="_blank"><h4 class="mt-3">Leonardo AI</h4></a>
-			  <h6 class="mt-3 mb-3">Image Generator</h6>
-		 <p>Leonardo AI played a pivotal role in the visual development of our production by generating a diverse array of images for use in videos and animations. This cutting-edge tool was instrumental in creating the compelling visuals that define our show's aesthetic, including the striking poster that captures the essence of the narrative. Leonardo AI's advanced image generation capabilities allowed us to produce high-quality, captivating graphics that enhance the overall visual impact and storytelling of the performance.</p>
-	   </div>
-	 </div>
-   </div>
-   
-  </div>
-</section>
-
-<section id="list_h" class="p_3">
-	<div class="container-xl">
-		<div class="list_h1 row" style="margin-top: 2 rem!important;">
-			<div class="col-md-4">
-			 <div class="list_h1i">
-			   <div class="grid clearfix">
-						<figure class="effect-jazz mb-0">
-						  <a href="https://fakeyou.com/" target="_blank"><img src="img/fakeyou_parrot.png" class="w-100" alt="abc" style="bottom: 2 rem;"></a>
-						</figure>
-				</div>
-			   <a href="https://fakeyou.com/" target="_blank"><h4 class="mt-3">FakeYou & Parrot AI</h4></a>
-			   <h6 class="mt-3 mb-3">Voice Generation and Modulation</h6>
-			   <p>
-				To bring our characters to life with distinct and memorable voices, we utilized FakeYou and Parrot AI. These innovative tools were essential in generating and modifying the voices of our characters, ensuring each had a unique and fitting vocal identity. FakeYou allowed us to create a range of expressive voices, while Parrot AI provided advanced capabilities for voice modulation and adaptation. Together, these technologies enriched the auditory experience of the performance, adding depth and individuality to each character's portrayal.</p>
-			   <h5 class="text-uppercase mb-0 fs-6"><a href="https://www.tryparrotai.com/" target="_blank">Parrot AI</a></h5>
-			   <h5 class="text-uppercase mb-0 fs-6 heading-spacing"><a href="https://fakeyou.com/" target="_blank">Fake You</a></h5>
-		
-			 </div>
-		   </div>
-		   <div class="col-md-4">
-			 <div class="list_h1i">
-			   <div class="grid clearfix">
-						<figure class="effect-jazz mb-0">
-						  <a href="https://www.d-id.com/" target="_blank"><img src="img/d-id.png" class="w-100" alt="abc"></a>
-						</figure>
-					</div>
-			   <a href="https://www.d-id.com/" target="_blank"><h4 class="mt-3">D-ID</h4></a>
-			   <h6 class="mt-3 mb-3">Bringing Characters to Life: Dynamic Animations with D-ID</h6>
-			  <p>We utilized D-ID to animate images generated by Leonardo AI and integrate them with audio files created by Parrot AI, resulting in dynamic character animations. This powerful tool enabled us to bring static images to life by synchronizing facial movements and expressions with spoken dialogue, creating engaging and lifelike animations. D-ID was instrumental in producing all narrator videos, the Evil Billionaire scene, the Mirror on the Wall segment, and several other key moments in the production. Its advanced capabilities ensured a seamless and captivating visual experience that enhanced the storytelling and audience immersion.</p>
-			   <h5 class="text-uppercase mb-0 fs-6"><a target="_blank" href="https://drive.google.com/drive/folders/1DzePC7C2eMzvsYtzwdxKTd5JL4PA0aPV?usp=sharing">See Animations</a></h5>
-			 </div>
-		   </div>
-		   <div class="col-md-4">
-			 <div class="list_h1i">
-			   <div class="grid clearfix">
-						<figure class="effect-jazz mb-0">
-						  <a href="https://clickup.com/" target="_blank"><img src="img/clickup_logo.png" class="w-100" alt="abc"></a>
-						</figure>
-					</div>
-					<a href="https://clickup.com/" target="_blank"><h4 class="mt-3">ClickUp</h4></a>
-					<h6 class="mt-3 mb-3">Streamlined Task Management with ClickUp</h6>
-			   <p>To efficiently manage and track the progress of tasks throughout the production, we employed ClickUp, utilizing its robust features to implement agile methodology. This project management tool enabled us to streamline workflows, monitor task completion, and ensure timely delivery of each stage of the project. By leveraging ClickUp’s capabilities, we maintained a clear overview of our progress and effectively coordinated efforts across all team members.</p>
-			 </div>
-		   </div>
-		 </div>
-	</div>
-</section>
-
-
-
-<section id="trend">
-  <div class="container-xl">
-     <div class="row trend_1">
-      <div class="col-md-2">
-	    <div class="trend_1l"></div>
-	  </div>	 
-	  <div class="col-md-8">
-	    <div class="trend_1m">
-		  <div class="trend_1m1 p-5 bg_darko">
-		     <h6>Agile Methodology</h6>
-			 <h1 class="font_50 mt-3 mb-3">A Software Engineer's Dream</h1>
-			 <hr class="line_1">
-			 <p class="fs-5">To efficiently manage and track the progress of our production, we employed ClickUp, utilizing agile methodology—a widely adopted approach across the IT world and major corporations. In our ClickUp board, tasks were meticulously created and assigned to specific individuals, then organized into three columns: To Do, In Progress, and Completed. Each task was detailed with a description and associated tool, ensuring clarity and accountability. Supporting materials resulting from each task were added in the comments section. To streamline our workflow, we established multiple backlogs, including separate boards for each act, the narrator, music, and dances. The accompanying screenshot illustrates our organized task management process and how ClickUp facilitated a structured and collaborative environment.</p>
-			 <div class="trend_1m1i position-relative">
-
-			   <div class="trend_1m1i1">
-			      <div class="grid clearfix">
-					<img src="img/clickup_board.png" class="w-100" alt="abc">
-			  </div>
-			   </div>
-			  
-			 </div>
-		  </div>
-		</div>
-	  </div>
-	  <div class="col-md-2">
-	    <div class="trend_1r"></div>
-	  </div>
-	 </div>
-  </div>
-</section>
-
-<section id="blog_h" class="p_3">
-  <div class="container-xl">
-    <div class="blog_h1 row">
-      <div class="col-md-8">
-	    <div class="blog_h1l">
-		  <h1 class="mb-0">Other Tools and Tricks We Used</h1>
-		</div>
-	  </div>	
-	</div>
-	<div class="blog_h2 row mt-4">
-      <div class="col-md-6">
-	    <div class="blog_h2l">
-         <div class="blog_h2li row">
-		   <div class="col-md-6">
-		     <div class="blog_h2lil">
-			   <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="https://github.com/Swordfish90/cool-retro-term" target="_blank"><img src="img/linux_logo.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-			 </div>
-		   </div>
-		   <div class="col-md-6">
-		     <div class="blog_h2lir">
-			   <h5><a href="https://github.com/Swordfish90/cool-retro-term" target="_blank">Cool Retro Terminal Linux</a></h5>
-			   <p class="mt-3">We utilized VirtualBox to set up a virtual machine running Linux on our computer. Within this environment, we developed a Python script designed to console log our text, enabling precise control and integration of our narration throughout the production.</p>
-			   <h6 class="mb-0 text-uppercase"><a href="https://github.com/Swordfish90/cool-retro-term" target="_blank">Go to GitHub Repository</a></h6>
-			 </div>
-		   </div>
-		 </div>  
-		 <div class="blog_h2li row mt-4">
-		   <div class="col-md-6">
-		     <div class="blog_h2lil">
-			   <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href=""><img src="img/empty.png" class="w-25" alt="abc"></a>
-				  </figure>
-			  </div>
-			 </div>
-		   </div>
-		 </div>
-		</div>
-	  </div>	
-	  <div class="col-md-6">
-	    <div class="blog_h2r">
-     	  <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/No_k2jUY0y0?si=w3NW7YOACsX4DDWJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>				  </figure>
-			  </div>
-			  <h3 class="mt-3">Insights into the Narrator</h3>
-			   <p class="mt-3">We incorporated a unique and evolving primitive narrator into our production using a cool retro Linux terminal interface and a custom Python script. This innovative approach allowed us to visually and conceptually track the narrator's development throughout the show. The video showcases the narrator's inception, starting as a simple entity born in the early scenes. As the narrative progresses, the narrator evolves and gains complexity, ultimately culminating in a dominant role by the end of Act 3. This evolution highlights the narrator's growing influence and integrates seamlessly with the overall story, enhancing the thematic depth and engagement of the performance.</p>		
-			</div>
-	  </div>
-	</div>
-  </div>  
-</section>
-
-<section class="full-width-section">
-	<p class="supporting-text">
-		Explore and download all production materials for the play through the following Google Drive link.
-	</p>
-	<a href="https://drive.google.com/drive/folders/19FYKo1FIywS4604F1MUxnL4-KPczAtzQ?usp=sharing" class="download-button" target="_blank">
-		<img src="img/Google_Drive_logo.png" alt="Google Drive Logo">
-		Art Meets AI Drive
-	</a>
-</section>
-
-<section id="footer" class="p_3">
-  <div class="container-xl">
-	<a href="https://erasmus-plus.ec.europa.eu/" target="_blank"><img src="img/ENFundedbytheEU.png" class="w-50" alt="abc" style="padding-bottom: 2rem;"></a>	
-	<div class="footer_2 row">
-      	<div class="col-md-8">
-		  <div class="footer_2l pt-2">
-		    <p class="mb-0">© 2024 All Rights Reserved</p>
-		  </div>
-		</div>
-		<div class="col-md-4">
-		  <div class="footer_2r text-end">
-		    <ul class="mb-0 social_icon1">
-			   <li class="d-inline-block"><a class="d-block text-center" href="https://www.instagram.com/patrz.globalnie?igsh=MWtoaGU5MWNpZWQzcw=="><i class="fa fa-instagram"></i></a></li>
-			</ul>
-		  </div>
-		</div>
- 	</div>
-  </div>  
-</section>
-
-<script src="js/common.js"></script>
-</div>
+<script>
+  (function () {
+    var nav = document.getElementById('nav'), t = nav.querySelector('.nav__toggle');
+    t.addEventListener('click', function () { var o = nav.classList.toggle('is-open'); t.setAttribute('aria-expanded', o); });
+    document.querySelectorAll('.year').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' });
+      document.querySelectorAll('.story .fade').forEach(function (el) { el.classList.add('pre'); io.observe(el); });
+    }
+  })();
+</script>
+<script src="../assets/redesign/js/yt-consent.js" defer></script>
 </body>
-
-
 </html>

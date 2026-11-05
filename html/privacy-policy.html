@@ -1,241 +1,199 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Studiova</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg" />
-  <link rel="stylesheet" href="../assets/libs/owl.carousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="../assets/libs/aos-master/dist/aos.css">
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <title>Privacy notice · Fundacja Patrz Globalnie</title>
+  <meta name="description" content="How Fundacja Patrz Globalnie handles personal data on this website and in its projects, under the EU General Data Protection Regulation (GDPR).">
+  <meta name="theme-color" content="#070d11">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+  <link rel="stylesheet" href="../assets/redesign/css/fonts.css">
+  <link rel="stylesheet" href="../assets/redesign/css/site.css">
 </head>
+<body class="page-privacy">
+<a class="skip" href="#privacy">Skip to content</a>
 
-<body>
+<header class="nav is-solid" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Fundacja Patrz Globalnie, home"><img src="../assets/images/logos/logo-white.svg" alt="Fundacja Patrz Globalnie"></a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="about-us.html">About Us</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="reports.html">Reports</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</header>
 
-  <!-- Header -->
-  <header class="header border-4 border-primary border-top position-fixed start-0 top-0 w-100">
-    <div class="container">
-      <div class="header-wrapper d-flex align-items-center justify-content-between">
-        <div class="logo">
-          <a href="index.html" class="logo-white">
-            <img src="../assets/images/logos/logo-white.svg" alt="logo" class="img-fluid">
-          </a>
-          <a href="index.html" class="logo-dark">
-            <img src="../assets/images/logos/logo-dark.svg" alt="logo" class="img-fluid">
-          </a>
-        </div>
-        <div class="d-flex align-items-center gap-4">
+<main class="reports legal" id="privacy">
+  <div class="reports__glow" aria-hidden="true"></div>
+  <div class="wrap reports__wrap">
+    <p class="eyebrow">Privacy</p>
+    <h1>Privacy notice</h1>
+    <p class="lede">How we handle personal data on this website, when you contact us, and in our projects, in line with the EU General Data Protection Regulation (Regulation (EU) 2016/679, “GDPR”) and Polish law.</p>
+    <p class="legal__date">Last updated: 5 November 2026</p>
 
-          <div class="btn-group">
-            <button
-              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
-              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end p-4">
-              <div class="d-flex flex-column gap-6">
-                <div class="hstack justify-content-between border-bottom pb-6">
-                  <p class="mb-0 fs-5 text-dark">Menu</p>
-                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
-                </div>
-                <div class="d-flex flex-column gap-3">
-                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Home</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="about-us.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">About</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="projects.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Projects</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="blog.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Blog</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Services</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="contact.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Contact</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Docs</a>
-                    </li>
-                  </ul>
-                  <div class="hstack gap-3">
-                    <a href="sign-in.html"
-                      class="btn btn-outline-light fs-6 bg-white px-3 py-2 text-dark w-50 hstack justify-content-center">Sign
-                      In</a>
-                    <a href="sign-up.html"
-                      class="btn btn-dark text-white fs-6 bg-dark px-3 py-2 w-50 hstack justify-content-center">Sign
-                      Up</a>
-                  </div>
-                </div>
-                <div>
-                  <a class="text-dark" href="tel:+1-212-456-7890">+1-212-456-7890</a>
-                  <a class="fs-8 text-dark fw-bold" href="mailto:info@wrappixel.com">info@wrappixel.com</a>
-                </div>
-              </div>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+    <aside class="legal__summary" aria-labelledby="short">
+      <h2 id="short">The short version</h2>
+      <ul>
+        <li><b>No cookies, no analytics, no ads, no tracking.</b> This website does not set cookies or store anything on your device.</li>
+        <li><b>No forms.</b> We only receive personal data if you contact us or take part in a project.</li>
+        <li><b>Fonts are hosted by us,</b> so opening a page does not contact Google.</li>
+        <li><b>Videos load only when you press play.</b> Until then, YouTube receives nothing.</li>
+        <li><b>You have rights</b> to access, correct, delete and object, and you can complain to the Polish data protection authority (UODO).</li>
+      </ul>
+    </aside>
 
-  <!--  Page Wrapper -->
-  <div class="page-wrapper overflow-hidden">
+    <nav class="legal__toc" aria-label="Contents">
+      <ol>
+        <li><a href="#controller">Who is responsible</a></li>
+        <li><a href="#website">Visiting this website</a></li>
+        <li><a href="#cookies">Cookies and similar technologies</a></li>
+        <li><a href="#youtube">YouTube videos</a></li>
+        <li><a href="#links">Links to other websites and social media</a></li>
+        <li><a href="#contact">When you contact us</a></li>
+        <li><a href="#images">Photos and videos of people</a></li>
+        <li><a href="#projects">Taking part in our projects</a></li>
+        <li><a href="#transfers">Transfers outside the European Economic Area</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#complaint">Right to complain</a></li>
+        <li><a href="#other">Other information</a></li>
+      </ol>
+    </nav>
 
-    <!--  Banner Section -->
-    <section class="banner-section banner-inner-section position-relative overflow-hidden d-flex align-items-end"
-      style="background-image: url(../assets/images/backgrounds/privacy-policy-banner.jpg);">
-      <div class="container">
-        <div class="d-flex flex-column gap-4 pb-5 pb-xl-10 position-relative z-1">
-          <div class="row align-items-center">
-            <div class="col-xl-4">
-              <div class="d-flex align-items-center gap-4" data-aos="fade-up" data-aos-delay="100"
-                data-aos-duration="1000">
-                <img src="../assets/images/svgs/primary-leaf.svg" alt="" class="img-fluid animate-spin">
-                <p class="mb-0 text-white fs-5 text-opacity-70">Understand the <span class="text-primary">Rules &
-                    Guidelines</span>Before Using Our Services</p>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex align-items-end gap-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            <h1 class="mb-0 fs-16 text-white lh-1">Privacy Policy</h1>
-            <a href="javascript:void(0)" class="p-1 ps-7 bg-primary rounded-pill">
-              <span class="bg-white round-52 rounded-circle d-flex align-items-center justify-content-center">
-                <iconify-icon icon="lucide:arrow-up-right" class="fs-8 text-dark"></iconify-icon>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
+    <section id="controller">
+      <h2>1. Who is responsible for your data</h2>
+      <p>The controller of your personal data (Article 4(7) GDPR) is:</p>
+      <address class="legal__card">
+        <b>Fundacja Patrz Globalnie</b><br>
+        <mark class="todo">[registered address: street, number, postcode] Krosno, Poland</mark><br>
+        KRS: <mark class="todo">[KRS number]</mark> · NIP: <mark class="todo">[NIP]</mark> · REGON: <mark class="todo">[REGON]</mark><br>
+        Email: <mark class="todo">[contact email for data protection matters]</mark>
+      </address>
+      <p>You can also write to us through our <a href="https://www.facebook.com/profile.php?id=100095043654160" target="_blank" rel="noopener">Facebook</a> or <a href="https://www.instagram.com/patrz.globalnie/" target="_blank" rel="noopener">Instagram</a> page, but for requests about your data we recommend email or post, because social media messages are also processed by Meta (see <a href="#links">section 5</a>).</p>
+      <p>We have not appointed a Data Protection Officer, as we are not required to under Article 37 GDPR. All data protection questions go to the contact details above.</p>
     </section>
 
-    <!--  Privacy Policy Section -->
-    <section class="privacy-policy py-5 py-lg-11">
-      <div class="container">
-        <p class="fs-5 text-dark fw-medium">This Privacy Statement explains how personal information about our
-          (potential)
-          customers and other individuals using our services is collected, used, and disclosed by **Bootstrap Admin
-          Templates**
-          ("us", "we", "our"). This Privacy Statement describes our privacy practices in relation to the use of our
-          websites, including any customer portals or interactive websites <a class="fw-bold"
-            href="https://bootstrap-admintemplates.com/" target="_blank">(https://bootstrap-admintemplates.com/)</a>,
-          our
-          software (Bootstrap), services, solutions, tools, and related applications, services, and programs, including
-          research and marketing activities, offered by us (the "Services").
-        </p>
-        <p class="fs-5 text-dark fw-medium">By signing up for our Services and agreeing to our General Terms and
-          Conditions, you consent to the collection, usage, storage, and disclosure of your information as described in
-          this Privacy Statement.
-        </p>
-        <p class="fs-5 text-dark fw-medium">Our Services may contain links to external websites or services. The
-          privacy practices and content of such sites or services will be governed by their respective privacy policies.
-          We may update this Privacy Statement periodically. If changes occur, we will notify you by updating the date
-          at the top of the statement and providing additional notifications (such as a statement on our homepage or an
-          email notification). We encourage you to review this Privacy Statement whenever you use our Services to stay
-          informed about how we handle your information.
-        </p>
-        <h4 class="my-4">Personal Information Collection</h4>
-        <p class="fs-5 text-dark fw-medium">While using our Services, we may ask you to provide certain personally
-          identifiable information that can be used to contact or identify you. This may include basic user details
-          (such as your name, email address, telephone number, and profile picture), company information, and any other
-          data you choose to share with us.
-
-          We do not collect financial information (such as credit card details or security codes). All payments are
-          handled through a third-party provider. If applicable, please refer to their Privacy
-          Policy: <a class="fw-bold" href="https://bootstrap-admintemplates.com/"
-            target="_blank">https://bootstrap-admintemplates.com/</a>.
-        </p>
-        <h4 class="my-4">Personal Information You Provide to Us</h4>
-        <p class="fs-5 text-dark fw-medium">When using our Services, you may provide personally identifiable
-          information, such as when creating an account, requesting customer support, or interacting with our platform.
-        <p class="fs-5 text-dark fw-medium mb-0">As noted, we do not collect financial details directly. Payments are
-          processed via third-party providers. Please review their privacy policy for details: <a class="fw-bold"
-            href="https://bootstrap-admintemplates.com/" target="_blank">https://bootstrap-admintemplates.com/</a>.
-        </p>
-      </div>
+    <section id="website">
+      <h2>2. Visiting this website</h2>
+      <p>This is a static website: it has no user accounts, no comment section and no forms, and we do not run any analytics or advertising tools.</p>
+      <p><b>Hosting.</b> The website is hosted on GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. When you open a page, your browser necessarily sends technical data to GitHub’s servers: your IP address, the date and time, the page requested, and your browser and operating system (the “user agent”). GitHub uses this data to deliver the website and to keep it secure, for example against attacks, and keeps it in server logs according to its own <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacy statement</a>. We do not receive these logs and cannot use them to identify you.</p>
+      <ul>
+        <li><b>Purpose:</b> showing you the website and keeping it secure and available.</li>
+        <li><b>Legal basis:</b> our legitimate interest in running a secure, working website (Article 6(1)(f) GDPR).</li>
+        <li><b>Recipient:</b> GitHub, Inc., as our hosting provider. On transfers to the USA, see <a href="#transfers">section 9</a>.</li>
+      </ul>
+      <p><b>Fonts.</b> The fonts on this site (Manrope, Unbounded, JetBrains Mono and Caveat, all under the SIL Open Font License) are stored on our own hosting. Opening a page does not connect you to Google Fonts or any other font service.</p>
+      <p><b>Security.</b> The website is only served over an encrypted connection (HTTPS).</p>
     </section>
 
+    <section id="cookies">
+      <h2>3. Cookies and similar technologies</h2>
+      <p>This website does <b>not</b> set any cookies and does not use local storage, fingerprinting or any other way of storing or reading information on your device. That is why there is no cookie banner: none is needed.</p>
+      <p>The only exception is a YouTube video that <b>you choose to play</b> (see <a href="#youtube">section 4</a>). Pressing play is your consent to that one video loading, as required by Article 5(3) of the ePrivacy Directive (2002/58/EC) and Article 399 of the Polish Electronic Communications Law (<span lang="pl">Prawo komunikacji elektronicznej</span>).</p>
+    </section>
+
+    <section id="youtube">
+      <h2>4. YouTube videos</h2>
+      <p>Some project pages show videos hosted on YouTube. We use a “click to load” solution: until you press play, the page shows only a placeholder and <b>no data is sent to YouTube or Google</b>. When you press play, the video loads from YouTube’s privacy-enhanced domain (<code>youtube-nocookie.com</code>).</p>
+      <p>From that moment, Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, receives your IP address and technical information about your device and browser, and may store cookies or similar data on your device to play and measure the video. Google is responsible for that processing under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>, and data may be transferred to Google LLC in the USA (see <a href="#transfers">section 9</a>).</p>
+      <ul>
+        <li><b>Legal basis:</b> your consent, given by pressing play (Article 6(1)(a) GDPR and the provisions on terminal equipment in <a href="#cookies">section 3</a>).</li>
+        <li><b>Withdrawing consent:</b> simply don’t press play, or delete YouTube/Google cookies in your browser settings. Withdrawal does not affect what happened before it.</li>
+        <li>If you are under 16, please ask a parent or guardian before playing videos.</li>
+      </ul>
+    </section>
+
+    <section id="links">
+      <h2>5. Links to other websites and social media</h2>
+      <p>The website contains ordinary links to other services, for example Facebook and Instagram (Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Ireland), Google Drive folders with project materials (Google Ireland Limited), local news websites, and our partners’ websites. These are plain links, not embedded plugins: <b>nothing is sent to those services until you click</b>. Once you are on their website, their own privacy policies apply.</p>
+      <p><b>Our Facebook and Instagram pages.</b> When you visit our pages on Facebook or Instagram, Meta processes your data under its own policies. For the page statistics Meta provides to us (“Page Insights”), we and Meta Platforms Ireland Limited are joint controllers under Article 26 GDPR. Meta has taken on primary responsibility for this processing and for handling your rights in the <a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank" rel="noopener">Page Insights Controller Addendum</a>. We only see anonymous, aggregated statistics. Our legal basis is our legitimate interest in communicating about our work (Article 6(1)(f) GDPR).</p>
+    </section>
+
+    <section id="contact">
+      <h2>6. When you contact us</h2>
+      <p>If you write to us by email, by post, or through Facebook or Instagram, we process the data you give us: usually your name, contact details, the content of your message and, on social media, your profile name.</p>
+      <ul>
+        <li><b>Purpose:</b> answering you and handling your request.</li>
+        <li><b>Legal basis:</b> our legitimate interest in replying to messages (Article 6(1)(f) GDPR). If you ask about joining a project, steps taken at your request before an agreement (Article 6(1)(b) GDPR).</li>
+        <li><b>How long:</b> as long as needed to deal with your matter, and then no longer than 12 months after the conversation ends, unless the matter continues (for example, you join a project; see <a href="#projects">section 8</a>) or we must keep it to establish or defend legal claims.</li>
+        <li><b>Recipients:</b> our email provider <mark class="todo">[name of email provider, e.g. Google Workspace or Microsoft 365]</mark> acting on our behalf (Article 28 GDPR), and Meta for messages sent on its platforms.</li>
+        <li>Giving us your data is voluntary, but we cannot reply without contact details.</li>
+      </ul>
+    </section>
+
+    <section id="images">
+      <h2>7. Photos and videos of people on this website</h2>
+      <p>To show and report on our projects, this website publishes photos and videos from our events, which may show participants, facilitators and audiences.</p>
+      <ul>
+        <li><b>Purpose:</b> documenting and promoting our projects, including the publicity obligations of projects co-funded by the European Union.</li>
+        <li><b>Legal basis:</b> the consent of the people shown (Article 6(1)(a) GDPR and Article 81 of the Polish Act on Copyright and Related Rights). For people under 18, consent is given by a parent or legal guardian. Where a person only appears as a detail of a larger whole, such as a crowd at a public event, Polish law allows publication without individual consent; in these cases our legal basis is our legitimate interest in documenting public events (Article 6(1)(f) GDPR).</li>
+        <li><b>How long:</b> until consent is withdrawn or an objection is upheld, or until the material is no longer relevant to our activities.</li>
+        <li><b>Your choice:</b> if you appear in a photo or video and want it removed or blurred, contact us (<a href="#controller">section 1</a>) and we will act promptly. Withdrawing consent does not affect publication before the withdrawal.</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>8. Taking part in our projects</h2>
+      <p>When you apply for or take part in one of our projects, such as an Erasmus+ youth exchange, we receive more information about you, for example your name, date of birth, contact details, nationality, travel details, emergency contact, and, if you share it, information about your health or dietary needs so we can keep you safe. You receive detailed information about this processing when you register. In short:</p>
+      <ul>
+        <li><b>Purposes:</b> organising the project (travel, accommodation, insurance, safety, certificates such as Youthpass) and reporting to the funders.</li>
+        <li><b>Legal bases:</b> the participation agreement (Article 6(1)(b) GDPR); our legal obligations under the grant agreement and accounting law (Article 6(1)(c) GDPR); and, for health information, your explicit consent (Article 9(2)(a) GDPR).</li>
+        <li><b>Recipients:</b> for Erasmus+ projects, the Polish National Agency, the Foundation for the Development of the Education System (<span lang="pl">Fundacja Rozwoju Systemu Edukacji</span>, FRSE), and the European Commission, through the official Erasmus+ IT tools; partner organisations in the project; and service providers such as accommodation, transport and insurance companies, only as far as needed.</li>
+        <li><b>How long:</b> as long as the grant agreement and the law require. For Erasmus+ projects, this is usually 5 years after the final payment of the grant (3 years for grants up to EUR 60,000), plus any longer period required by Polish accounting and tax law.</li>
+      </ul>
+    </section>
+
+    <section id="transfers">
+      <h2>9. Transfers outside the European Economic Area</h2>
+      <p>Some of the services above are provided by companies based in, or connected to, the USA: GitHub, Inc. (hosting), and Google LLC and Meta Platforms, Inc. (only when you play a video or use their platforms). Transfers to these companies are based on the European Commission’s adequacy decision for the <b>EU–US Data Privacy Framework</b> of 10 July 2023 (Article 45 GDPR), for companies certified under it, and otherwise on the Commission’s <b>Standard Contractual Clauses</b> (Article 46(2)(c) GDPR). You can ask us for more information about these safeguards.</p>
+    </section>
+
+    <section id="rights">
+      <h2>10. Your rights</h2>
+      <p>Under the GDPR you have the right to:</p>
+      <ul class="legal__rights">
+        <li><b>Access</b> your data and get a copy (Article 15)</li>
+        <li><b>Correct</b> inaccurate or incomplete data (Article 16)</li>
+        <li><b>Have your data deleted</b> (“right to be forgotten”, Article 17)</li>
+        <li><b>Restrict</b> processing (Article 18)</li>
+        <li><b>Data portability</b>: receive your data in a machine-readable format (Article 20)</li>
+        <li><b>Object</b> to processing based on our legitimate interests (Article 21)</li>
+        <li><b>Withdraw consent</b> at any time, without affecting processing before the withdrawal (Article 7(3))</li>
+      </ul>
+      <p>To use your rights, contact us using the details in <a href="#controller">section 1</a>. It is free. We will reply within one month, which can be extended by two further months for complex requests; we will tell you if that happens (Article 12(3) GDPR). We may ask you to confirm your identity first.</p>
+      <p>We do not use automated decision-making or profiling that has legal or similarly significant effects on you (Article 22 GDPR).</p>
+    </section>
+
+    <section id="complaint">
+      <h2>11. Right to complain</h2>
+      <p>If you think we process your data unlawfully, you can complain to a supervisory authority (Article 77 GDPR). In Poland, this is the President of the Personal Data Protection Office (<span lang="pl">Prezes Urzędu Ochrony Danych Osobowych</span>, UODO), ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>. You can also complain in the EU country where you live or work. We would appreciate the chance to address your concerns first, so please feel free to contact us.</p>
+    </section>
+
+    <section id="other">
+      <h2>12. Other information</h2>
+      <p><b>Is providing data required?</b> No. You can browse the website without giving us any personal data. Contacting us and taking part in projects is voluntary, though we need certain information to reply to you or to organise a project.</p>
+      <p><b>Children.</b> This website is not directed at children under 16, and we do not knowingly collect their data through it. For minors taking part in our projects, a parent or legal guardian is involved as described in <a href="#projects">section 8</a>.</p>
+      <p><b>Changes to this notice.</b> We may update this notice when our website or activities change. The date at the top shows the latest version.</p>
+    </section>
+
+    <p class="links legal__end"><a class="btn btn--ghost" href="index.html">Back to the home page</a></p>
   </div>
+</main>
 
-  <footer class="footer bg-dark py-5 py-lg-11 py-xl-12">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-5 mb-8 mb-xl-0">
-          <div class="d-flex flex-column gap-8 pe-xl-5">
-            <h2 class="mb-0 text-white">Build something together?</h2>
-            <div class="d-flex flex-column gap-2">
-              <a href="https://www.wrappixel.com/" target="_blank" class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:arrow-up-right" class="fs-7 text-primary"></iconify-icon>
-                info@wrappixel.com
-              </a>
-              <a href="https://maps.app.goo.gl/hpDp81fqzGt5y4bC8" target="_blank"
-                class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:map-pin" class="fs-7 text-primary"></iconify-icon>
-                info@wrappixel.com
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
-          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="index.html">Home</a></li>
-            <li><a class="link-hover fs-5 text-white" href="about-us.html">About</a></li>
-            <li><a class="link-hover fs-5 text-white" id="services" href="#services">Services</a></li>
-            <li><a class="link-hover fs-5 text-white" href="projects.html">Work</a></li>
-            <li><a class="link-hover fs-5 text-white" href="terms-and-conditions.html">Terms</a></li>
-            <li><a class="link-hover fs-5 text-white" href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a class="link-hover fs-5 text-white" href="404.html">Error 404</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
-          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="#!">Facebook</a></li>
-            <li><a class="link-hover fs-5 text-white" href="#!">Instagram</a></li>
-            <li><a class="link-hover fs-5 text-white" href="#!">Twitter</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-xl-3 mb-8 mb-xl-0">
-          <p class="mb-0 text-white text-opacity-70 text-md-end">© Studiova copyright 2025</p>
-        </div>
-      </div>
-    </div>
-  <p class="mb-0 text-white text-opacity-70 text-md-center mt-10">Distributed by <a class="text-white" href="https://www.themewagon.com" target="_blank">ThemeWagon</a></p>
-  </footer>
+<footer class="foot foot--simple">
+  <nav class="foot__links" aria-label="Footer">
+    <a href="index.html">Home</a><a href="about-us.html">About</a><a href="projects.html">All projects</a><a href="contact.html">Contact</a><a href="reports.html">Reports</a><a href="privacy-policy.html" aria-current="page">Privacy policy</a>
+  </nav>
+  <p class="foot__social"><a href="https://www.facebook.com/profile.php?id=100095043654160" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/patrz.globalnie/" target="_blank" rel="noopener">Instagram</a></p>
+  <p class="foot__legal">© Fundacja Patrz Globalnie <span class="year">2026</span></p>
+</footer>
 
-  <div class="get-template hstack gap-2">
-    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
-      id="scrollToTopBtn">
-      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
-    </button>
-  </div>
-
-
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="../assets/libs/aos-master/dist/aos.js"></script>
-  <script src="../assets/js/custom.js"></script>
-  <!-- solar icons -->
-  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+<script>
+  (function () {
+    var nav = document.getElementById('nav'), t = nav.querySelector('.nav__toggle');
+    t.addEventListener('click', function () { var o = nav.classList.toggle('is-open'); t.setAttribute('aria-expanded', o); });
+    document.querySelectorAll('.year').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+  })();
+</script>
 </body>
-
 </html>

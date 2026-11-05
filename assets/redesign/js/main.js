@@ -111,19 +111,6 @@ async function init3D() {
     requestScroll();
   });
 
-  // footer eye: watches you, then closes when you reach the very bottom
-  const foot = $('#foot');
-  whenNear(foot, async () => {
-    const feye = createEye($('.foot__eye', foot), { mode: 'footer' });
-    let atBottomTimer = 0;
-    onVisible(foot, v => { feye.setVisible(v); if (v) setTimeout(() => feye.blink(), 600); }, '0%');
-    window.addEventListener('scroll', () => {
-      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
-      clearTimeout(atBottomTimer);
-      if (atBottom) atBottomTimer = setTimeout(() => feye.setSleep(1), 1400); else feye.setSleep(0);
-    }, { passive: true });
-  });
-
   requestScroll();
 }
 

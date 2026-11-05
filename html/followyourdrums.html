@@ -1,433 +1,181 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Follow Your Drums!</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg" />
-  <link rel="stylesheet" href="../assets/libs/owl.carousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="../assets/libs/aos-master/dist/aos.css">
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <title>Follow Your Drums! · Fundacja Patrz Globalnie</title>
+  <meta name="description" content="Follow Your Drums!, an Erasmus+ Youth Exchange (17–25 September 2025) where young people from Portugal, Hungary, Romania, North Macedonia and Poland turned waste into music.">
+  <meta name="theme-color" content="#070d11">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+  <link rel="stylesheet" href="../assets/redesign/css/fonts.css">
+  <link rel="stylesheet" href="../assets/redesign/css/site.css">
 </head>
+<body class="page-story">
+<a class="skip" href="#story">Skip to content</a>
 
-<body>
+<header class="nav is-solid" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Fundacja Patrz Globalnie, home"><img src="../assets/images/logos/logo-white.svg" alt="Fundacja Patrz Globalnie"></a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="about-us.html">About Us</a>
+    <a href="index.html#projects" aria-current="page">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="reports.html">Reports</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</header>
 
-  <!-- Header -->
-   <header class="header border-4 border-primary border-top position-fixed start-0 top-0 w-100">
-    <div class="container">
-      <div class="header-wrapper d-flex align-items-center justify-content-between">
-        <div class="logo">
-          <a href="index.html" class="logo-white">
-            <img src="../assets/images/logos/logo-white.svg" alt="logo" class="img-fluid">
-          </a>
-          <a href="index.html" class="logo-dark">
-            <img src="../assets/images/logos/logo-dark.svg" alt="logo" class="img-fluid">
-          </a>
-        </div>
-        <div class="d-flex align-items-center gap-4">
+<main class="story" id="story">
+  <!-- the original project banner, kept as it was -->
+  <figure class="story__banner">
+    <img src="../assets/redesign/img/drums/banner.jpg" alt="Collage of photos from Follow Your Drums!: making instruments, playing music outdoors and the group together" width="1760" height="750">
+  </figure>
 
-          <div class="btn-group">
-            <button
-              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
-              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end p-4">
-              <div class="d-flex flex-column gap-6">
-                <div class="hstack justify-content-between border-bottom pb-6">
-                  <p class="mb-0 fs-5 text-dark">Menu</p>
-                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
-                </div>
-                <div class="d-flex flex-column gap-3">
-                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Home</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="about-us.html" aria-current="true"
-                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">About</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="projects.html" class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Projects</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="blog.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">News</a>
-                    </li>
-<!-- 
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Services</a>
-                    </li> -->
-                    <li class="header-item">
-                      <a href="contact.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Contact</a>
-                    </li>
-                    <!-- <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Docs</a>
-                    </li> -->
-                  </ul>
-                  <!-- <div class="hstack gap-3">
-                    <a href="sign-in.html"
-                      class="btn btn-outline-light fs-6 bg-white px-3 py-2 text-dark w-50 hstack justify-content-center">Sign
-                      In</a>
-                    <a href="sign-up.html"
-                      class="btn btn-dark text-white fs-6 bg-dark px-3 py-2 w-50 hstack justify-content-center">Sign
-                      Up</a>
-                  </div> -->
-                </div>
-                <!-- <div>
-                  <a class="text-dark" href="tel:+1-212-456-7890">+1-212-456-7890</a>
-                  <a class="fs-8 text-dark fw-bold" href="mailto:info@wrappixel.com">info@wrappixel.com</a>
-                </div> -->
-              </div>
-            </ul>
-          </div>
-        </div>
+  <div class="wrap story__wrap">
+    <a class="story__back" href="projects.html">← All projects</a>
+    <p class="eyebrow">Erasmus+ Youth Exchange · Project story</p>
+    <h1>Follow Your <span>Drums!</span></h1>
+    <p class="lede">Turning waste into music: can music save our planet?</p>
+
+    <dl class="story__facts story__facts--4">
+      <div><dt>When</dt><dd>17–25 September 2025</dd></div>
+      <div><dt>Where</dt><dd>Krosno, Poland</dd></div>
+      <div><dt>From</dt><dd>Portugal, Hungary, Romania, North Macedonia, Poland</dd></div>
+      <div><dt>Subjects</dt><dd>Music, junk art</dd></div>
+    </dl>
+
+    <!-- 01 -->
+    <section class="chapter fade" aria-labelledby="c1">
+      <p class="chapter__no">01</p>
+      <div class="chapter__text">
+        <h2 id="c1">Getting in tune</h2>
+        <p>From 17 to 25 September 2025, we took part in the Erasmus+ youth exchange <b>Follow Your Drums!</b> in Krosno, Poland, together with participants from Portugal, Hungary, Romania, North Macedonia and Poland. On the first day we focused on getting to know each other and building a positive group atmosphere. Very quickly, we felt comfortable, connected and ready to collaborate.</p>
+        <p>The project was presented in a dynamic, interactive way that immediately motivated us. Instead of sitting through a traditional workshop, we explored <b>Erasmus+ opportunities</b> by creating <b>AI-generated videos</b>, developing <b>digital skills</b> while promoting youth exchanges, volunteering and mobility programmes.</p>
+        <p>Later, we went into the city to <b>pick up trash and interview local residents</b>. This helped us <b>support the environment</b>, <b>connect with the local community</b> and raise awareness about sustainability.</p>
       </div>
-    </div>
-  </header>
-
-  <!--  Page Wrapper -->
-  <div class="page-wrapper overflow-hidden">
-
-    <!--  Banner Section -->
-    <section class="banner-section banner-inner-section position-relative overflow-hidden d-flex align-items-end"
-      style="background-image: url(../assets/images/backgrounds/followyourdrumsbanner.png);">
-      <div class="container">
-        <div class="d-flex flex-column gap-4 pb-5 pb-xl-10 position-relative z-1">
-          <div class="row align-items-center">
-            <div class="col-xl-4">
-              <div class="d-flex align-items-center gap-4" data-aos="fade-up" data-aos-delay="100"
-                data-aos-duration="1000">
-                <img src="../assets/images/svgs/primary-leaf.svg" style="max-width:10%;" alt="" class="img-fluid animate-spin" style="max-width:10%;">
-                <p class="mb-0 text-white fs-5 text-opacity-70">Turning <span class="text-primary">Waste into Music:
-                    </span> Can Music Save Our Planet</p>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex align-items-end gap-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            <h1 class="mb-0 fs-16 text-white lh-1" style="font-size: 3.5rem !important;">Follow Your Drums!</h1>
-          </div>
-        </div>
+      <div class="chapter__media shots shots--2">
+        <figure class="shot shot--wide"><img src="../assets/redesign/img/drums/drums-08.jpg" alt="The group sitting in a circle on the grass outdoors" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/drums/drums-02.jpg" alt="A participant sitting on a bench outdoors, reading notes" width="274" height="343" loading="lazy"></figure>
       </div>
     </section>
 
-    <!--  Project Detail Section -->
-    <section class="project-detail py-5 py-lg-11 py-xl-12">
-      <div class="container">
-        <div class="d-flex flex-column gap-5 gap-xl-11">
-          <div class="d-flex flex-column gap-8">
-            <a href="projects.html" class="btn py-2 ps-3 pe-5" data-aos="fade-up" data-aos-delay="100"
-              data-aos-duration="1000">
-              <span class="btn-text pe-1">Back</span>
-              <iconify-icon icon="lucide:arrow-up-right"
-                class="btn-icon bg-white text-dark round-36 rounded-circle hstack justify-content-center fs-5 shadow-sm"></iconify-icon>
-            </a>
-            <div class="d-md-flex align-items-center gap-4 gap-lg-8" data-aos="fade-up" data-aos-delay="200"
-              data-aos-duration="1000">
-              <div class="d-flex flex-column gap-2 py-2 pe-4 pe-lg-8 border-end">
-                <p class="mb-0">Subjects</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">Music, Junk Art</p>
-              </div>
-              <div class="d-flex flex-column gap-2 py-2 pe-4 pe-lg-8 border-end">
-                <p class="mb-0">Where</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">Krosno, Poland</p>
-              </div>
-              <!-- <div class="d-flex flex-column gap-2 py-2 pe-4 pe-lg-8 border-end">
-                <p class="mb-0">Raised</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">$1.1M</p>
-              </div> -->
-              <div class="d-flex flex-column gap-2 py-2">
-                <p class="mb-0">When</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">17 - 25 Sept 2025</p>
-              </div>
-            </div>
-          </div>
-          <div class="row gap-4 gap-lg-0">
-            <div class="col-lg-4">
-              <h2 class="fs-13 mb-0" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">Description
-              </h2>
-            </div>
-            <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                <p class="fs-5 mb-6">
-               From 17–25 September, we took part in the Erasmus+ youth exchange
-                <b>Follow Your Drums!</b> in Krosno, Poland, together with participants from Portugal, Hungary, Romania, North Macedonia, Poland. <br>
-                 On the first day, we focused on getting to know each other and creating a positive 
-                 group atmosphere. Very quickly, we felt comfortable, connected, and ready to collaborate.
-                  The project presentation was done in a dynamic and interactive way, which immediately 
-                  motivated us and helped us understand the goals of the exchange.
-             </p>
-                
-                <!-- <h4>1. PurseBlog</h4> -->
-                <p class="fs-5 mb-6">
-                We explored <b>Erasmus+ opportunities</b> by creating <b>AI-generated videos</b> 
-                instead of sitting through a traditional workshop. This allowed us to <b>develop d
-                    igital skills</b> while promoting youth exchanges, volunteering, and mobility programs.
-                 Later, we went into the city to <b>pick up trash and interview local residents</b>.
-                  This action helped us <b>support the environment</b>, but also <b>connect with the 
-                    local community</b> and raise awareness about sustainability.</p>
-                <!-- <h4>2. The MyBag Blog</h4>
-                <p class="fs-5 mb-0">
-                  The MyBag Blog is a hub for designer handbag inspiration, trends, and style guides. Packed with the
-                  latest trends, blogger styles, and, of course, handbags, it serves as a valuable resource for fashion
-                  enthusiasts seeking to stay updated on current styles.
-                </p> -->
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums1.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums2.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums3.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums4.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums5.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums6.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="row justify-content-end">
-            <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <p class="fs-5 mb-0">
-                Music was the <b>core of the project</b>. With the support of our facilitator and drumming expert Piotr, we <b>transformed collected waste into percussion instruments</b>. We sanitized materials, decorated them, and turned <b>trash into art</b>. Then we formed groups and <b>began composing rhythms and songs</b>, either by covering known tracks or creating our own. It was inspiring to see how much creativity could come from recycled objects. </p>
-               
-                <!-- <h4>1. Define Your Goals:</h4> -->
-                <p class="fs-5 mb-6">
-                    <br>
-               As the week continued, our <b>teamwork and musical skills grew stronger</b>. We spent time practicing, experimenting, and <b>jamming as a full group</b>. One of the highlights was composing <b>one big group song</b> that we all performed together. We felt like a <b>real band</b>, learning how to listen, synchronize, and support each other. Later, each group <b>recorded their songs using multiple devices</b>, and we mixed the best audio to achieve <b>high-quality sound</b> our first experience with <b>music production</b>.  </p>
-               
-              </div>
-            </div>
-            <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums7.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums8.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums9.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums11.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums10.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums12.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <!-- <h4>1. Define Your Goals:</h4> -->
-                <p class="fs-5 mb-6">
-                    <br>
-                    <br>
-                    <br>
-              We also combined creativity with technology by producing <b>music videos using AI tools</b> such as Viddo.ai and Google Veo3. We merged AI-generated visuals with our own footage, creating modern and artistic results. This activity showed us how <b>innovation and digital tools can enhance artistic expression</b> and make our work more impactful. </p>
-              </div>
-              <br>
-                    <br>
-            </div>
-             <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums13.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums14.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums15.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-           <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums16.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums17.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/followyourdrums/drums18.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-               
-                <p class="fs-5 mb-6">
-                    <br>
-                   One of the most eye-opening moments was the <b>visit to MPGK Krosno</b>, the city’s waste management and water treatment facility. We learned how <b>recycling and resource management work in real life</b>, how <b>AI and robotics support the process</b>, and how <b>clean energy is produced from bio-fermentation and solar farms</b>. We were impressed that this energy is used to <b>power public buses and electric vehicles</b>. Meeting the <b>president of MPGK</b> gave us deeper insight into sustainability on a regional level.
-                    <br>
-                    <br>
-                   The project concluded with a <b>public concert at the Krosno Youth Centre</b>, where we <b>performed our songs live</b> and even <b>jammed with the audience and local decision-makers</b>. It was a powerful moment to share our message with the community. On the final day, we reflected on everything we learned, received our <b>Youthpass certificates</b>, and celebrated with farewell activities. We returned home with <b>new friendships, confidence, creative skills, and the belief that when we follow our rhythm together, we can inspire real change.</b>
-               </p>
-              </div>
-              <!-- <ul style="list-style-type: disc; padding-left: 20px;">
-                <li> <a href="https://www.krosno.pl/aktualnosci/mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym,23986"
-                    target="_blank"> <h5> City of Krosno (Municipality)</h5></a></li>
-                <li> <a href="https://www.krosno112.pl/artykul/25216,krosnienski-holding-komunalny-odwiedzili-mlodzi-ekolodzy-z-europy"
-                    target="_blank"> <h5> Krosno 112 (Local Newspaper)</h5></a></li>
-                <li> <a href="https://www.facebook.com/mpgk.krosno/posts/pfbid02q7bbKZDxWJ8jJh5ZLv2ox6ueCFxaCNRmkpJUEqGYntCmaHN2LinM2NHTJexSw6L8l"
-                    target="_blank"> <h5> MPGK Krosno (Facebook)</h5></a></li>
-                <li> <a href="https://aukcje.ekrosno.pl/aktualnosci1/1339-mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym"
-                    target="_blank"> <h5> MPGK Krosno (Website)</h5></a></li>
-                <li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02fyP7obz9Gj789Q1tokipeTPV6pFjLqWF1v14vwbBa9zyzAsmMEoHAFZAMXAC6dwel&id=61551171125702" target="_blank">
-                    <h5>Centrum Aktywności Młodzieży Krosno (Youth Centre Krosno)</h5>
-                </a></li>
-                <li><a href="https://www.facebook.com/KrosnoDziejeSie/posts/pfbid0biTZKMnmpYdQKj9QrzFW39mzXv6tmbt3HiGiN1mcfgRMzuz7U2srsuyNNz7zzSZ2l" target="_blank">
-                    <h5>Dzieje się w Krośnie</h5>
-                </a></li>
-                <li><a href="https://krosno24.pl/wydarzenia/fashion-forward-recycled-runway-pokaz-mody-w-cam-w1162" target="_blank">
-                    <h5>Krosno 24 (local newspaper)</h5>
-                </a></li>
-                <li><a href="https://www.facebook.com/mskkrosno/posts/974962434747464/?_rdr" target="_blank">
-                    <h5>Młodzieżowy Strajk Klimatyczny - Krosno</h5>
-                </a></li>
-                <li><a href="https://conexaojovem.pt/fashion-forward-recycled-runway-kombornia-polonia/" target="_blank">
-                    <h5>Conexao Jovem (Our Portuguese Partner)</h5>
-                </a></li>
-                <li><a href="https://www.facebook.com/yagexcel/posts/pfbid02YmSJzAp9bhcAnihfFs7Df6ZcmWP6QuagbA5eC1VUAZkF9nPgo88NgCTA3eH5pox4l " target="_blank">
-                    <h5>Association for Youth Activism and Growth - Excel (Our Macedonian Partner)</h5>
-                </a></li>
-                    <br>
-                    <br>
-              </ul> -->
-
-              <br>
-                    <br>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <iframe width="100%" height="100%" 
-                         width="560" height="315" src="https://www.youtube.com/embed/WDkQHS0eSNw?si=rkvkhrIXOVhy4VTu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>           
-                </div>
-            <div class="col-lg-4 mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <iframe width="100%" height="100%" 
-                         width="560" height="315"src="https://www.youtube.com/embed/p9xEXCWl-80?si=xij-S8S1E7TcbkpV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>           
-                </div>
-                 <div class="col-lg-4 mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <iframe width="100%" height="100%" 
-                         width="560" height="315" src="https://www.youtube.com/embed/NGuM7o3fPpk?si=l53EX5IJxTp26oYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>         
-                </div>
-                 <div class="col-lg-4 mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <iframe width="100%" height="100%" 
-                         width="560" height="315" src="https://www.youtube.com/embed/81eMsw0ZUfA?si=3B5aPTGb5vAt24yX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                 <div class="col-lg-4 mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <iframe width="100%" height="100%" 
-                         width="560" height="315" src="https://www.youtube.com/embed/_aZ8G-rYMJ0?si=Q-yJVUW_9nbSd_hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-
-            </div>
-            <br>
-         <a href="https://drive.google.com/drive/folders/1TioNIIsclsTafJR85tz8IPE1Zgodd4iZ?usp=sharing" target="_blank" class="btn py-2 ps-3 pe-5" data-aos="fade-up" data-aos-delay="100"
-              data-aos-duration="1000">
-              <span class="btn-text pe-1">See All Resources and Photos</span>
-              <iconify-icon icon="lucide:arrow-up-right"
-                class="btn-icon bg-white text-dark round-36 rounded-circle hstack justify-content-center fs-5 shadow-sm"></iconify-icon>
-            </a>
-
-             <div class="row">
-            <div class="col-lg-7 mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/co-funded-black.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            </div>
+    <!-- 02 -->
+    <section class="chapter chapter--flip fade" aria-labelledby="c2">
+      <p class="chapter__no">02</p>
+      <div class="chapter__text">
+        <h2 id="c2">Trash into instruments</h2>
+        <p>Music was the <b>core of the project</b>. With the support of our facilitator and drumming expert Piotr, we <b>transformed collected waste into percussion instruments</b>. We sanitised the materials, decorated them, and turned <b>trash into art</b>.</p>
+        <p>Then we formed groups and <b>began composing rhythms and songs</b>, either covering known tracks or creating our own. It was inspiring to see how much creativity could come from recycled objects.</p>
+      </div>
+      <div class="chapter__media shots shots--3">
+        <figure class="shot shot--wide"><img src="../assets/redesign/img/drums/drums-01.jpg" alt="Participants outdoors turning buckets and pipes into drums" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/drums/drums-04.jpg" alt="Participants decorating their instruments at an outdoor table" width="257" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/drums/drums-07.jpg" alt="A participant playing a homemade drum on the grass" width="257" height="343" loading="lazy"></figure>
       </div>
     </section>
 
-  </div>
-
-  <footer class="footer bg-dark py-5 py-lg-11 py-xl-12">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-5 mb-8 mb-xl-0">
-          <div class="d-flex flex-column gap-8 pe-xl-5">
-            <h2 class="mb-0 text-white">Join Us on Our Journey!</h2>
-            <!-- <div class="d-flex flex-column gap-2">
-              <a href="https://www.wrappixel.com/" target="_blank" class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:arrow-up-right" class="fs-7 text-primary"></iconify-icon>
-                facebook.com/patrz.globalnie
-              </a>
-              <a href="https://maps.app.goo.gl/hpDp81fqzGt5y4bC8" target="_blank"
-                class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:map-pin" class="fs-7 text-primary"></iconify-icon>
-                instagram.com/patrz.globalnie
-              </a> 
-            </div> -->
-          </div>
-        </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
-          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="index.html">Home</a></li>
-            <li><a class="link-hover fs-5 text-white" href="about-us.html">About</a></li>
-            <!-- <li><a class="link-hover fs-5 text-white" id="services" href="#services">Services</a></li> -->
-            <li><a class="link-hover fs-5 text-white" href="projects.html">Projects</a></li>
-            <li><a class="link-hover fs-5 text-white" href="reports.html">Reports</a></li>
-            <!-- <li><a class="link-hover fs-5 text-white" href="privacy-policy.html">Privacy Policy</a></li> -->
-            <!-- <li><a class="link-hover fs-5 text-white" href="404.html">Error 404</a></li> -->
-          </ul>
-        </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
-          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="https://www.facebook.com/profile.php?id=100095043654160">Facebook</a></li>
-            <li><a class="link-hover fs-5 text-white" href="https://www.instagram.com/patrz.globalnie/">Instagram</a></li>
-            <!-- <li><a class="link-hover fs-5 text-white" href="#!">Twitter</a></li> -->
-          </ul>
-        </div>
-        <div class="col-md-4 col-xl-3 mb-8 mb-xl-0">
-          <p class="mb-0 text-white text-opacity-70 text-md-end">©  Fundacja Patrz Globalnie 2025 | All Rights Reserved</p>
-        </div>
+    <!-- 03 -->
+    <section class="chapter fade" aria-labelledby="c3">
+      <p class="chapter__no">03</p>
+      <div class="chapter__text">
+        <h2 id="c3">Becoming a band</h2>
+        <p>As the week went on, our <b>teamwork and musical skills grew stronger</b>. We spent time practising, experimenting and <b>jamming as a full group</b>. One of the highlights was composing <b>one big group song</b> that we all performed together. We felt like a <b>real band</b>, learning how to listen, synchronise and support each other.</p>
+        <p>Each group then <b>recorded their songs on several devices</b>, and we mixed the best takes to get <b>high-quality sound</b>: our first experience of <b>music production</b>.</p>
       </div>
-    </div>
-  <!-- <p class="mb-0 text-white text-opacity-70 text-md-center mt-10">Distributed by <a class="text-white" href="https://www.themewagon.com" target="_blank">ThemeWagon</a></p> -->
-  </footer>
+      <div class="chapter__media shots shots--3">
+        <figure class="shot shot--wide"><img src="../assets/redesign/img/drums/drums-05.jpg" alt="Participants recording and mixing music on laptops around a table" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/drums/drums-06.jpg" alt="A participant playing the ukulele outdoors" width="257" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/drums/drums-09.jpg" alt="Participants rehearsing with their recycled instruments" width="257" height="343" loading="lazy"></figure>
+      </div>
+    </section>
 
-  <div class="get-template hstack gap-2">
-    
-    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
-      id="scrollToTopBtn">
-      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
-    </button>
+    <!-- 04 -->
+    <section class="chapter chapter--full fade" aria-labelledby="c4">
+      <p class="chapter__no">04</p>
+      <div class="chapter__text">
+        <h2 id="c4">Music videos with AI</h2>
+        <p>We also combined creativity with technology by producing <b>music videos with AI tools</b> such as Viddo.ai and Google Veo 3, merging AI-generated visuals with our own footage for modern, artistic results. It showed us how <b>innovation and digital tools can enhance artistic expression</b> and make our work more impactful.</p>
+      </div>
+    </section>
+
+    <div class="story__videos story__videos--in fade">
+      <figure class="story__video"><div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=WDkQHS0eSNw" data-yt="WDkQHS0eSNw" data-title="Los Bandaleros"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">Los Bandaleros</span><span class="yt__n">Play video · loads YouTube</span></a></div></figure>
+      <figure class="story__video"><div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=p9xEXCWl-80" data-yt="p9xEXCWl-80" data-title="Believer cover"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">Believer cover</span><span class="yt__n">Play video · loads YouTube</span></a></div></figure>
+      <figure class="story__video"><div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=NGuM7o3fPpk" data-yt="NGuM7o3fPpk" data-title="The Lion King cover"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">The Lion King cover</span><span class="yt__n">Play video · loads YouTube</span></a></div></figure>
+      <figure class="story__video"><div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=81eMsw0ZUfA" data-yt="81eMsw0ZUfA" data-title="Our History"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">Our History</span><span class="yt__n">Play video · loads YouTube</span></a></div></figure>
+      <figure class="story__video"><div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=_aZ8G-rYMJ0" data-yt="_aZ8G-rYMJ0" data-title="Earth Movers"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">Earth Movers</span><span class="yt__n">Play video · loads YouTube</span></a></div></figure>
+    </div>
+    <p class="yt__privacy">Videos come from YouTube (Google) and load only when you press play. <a href="privacy-policy.html#youtube">How we handle this</a></p>
+
+    <!-- 05 -->
+    <section class="chapter chapter--flip fade" aria-labelledby="c5">
+      <p class="chapter__no">05</p>
+      <div class="chapter__text">
+        <h2 id="c5">Inside MPGK</h2>
+        <p>One of the most eye-opening moments was the <b>visit to MPGK Krosno</b>, the city’s waste management and water treatment facility. We learned how <b>recycling and resource management work in real life</b>, how <b>AI and robotics support the process</b>, and how <b>clean energy is produced from bio-fermentation and solar farms</b>.</p>
+        <p>We were impressed that this energy is used to <b>power public buses and electric vehicles</b>. Meeting the <b>president of MPGK</b> gave us deeper insight into sustainability at a regional level.</p>
+      </div>
+      <div class="chapter__media shots shots--stack">
+        <figure class="shot"><img src="../assets/redesign/img/drums/drums-03.jpg" alt="The group in hi-vis vests outside the MPGK facility" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/drums/drums-13.jpg" alt="The facility’s control room with monitoring screens" width="527" height="343" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="chapter chapter--full fade" aria-labelledby="c6">
+      <p class="chapter__no">06</p>
+      <div class="chapter__text">
+        <h2 id="c6">The concert</h2>
+        <p>The project ended with a <b>public concert at the Krosno Youth Centre</b>, where we <b>performed our songs live</b> and even <b>jammed with the audience and local decision-makers</b>. It was a powerful moment to share our message with the community.</p>
+        <p>On the final day, we reflected on everything we had learned, received our <b>Youthpass certificates</b>, and celebrated with farewell activities.</p>
+      </div>
+    </section>
   </div>
 
+  <!-- the week in photos: a strip that scrolls sideways -->
+  <div class="runway fade" role="region" aria-label="Photos from the week, scroll sideways" tabindex="0">
+    <ol class="runway__track">
+      <li><img src="../assets/redesign/img/drums/drums-15.jpg" alt="Participants performing together in a hall" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/drums/drums-10.jpg" alt="Participants with their instruments in a brick room" width="291" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/drums/drums-11.jpg" alt="Participants holding the Portuguese flag" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/drums/drums-14.jpg" alt="A participant presenting outdoors in front of a poster" width="257" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/drums/drums-12.jpg" alt="The group seated along a wall during a session" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/drums/drums-18.jpg" alt="The group outdoors among birch trees" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/drums/drums-17.jpg" alt="Participants sitting together in a row" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/drums/drums-16.jpg" alt="A meeting around a long conference table" width="257" height="343" loading="lazy"></li>
+    </ol>
+  </div>
+  <p class="wrap story__wrap runway__credit">The week in photos · scroll sideways for more →</p>
 
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="../assets/libs/aos-master/dist/aos.js"></script>
-  <script src="../assets/js/custom.js"></script>
-  <!-- solar icons -->
-  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <div class="wrap story__wrap">
+    <blockquote class="story__quote fade" style="margin-top: clamp(60px, 8vw, 100px)">
+      <p>We returned home with new friendships, confidence, creative skills, and the belief that when we follow our rhythm together, we can inspire real change.</p>
+    </blockquote>
+
+    <p class="links"><a class="btn" href="https://drive.google.com/drive/folders/1TioNIIsclsTafJR85tz8IPE1Zgodd4iZ?usp=sharing" target="_blank" rel="noopener">All resources and photos ↗</a> <a class="btn btn--ghost" href="projects.html">Back to all projects</a></p>
+
+    <img class="story__eu" src="../assets/redesign/img/eu-cofunded.png" alt="Co-funded by the European Union" width="270" height="60" loading="lazy">
+  </div>
+</main>
+
+<footer class="foot foot--simple">
+  <nav class="foot__links" aria-label="Footer">
+    <a href="index.html">Home</a><a href="about-us.html">About</a><a href="projects.html">All projects</a><a href="contact.html">Contact</a><a href="reports.html">Reports</a><a href="privacy-policy.html">Privacy policy</a>
+  </nav>
+  <p class="foot__social"><a href="https://www.facebook.com/profile.php?id=100095043654160" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/patrz.globalnie/" target="_blank" rel="noopener">Instagram</a></p>
+  <p class="foot__legal">© Fundacja Patrz Globalnie <span class="year">2026</span></p>
+</footer>
+
+<script>
+  (function () {
+    var nav = document.getElementById('nav'), t = nav.querySelector('.nav__toggle');
+    t.addEventListener('click', function () { var o = nav.classList.toggle('is-open'); t.setAttribute('aria-expanded', o); });
+    document.querySelectorAll('.year').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' });
+      document.querySelectorAll('.story .fade').forEach(function (el) { el.classList.add('pre'); io.observe(el); });
+    }
+  })();
+</script>
+<script src="../assets/redesign/js/yt-consent.js" defer></script>
 </body>
-
 </html>

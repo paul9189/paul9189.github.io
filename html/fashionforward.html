@@ -1,462 +1,184 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fashion Forward</title>
-  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.svg" />
-  <link rel="stylesheet" href="../assets/libs/owl.carousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="../assets/libs/aos-master/dist/aos.css">
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <title>Fashion Forward: Recycled Runway · Fundacja Patrz Globalnie</title>
+  <meta name="description" content="Fashion Forward: Recycled Runway, an Erasmus+ Youth Exchange (29 March – 6 April 2025) where 28 young people from Poland, Portugal, North Macedonia and Hungary turned waste into fashion.">
+  <meta name="theme-color" content="#070d11">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+  <link rel="stylesheet" href="../assets/redesign/css/fonts.css">
+  <link rel="stylesheet" href="../assets/redesign/css/site.css">
 </head>
+<body class="page-story">
+<a class="skip" href="#story">Skip to content</a>
 
-<body>
+<header class="nav is-solid" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Fundacja Patrz Globalnie, home"><img src="../assets/images/logos/logo-white.svg" alt="Fundacja Patrz Globalnie"></a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="about-us.html">About Us</a>
+    <a href="index.html#projects" aria-current="page">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="reports.html">Reports</a>
+  </nav>
+  <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</header>
 
-  <!-- Header -->
-   <header class="header border-4 border-primary border-top position-fixed start-0 top-0 w-100">
-    <div class="container">
-      <div class="header-wrapper d-flex align-items-center justify-content-between">
-        <div class="logo">
-          <a href="index.html" class="logo-white">
-            <img src="../assets/images/logos/logo-white.svg" alt="logo" class="img-fluid">
-          </a>
-          <a href="index.html" class="logo-dark">
-            <img src="../assets/images/logos/logo-dark.svg" alt="logo" class="img-fluid">
-          </a>
-        </div>
-        <div class="d-flex align-items-center gap-4">
+<main class="story" id="story">
+  <!-- the original project banner, kept as it was -->
+  <figure class="story__banner">
+    <img src="../assets/redesign/img/ff/banner.jpg" alt="Collage of photos from Fashion Forward 29.3 – 6.4.2025: workshops, the recycling centre visit and the catwalk" width="1760" height="750">
+  </figure>
 
-          <div class="btn-group">
-            <button
-              class="btn btn-secondary toggle-menu round-45 p-2 d-flex align-items-center justify-content-center bg-white rounded-circle"
-              type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-              <iconify-icon icon="solar:hamburger-menu-line-duotone" class="menu-icon fs-8 text-dark"></iconify-icon>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end p-4">
-              <div class="d-flex flex-column gap-6">
-                <div class="hstack justify-content-between border-bottom pb-6">
-                  <p class="mb-0 fs-5 text-dark">Menu</p>
-                  <button type="button" class="btn-close opacity-75" aria-label="Close"></button>
-                </div>
-                <div class="d-flex flex-column gap-3">
-                  <ul class="header-menu list-unstyled mb-0 d-flex flex-column gap-2">
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Home</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="about-us.html" aria-current="true"
-                        class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">About</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="projects.html" class="header-link active hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Projects</a>
-                    </li>
-                    <li class="header-item">
-                      <a href="blog.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">News</a>
-                    </li>
-<!-- 
-                    <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Services</a>
-                    </li> -->
-                    <li class="header-item">
-                      <a href="contact.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Contact</a>
-                    </li>
-                    <!-- <li class="header-item">
-                      <a href="index.html" class="header-link hstack gap-2 fs-7 fw-bold text-dark"><img
-                          src="../assets/images/svgs/secondary-leaf.svg" alt="" width="20" height="20"
-                          class="img-fluid animate-spin">Docs</a>
-                    </li> -->
-                  </ul>
-                  <!-- <div class="hstack gap-3">
-                    <a href="sign-in.html"
-                      class="btn btn-outline-light fs-6 bg-white px-3 py-2 text-dark w-50 hstack justify-content-center">Sign
-                      In</a>
-                    <a href="sign-up.html"
-                      class="btn btn-dark text-white fs-6 bg-dark px-3 py-2 w-50 hstack justify-content-center">Sign
-                      Up</a>
-                  </div> -->
-                </div>
-                <!-- <div>
-                  <a class="text-dark" href="tel:+1-212-456-7890">+1-212-456-7890</a>
-                  <a class="fs-8 text-dark fw-bold" href="mailto:info@wrappixel.com">info@wrappixel.com</a>
-                </div> -->
-              </div>
-            </ul>
-          </div>
-        </div>
+  <div class="wrap story__wrap">
+    <a class="story__back" href="projects.html">← All projects</a>
+    <p class="eyebrow">Erasmus+ Youth Exchange · Project story</p>
+    <h1>Fashion Forward: <span>Recycled Runway</span></h1>
+    <p class="lede">Turning waste into fashion: how young people redesigned the future in Krosno.</p>
+
+    <dl class="story__facts">
+      <div><dt>When</dt><dd>29 March – 6 April 2025</dd></div>
+      <div><dt>Where</dt><dd>Krosno, Poland</dd></div>
+      <div><dt>Who</dt><dd>28 participants</dd></div>
+      <div><dt>From</dt><dd>Poland, Portugal, North Macedonia, Hungary</dd></div>
+      <div><dt>Subjects</dt><dd>Sustainable fashion, digital innovation</dd></div>
+    </dl>
+
+    <!-- 01 -->
+    <section class="chapter fade" aria-labelledby="c1">
+      <p class="chapter__no">01</p>
+      <div class="chapter__text">
+        <h2 id="c1">The mission</h2>
+        <p>From 29 March to 6 April 2025, Krosno became the stage for <b>innovation, creativity and climate action</b> through Fashion Forward: Recycled Runway, an Erasmus+ Youth Exchange organised by Fundacja Patrz Globalnie. The project brought together 28 participants from <b>Poland, Portugal, North Macedonia and Hungary</b> to tackle one of today’s biggest challenges: <b>the destructive impact of the fast fashion industry</b>.</p>
+        <p>Our mission was bold: <b>transform waste into fashion</b>, inspire sustainable choices, and use the <b>power of technology</b> to amplify change. More than a typical exchange, Fashion Forward combined <b>AI-powered creativity, hands-on upcycling and intercultural learning</b>, giving participants the tools to rethink fashion and stand up for a greener future.</p>
       </div>
-    </div>
-  </header>
-
-  <!--  Page Wrapper -->
-  <div class="page-wrapper overflow-hidden">
-
-    <!--  Banner Section -->
-    <section class="banner-section banner-inner-section position-relative overflow-hidden d-flex align-items-end"
-      style="background-image: url(../assets/images/backgrounds/fashionforwardbanner.png);">
-      <div class="container">
-        <div class="d-flex flex-column gap-4 pb-5 pb-xl-10 position-relative z-1">
-          <div class="row align-items-center">
-            <div class="col-xl-4">
-              <div class="d-flex align-items-center gap-4" data-aos="fade-up" data-aos-delay="100"
-                data-aos-duration="1000">
-                <img src="../assets/images/svgs/primary-leaf.svg" style="max-width:10%;" alt="" class="img-fluid animate-spin" style="max-width:10%;">
-                <p class="mb-0 text-white fs-5 text-opacity-70">Turning <span class="text-primary">Waste into Fashion:
-                    </span> How Youth Redesigned the Future in Krosno</p>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex align-items-end gap-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-            <h1 class="mb-0 fs-16 text-white lh-1" style="font-size: 3.5rem !important;">Fashion Forward: Recycled Runway</h1>
-          </div>
-        </div>
+      <div class="chapter__media shots shots--2">
+        <figure class="shot shot--wide"><img src="../assets/redesign/img/ff/ff-01.jpg" alt="The whole group of participants standing together outside a building" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/ff/ff-02.jpg" alt="Participants fitting an upcycled outfit on a dress form" width="257" height="343" loading="lazy"></figure>
       </div>
     </section>
 
-    <!--  Project Detail Section -->
-    <section class="project-detail py-5 py-lg-11 py-xl-12">
-      <div class="container">
-        <div class="d-flex flex-column gap-5 gap-xl-11">
-          <div class="d-flex flex-column gap-8">
-            <a href="projects.html" class="btn py-2 ps-3 pe-5" data-aos="fade-up" data-aos-delay="100"
-              data-aos-duration="1000">
-              <span class="btn-text pe-1">Back</span>
-              <iconify-icon icon="lucide:arrow-up-right"
-                class="btn-icon bg-white text-dark round-36 rounded-circle hstack justify-content-center fs-5 shadow-sm"></iconify-icon>
-            </a>
-            <div class="d-md-flex align-items-center gap-4 gap-lg-8" data-aos="fade-up" data-aos-delay="200"
-              data-aos-duration="1000">
-              <div class="d-flex flex-column gap-2 py-2 pe-4 pe-lg-8 border-end">
-                <p class="mb-0">Subjects</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">Sustainable Fashion, Digital Innovation</p>
-              </div>
-              <div class="d-flex flex-column gap-2 py-2 pe-4 pe-lg-8 border-end">
-                <p class="mb-0">Where</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">Krosno, Poland</p>
-              </div>
-              <!-- <div class="d-flex flex-column gap-2 py-2 pe-4 pe-lg-8 border-end">
-                <p class="mb-0">Raised</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">$1.1M</p>
-              </div> -->
-              <div class="d-flex flex-column gap-2 py-2">
-                <p class="mb-0">When</p>
-                <p class="mb-0 text-dark fs-5 fw-medium">29 March – 6 April 2025</p>
-              </div>
-            </div>
-          </div>
-          <div class="row gap-4 gap-lg-0">
-            <div class="col-lg-4">
-              <h2 class="fs-13 mb-0" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">Description
-              </h2>
-            </div>
-            <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                <p class="fs-5 mb-6">
-               From March 29 to April 6, 2025, Krosno became the stage for <b>innovation, 
-               creativity, and climate action </b>through Fashion Forward: Recycled Runway, 
-               an Erasmus+ Youth Exchange organized by Fundacja Patrz Globalnie.
-              <br>  The project united 28 participants from <b>Poland, Portugal, North Macedonia, and Hungary </b>
-                to tackle one of today’s biggest challenges: 
-                <b>the destructive impact of the fast fashion industry.</b>
-             </p>
-                
-                <!-- <h4>1. PurseBlog</h4> -->
-                <p class="fs-5 mb-6">
-                 Our mission was to bold—<b>transform waste into fashion</b>, 
-                 inspire sustainable choices, and harness the <b>power of technology</b>
-                 to amplify change.
-                 <br>More than a typical exchange, 
-                 Fashion Forward combined <b>AI-powered creativity, hands-on upcycling, and intercultural learning</b>
-                 , giving participants the tools to rethink fashion and advocate for a greener future.
-                </p>
-                <!-- <h4>2. The MyBag Blog</h4>
-                <p class="fs-5 mb-0">
-                  The MyBag Blog is a hub for designer handbag inspiration, trends, and style guides. Packed with the
-                  latest trends, blogger styles, and, of course, handbags, it serves as a valuable resource for fashion
-                  enthusiasts seeking to stay updated on current styles.
-                </p> -->
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion1.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion2.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion3.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion4.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion5.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion6.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="row justify-content-end">
-            <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <p class="fs-5 mb-0">
-                One of the project’s most eye-opening experiences was our
-                <b>visit to MPGK Krosno</b>, the city’s waste management and recycling facility.
-                There, we explored the entire recycling chain, 
-                from sorting materials to advanced water purification systems,
-                 and learned how the city uses fermentation to produce biogas 
-                 and generate electricity. 
-                 At the clothes section of the recycling facility, we
-                 saw how everyday choices and the <b>fast fashion industry impact </b> the environment and 
-                 discovered practical circular economy solutions in action.
-                 <br>
-                 For many, it was a powerful reminder that sustainability begins
-                 at home, and that every small effort counts, including our choices of clothing and source of materials.
-                </p>
-               
-                <!-- <h4>1. Define Your Goals:</h4> -->
-                <p class="fs-5 mb-6">
-                    <br>
-                Back at our workspace, <b>creativity took center stage. </b>
-                Armed with trash collected from around the venue, discarded clothing from MPGK, 
-                and trash we collected during the project,
-                and tools like glue guns, sewing machines, and wire and more,
-                we set out to <b>create bold fashion statements.</b>
-                <br> Combining AI design tools like MidJourney with hands-on craftsmanship,
-                we turned waste into unique outfits full of meaning. 
-                These weren’t just clothes—they were <b>manifestos for a sustainable future</b>.
-                </p>
-               
-              </div>
-            </div>
-            <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion7.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion8.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion9.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion11.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion10.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion3.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <!-- <h4>1. Define Your Goals:</h4> -->
-                <p class="fs-5 mb-6">
-                    <br>
-               To share these messages with the community, we organized the <b>
-                 Fashion Forward Catwalk </b> on April 4 at <b>Centrum Aktywności Młodzieży </b>
-                 (Youth Centre in Krosno). Before the runway began, 
-                 guests watched an <b>AI-generated short film</b>,
-                 created by participants using Sora AI, KlingAI, FakeYou, and InVideo AI, 
-                 showcasing <b>dramatic, emotional scenes about the impact of fast fashion</b>
-                 on the planet. 
-                 <br>The catwalk itself featured stunning, upcycled designs that wowed the 
-                 audience and sparked conversations about conscious consumerism.
-                 This event proved that fashion can be both beautiful and responsible. </p>
-              </div>
-            </div>
-             <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion13.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion14.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion15.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-           <div class="row">
-            <div class="col-lg-4 mb-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion16.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion17.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            <div class="col-lg-4 mb-7" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/projects/fashionforward/fashion18.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-          </div>
-          <div class="col-lg-8">
-              <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-               
-                <p class="fs-5 mb-6">
-                    <br>
-                    Fashion Forward wasn’t only about fashion—it was about people,
-                    ideas, and cultural exchange. 
-                    Through lively discussions on fast fashion, 
-                    creative solution-building sessions, and 
-                    intercultural evenings filled with music and food, 
-                    participants built <b>friendships that crossed borders</b>.
-                    These shared moments gave rise to future initiatives like 
-                    <b>Sustainable Fashion Clubs</b>, ensuring that the impact continues 
-                    long after the project.
-
-                    <br>
-                    <br>
-                    <b>Fashion Forward: Recycled Runway was more than a youth exchange—it was a 
-                    movement toward responsibility, creativity, and change</b>.
-                    We are grateful to everyone who supported us, 
-                    including local partners who amplified our message and
-                    helped us reach the community. Special thanks to:
-               </p>
-              </div>
-              <ul style="list-style-type: disc; padding-left: 20px;">
-                <li> <a href="https://www.krosno.pl/aktualnosci/mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym,23986"
-                    target="_blank"> <h5> City of Krosno (Municipality)</h5></a></li>
-                <li> <a href="https://www.krosno112.pl/artykul/25216,krosnienski-holding-komunalny-odwiedzili-mlodzi-ekolodzy-z-europy"
-                    target="_blank"> <h5> Krosno 112 (Local Newspaper)</h5></a></li>
-                <li> <a href="https://www.facebook.com/mpgk.krosno/posts/pfbid02q7bbKZDxWJ8jJh5ZLv2ox6ueCFxaCNRmkpJUEqGYntCmaHN2LinM2NHTJexSw6L8l"
-                    target="_blank"> <h5> MPGK Krosno (Facebook)</h5></a></li>
-                <li> <a href="https://aukcje.ekrosno.pl/aktualnosci1/1339-mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym"
-                    target="_blank"> <h5> MPGK Krosno (Website)</h5></a></li>
-                <li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02fyP7obz9Gj789Q1tokipeTPV6pFjLqWF1v14vwbBa9zyzAsmMEoHAFZAMXAC6dwel&id=61551171125702" target="_blank">
-                    <h5>Centrum Aktywności Młodzieży Krosno (Youth Centre Krosno)</h5>
-                </a></li>
-                <li><a href="https://www.facebook.com/KrosnoDziejeSie/posts/pfbid0biTZKMnmpYdQKj9QrzFW39mzXv6tmbt3HiGiN1mcfgRMzuz7U2srsuyNNz7zzSZ2l" target="_blank">
-                    <h5>Dzieje się w Krośnie</h5>
-                </a></li>
-                <li><a href="https://krosno24.pl/wydarzenia/fashion-forward-recycled-runway-pokaz-mody-w-cam-w1162" target="_blank">
-                    <h5>Krosno 24 (local newspaper)</h5>
-                </a></li>
-                <li><a href="https://www.facebook.com/mskkrosno/posts/974962434747464/?_rdr" target="_blank">
-                    <h5>Młodzieżowy Strajk Klimatyczny - Krosno</h5>
-                </a></li>
-                <li><a href="https://conexaojovem.pt/fashion-forward-recycled-runway-kombornia-polonia/" target="_blank">
-                    <h5>Conexao Jovem (Our Portuguese Partner)</h5>
-                </a></li>
-                <li><a href="https://www.facebook.com/yagexcel/posts/pfbid02YmSJzAp9bhcAnihfFs7Df6ZcmWP6QuagbA5eC1VUAZkF9nPgo88NgCTA3eH5pox4l " target="_blank">
-                    <h5>Association for Youth Activism and Growth - Excel (Our Macedonian Partner)</h5>
-                </a></li>
-                    <br>
-                    <br>
-              </ul>
-
-              
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <iframe width="100%" height="100%" 
-                        src="https://www.youtube.com/embed/LKdx7TLVcX4?si=aBy85QhE1pQL5wbf" " 
-                        title="Fashion Forward: CatWalk Background Video" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen 
-                        class="w-100 object-fit-cover">
-                    </iframe>            
-                </div>
-           
-
-
-            </div>
-            <br>
-         <a href="https://drive.google.com/drive/folders/1MzuU8Mc1-fBsVJHwW7Y1Qzl2m17cd5Ec?usp=sharing" target="_blank" class="btn py-2 ps-3 pe-5" data-aos="fade-up" data-aos-delay="100"
-              data-aos-duration="1000">
-              <span class="btn-text pe-1">See All Resources and Photos</span>
-              <iconify-icon icon="lucide:arrow-up-right"
-                class="btn-icon bg-white text-dark round-36 rounded-circle hstack justify-content-center fs-5 shadow-sm"></iconify-icon>
-            </a>
-
-             <div class="row">
-            <div class="col-lg-7 mb-8" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="../assets/images/co-funded-black.png" alt="services" class="w-100 object-fit-cover">
-            </div>
-            </div>
+    <!-- 02 -->
+    <section class="chapter chapter--flip fade" aria-labelledby="c2">
+      <p class="chapter__no">02</p>
+      <div class="chapter__text">
+        <h2 id="c2">Inside the recycling centre</h2>
+        <p>One of the most eye-opening experiences was our <b>visit to MPGK Krosno</b>, the city’s waste management and recycling facility. We followed the entire recycling chain, from sorting materials to advanced water purification, and learned how the city uses fermentation to produce biogas and generate electricity.</p>
+        <p>In the clothing section of the facility we saw how everyday choices and the <b>fast fashion industry</b> affect the environment, and discovered practical circular-economy solutions in action. For many, it was a powerful reminder that sustainability begins at home, and that every small effort counts, including what we wear and where our materials come from.</p>
+      </div>
+      <div class="chapter__media shots shots--stack">
+        <figure class="shot"><img src="../assets/redesign/img/ff/ff-03.jpg" alt="Participants in hi-vis vests outside the recycling facility" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/ff/ff-08.jpg" alt="Participants in hard hats and hi-vis vests touring the inside of the facility" width="527" height="343" loading="lazy"></figure>
       </div>
     </section>
 
-  </div>
-
-  <footer class="footer bg-dark py-5 py-lg-11 py-xl-12">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-5 mb-8 mb-xl-0">
-          <div class="d-flex flex-column gap-8 pe-xl-5">
-            <h2 class="mb-0 text-white">Join Us on Our Journey!</h2>
-            <!-- <div class="d-flex flex-column gap-2">
-              <a href="https://www.wrappixel.com/" target="_blank" class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:arrow-up-right" class="fs-7 text-primary"></iconify-icon>
-                facebook.com/patrz.globalnie
-              </a>
-              <a href="https://maps.app.goo.gl/hpDp81fqzGt5y4bC8" target="_blank"
-                class="link-hover hstack gap-3 text-white fs-5">
-                <iconify-icon icon="lucide:map-pin" class="fs-7 text-primary"></iconify-icon>
-                instagram.com/patrz.globalnie
-              </a> 
-            </div> -->
-          </div>
-        </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
-          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="index.html">Home</a></li>
-            <li><a class="link-hover fs-5 text-white" href="about-us.html">About</a></li>
-            <!-- <li><a class="link-hover fs-5 text-white" id="services" href="#services">Services</a></li> -->
-            <li><a class="link-hover fs-5 text-white" href="projects.html">Projects</a></li>
-            <!-- <li><a class="link-hover fs-5 text-white" href="terms-and-conditions.html">Terms</a></li> -->
-            <!-- <li><a class="link-hover fs-5 text-white" href="privacy-policy.html">Privacy Policy</a></li> -->
-            <!-- <li><a class="link-hover fs-5 text-white" href="404.html">Error 404</a></li> -->
-          </ul>
-        </div>
-        <div class="col-md-4 col-xl-2 mb-8 mb-xl-0">
-          <ul class="footer-menu list-unstyled mb-0 d-flex flex-column gap-2">
-            <li><a class="link-hover fs-5 text-white" href="https://www.facebook.com/profile.php?id=100095043654160">Facebook</a></li>
-            <li><a class="link-hover fs-5 text-white" href="https://www.instagram.com/patrz.globalnie/">Instagram</a></li>
-            <!-- <li><a class="link-hover fs-5 text-white" href="#!">Twitter</a></li> -->
-          </ul>
-        </div>
-        <div class="col-md-4 col-xl-3 mb-8 mb-xl-0">
-          <p class="mb-0 text-white text-opacity-70 text-md-end">©  Fundacja Patrz Globalnie 2025 | All Rights Reserved</p>
-        </div>
+    <!-- 03 -->
+    <section class="chapter fade" aria-labelledby="c3">
+      <p class="chapter__no">03</p>
+      <div class="chapter__text">
+        <h2 id="c3">The workshop</h2>
+        <p>Back at our workspace, <b>creativity took centre stage</b>. Armed with rubbish collected around the venue and during the project, discarded clothing from MPGK, and tools like glue guns, sewing machines and wire, we set out to <b>create bold fashion statements</b>.</p>
+        <p>Combining AI design tools like Midjourney with hands-on craftsmanship, we turned waste into unique outfits full of meaning. These weren’t just clothes: they were <b>manifestos for a sustainable future</b>.</p>
       </div>
-    </div>
-  <!-- <p class="mb-0 text-white text-opacity-70 text-md-center mt-10">Distributed by <a class="text-white" href="https://www.themewagon.com" target="_blank">ThemeWagon</a></p> -->
-  </footer>
+      <div class="chapter__media shots shots--3">
+        <figure class="shot shot--wide"><img src="../assets/redesign/img/ff/ff-17.jpg" alt="Participants designing together on laptops" width="527" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/ff/ff-07.jpg" alt="Participants working on a laptop" width="257" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/ff/ff-16.jpg" alt="A workshop room with materials spread over the tables" width="257" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/ff/ff-04.jpg" alt="Participants in a group session at laptops" width="257" height="343" loading="lazy"></figure>
+        <figure class="shot"><img src="../assets/redesign/img/ff/ff-06.jpg" alt="A presentation in a meeting room" width="257" height="343" loading="lazy"></figure>
+      </div>
+    </section>
 
-  <div class="get-template hstack gap-2">
-    
-    <button class="btn bg-primary p-2 round-52 rounded-circle hstack justify-content-center flex-shrink-0"
-      id="scrollToTopBtn">
-      <iconify-icon icon="lucide:arrow-up" class="fs-7 text-dark"></iconify-icon>
-    </button>
+    <!-- 04 -->
+    <section class="chapter chapter--full fade" aria-labelledby="c4">
+      <p class="chapter__no">04</p>
+      <div class="chapter__text">
+        <h2 id="c4">The catwalk</h2>
+        <p>To share these messages with the community, we organised the <b>Fashion Forward Catwalk</b> on 4 April at Centrum Aktywności Młodzieży (the Youth Centre in Krosno). Before the runway began, guests watched an <b>AI-generated short film</b> created by participants with Sora AI, KlingAI, FakeYou and InVideo AI, showing dramatic, emotional scenes about the impact of fast fashion on the planet.</p>
+        <p>The catwalk itself featured stunning upcycled designs that wowed the audience and sparked conversations about conscious consumerism. It proved that fashion can be both beautiful and responsible.</p>
+      </div>
+    </section>
   </div>
 
+  <!-- the runway: a strip of real catwalk photos, scrolls sideways -->
+  <div class="runway fade" role="region" aria-label="Catwalk photos, scroll sideways" tabindex="0">
+    <ol class="runway__track">
+      <li><img src="../assets/redesign/img/ff/ff-05.jpg" alt="A model in an upcycled plastic dress on stage" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/ff/ff-15.jpg" alt="The catwalk in the brick cellar with the audience watching" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/ff/ff-14.jpg" alt="Two models walking away in upcycled dresses" width="229" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/ff/ff-10.jpg" alt="Models walking down the runway corridor" width="291" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/ff/ff-11.jpg" alt="The line-up of upcycled outfits in front of the brick wall" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/ff/ff-13.jpg" alt="Close-up of an upcycled outfit and handbag" width="527" height="343" loading="lazy"></li>
+      <li><img src="../assets/redesign/img/ff/ff-18.jpg" alt="Models in upcycled outfits coming down the stairs" width="527" height="343" loading="lazy"></li>
+    </ol>
+  </div>
+  <p class="wrap story__wrap runway__credit">Catwalk photos: Damian Krzanowski · scroll sideways for more →</p>
 
-  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="../assets/libs/aos-master/dist/aos.js"></script>
-  <script src="../assets/js/custom.js"></script>
-  <!-- solar icons -->
-  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <div class="wrap story__wrap">
+    <figure class="story__video fade">
+      <div class="story__frame yt"><a class="yt__play" href="https://www.youtube.com/watch?v=LKdx7TLVcX4" data-yt="LKdx7TLVcX4" data-title="Fashion Forward: catwalk background video"><span class="yt__icon" aria-hidden="true"></span><span class="yt__t">Fashion Forward: catwalk background video</span><span class="yt__n">Play video · loads YouTube</span></a></div>
+      <figcaption>The background video played during the catwalk.</figcaption>
+    </figure>
+    <p class="yt__privacy">Videos come from YouTube (Google) and load only when you press play. <a href="privacy-policy.html#youtube">How we handle this</a></p>
+
+    <!-- 05 -->
+    <section class="chapter chapter--flip fade" aria-labelledby="c5">
+      <p class="chapter__no">05</p>
+      <div class="chapter__text">
+        <h2 id="c5">Beyond the runway</h2>
+        <p>Fashion Forward wasn’t only about fashion; it was about people, ideas and cultural exchange. Through lively discussions on fast fashion, creative solution-building sessions, and intercultural evenings filled with music and food, participants built <b>friendships that crossed borders</b>. These shared moments gave rise to future initiatives like <b>Sustainable Fashion Clubs</b>, so the impact continues long after the project.</p>
+      </div>
+      <div class="chapter__media shots shots--stack">
+        <figure class="shot"><img src="../assets/redesign/img/ff/ff-09.jpg" alt="Participants relaxing together between sessions" width="257" height="343" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <blockquote class="story__quote fade">
+      <p>Fashion Forward: Recycled Runway was more than a youth exchange. It was a movement toward responsibility, creativity and change.</p>
+    </blockquote>
+
+    <section class="story__thanks" aria-labelledby="thanks">
+      <h2 id="thanks" class="contact__h">Thank you</h2>
+      <p class="lede">We are grateful to everyone who supported us, including the local partners who amplified our message and helped us reach the community.</p>
+      <ul class="reports__list story__press">
+        <li><a href="https://www.krosno.pl/aktualnosci/mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym,23986" target="_blank" rel="noopener"><span class="t">City of Krosno</span><span class="f">Municipality</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.krosno112.pl/artykul/25216,krosnienski-holding-komunalny-odwiedzili-mlodzi-ekolodzy-z-europy" target="_blank" rel="noopener"><span class="t">Krosno 112</span><span class="f">Local newspaper</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.facebook.com/mpgk.krosno/posts/pfbid02q7bbKZDxWJ8jJh5ZLv2ox6ueCFxaCNRmkpJUEqGYntCmaHN2LinM2NHTJexSw6L8l" target="_blank" rel="noopener"><span class="t">MPGK Krosno</span><span class="f">Facebook</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://aukcje.ekrosno.pl/aktualnosci1/1339-mlodzi-ekolodzy-z-europy-z-wizyta-w-krosnienskim-holdingu-komunalnym" target="_blank" rel="noopener"><span class="t">MPGK Krosno</span><span class="f">Website</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02fyP7obz9Gj789Q1tokipeTPV6pFjLqWF1v14vwbBa9zyzAsmMEoHAFZAMXAC6dwel&amp;id=61551171125702" target="_blank" rel="noopener"><span class="t">Centrum Aktywności Młodzieży Krosno</span><span class="f">Youth Centre</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.facebook.com/KrosnoDziejeSie/posts/pfbid0biTZKMnmpYdQKj9QrzFW39mzXv6tmbt3HiGiN1mcfgRMzuz7U2srsuyNNz7zzSZ2l" target="_blank" rel="noopener"><span class="t">Dzieje się w Krośnie</span><span class="f">Facebook</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://krosno24.pl/wydarzenia/fashion-forward-recycled-runway-pokaz-mody-w-cam-w1162" target="_blank" rel="noopener"><span class="t">Krosno 24</span><span class="f">Local newspaper</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.facebook.com/mskkrosno/posts/974962434747464/" target="_blank" rel="noopener"><span class="t">Młodzieżowy Strajk Klimatyczny – Krosno</span><span class="f">Facebook</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://conexaojovem.pt/fashion-forward-recycled-runway-kombornia-polonia/" target="_blank" rel="noopener"><span class="t">Conexão Jovem</span><span class="f">Portuguese partner</span><span class="d" aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.facebook.com/yagexcel/posts/pfbid02YmSJzAp9bhcAnihfFs7Df6ZcmWP6QuagbA5eC1VUAZkF9nPgo88NgCTA3eH5pox4l" target="_blank" rel="noopener"><span class="t">Association for Youth Activism and Growth – Excel</span><span class="f">Macedonian partner</span><span class="d" aria-hidden="true">↗</span></a></li>
+      </ul>
+      <p class="links"><a class="btn" href="https://drive.google.com/drive/folders/1MzuU8Mc1-fBsVJHwW7Y1Qzl2m17cd5Ec?usp=sharing" target="_blank" rel="noopener">All resources and photos ↗</a> <a class="btn btn--ghost" href="projects.html">Back to all projects</a></p>
+    </section>
+
+    <img class="story__eu" src="../assets/redesign/img/eu-cofunded.png" alt="Co-funded by the European Union" width="270" height="60" loading="lazy">
+  </div>
+</main>
+
+<footer class="foot foot--simple">
+  <nav class="foot__links" aria-label="Footer">
+    <a href="index.html">Home</a><a href="about-us.html">About</a><a href="projects.html">All projects</a><a href="contact.html">Contact</a><a href="reports.html">Reports</a><a href="privacy-policy.html">Privacy policy</a>
+  </nav>
+  <p class="foot__social"><a href="https://www.facebook.com/profile.php?id=100095043654160" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/patrz.globalnie/" target="_blank" rel="noopener">Instagram</a></p>
+  <p class="foot__legal">© Fundacja Patrz Globalnie <span class="year">2026</span></p>
+</footer>
+
+<script>
+  (function () {
+    var nav = document.getElementById('nav'), t = nav.querySelector('.nav__toggle');
+    t.addEventListener('click', function () { var o = nav.classList.toggle('is-open'); t.setAttribute('aria-expanded', o); });
+    document.querySelectorAll('.year').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+    // gentle fade-in as sections arrive; skipped entirely for reduced motion
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -10% 0px' });
+      document.querySelectorAll('.story .fade').forEach(function (el) { el.classList.add('pre'); io.observe(el); });
+    }
+  })();
+</script>
+<script src="../assets/redesign/js/yt-consent.js" defer></script>
 </body>
-
 </html>
