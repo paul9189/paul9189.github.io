@@ -93,7 +93,8 @@ async function init3D() {
       card.hidden = false;
       $('h3', card).textContent = info.name;
       const q = info.quote ? `<q>${info.quote[0]}</q><p class="small">${info.quote[1]}</p>` : '';
-      $('.body', card).innerHTML = `${q}<p class="small">Projects:</p><ul>${info.projects.map(p => `<li><a href="${p.link}">${p.name}</a></li>`).join('')}</ul>`;
+      const label = window.i18n ? window.i18n.t('Projects:', 'Projekty:') : 'Projects:';
+      $('.body', card).innerHTML = `${q}<p class="small">${label}</p><ul>${info.projects.map(p => `<li><a href="${p.link}">${p.name}</a></li>`).join('')}</ul>`;
     });
     $('.x', card).addEventListener('click', () => { card.hidden = true; });
     onVisible(mapSec, v => map.setVisible(v), '0%');
@@ -131,9 +132,19 @@ async function init3D() {
       parent.appendChild(w);
     });
   };
-  [...p.childNodes].forEach(n => {
-    if (n.nodeType === 3) { const frag = document.createDocumentFragment(); splitText(n.textContent, frag); p.replaceChild(frag, n); }
-    else { const t = n.textContent; n.textContent = ''; splitText(t, n); }
+  const source = p.innerHTML;
+  const build = () => {
+    chars.length = 0;
+    [...p.childNodes].forEach(n => {
+      if (n.nodeType === 3) { const frag = document.createDocumentFragment(); splitText(n.textContent, frag); p.replaceChild(frag, n); }
+      else { const t = n.textContent; n.textContent = ''; splitText(t, n); }
+    });
+  };
+  build();
+  // i18n.js swaps in the plain Polish sentence (or our English); split it into shards again
+  document.addEventListener('i18n:change', e => {
+    if (e.detail.lang !== 'pl') p.innerHTML = source;
+    build(); requestScroll();
   });
   const steps = $$('.steps li', sec);
   scrolly(sec, prog => {

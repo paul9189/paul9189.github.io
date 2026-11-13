@@ -71,8 +71,17 @@ kbd { font: 600 .8em var(--mono); padding: .1em .45em; border: 1px solid var(--l
 .nav__toggle span:first-child { top: 17px; } .nav__toggle span:last-child { top: 26px; }
 .nav.is-open .nav__toggle span:first-child { transform: translateY(4.5px) rotate(45deg); }
 .nav.is-open .nav__toggle span:last-child { transform: translateY(-4.5px) rotate(-45deg); }
+/* EN | PL switch (built by i18n.js) */
+.nav__links { margin-left: auto; }
+.lang { display: flex; gap: 2px; margin-left: 14px; padding: 3px; border-radius: 999px; border: 1px solid var(--line); background: rgba(7,13,17,.4); flex: none; }
+.lang a { padding: 6px 10px; border-radius: 999px; font: 700 12px/1 var(--mono); letter-spacing: .08em; color: var(--muted); }
+.lang a:hover { color: var(--text); text-decoration: none; }
+.lang a[aria-current] { background: var(--blue-hi); color: var(--ink); }
+.i18n-pending body { opacity: 0; }
+body { transition: opacity .2s; }
 @media (max-width: 820px) {
   .nav__toggle { display: block; }
+  .lang { margin: 0 6px 0 auto; }
   .nav__links { position: fixed; inset: 72px 12px auto 12px; flex-direction: column; align-items: stretch; padding: 12px; border-radius: 20px; background: rgba(10,18,24,.96); border: 1px solid var(--line); opacity: 0; pointer-events: none; transform: translateY(-8px); transition: .25s; }
   .nav.is-open .nav__links { opacity: 1; pointer-events: auto; transform: none; }
   .nav__links a { padding: 14px 16px; }

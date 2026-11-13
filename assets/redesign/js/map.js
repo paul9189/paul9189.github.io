@@ -14,15 +14,31 @@ const PLACES = { krosno: ['Krosno', 21.77, 49.69], strasbourg: ['Strasbourg', 7.
 // Two accents only: brand blue for every project, EU gold for the one at the European Parliament.
 const BLUE = '#74b4ff', GOLD = '#ffcc00';
 export const PROJECTS = [
-  { tick: 'Art Meets AI', name: 'Art Meets AI', date: '2024', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'RO', 'SK', 'CZ'], color: BLUE, meta: '28 participants. An AI-directed show for 600+ students and teachers.', link: '/aiart/aiartindex.html' },
-  { tick: 'Fashion', name: 'Fashion Forward: Recycled Runway', date: '29 Mar – 6 Apr 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'PT', 'MK', 'HU'], color: BLUE, meta: '28 participants. Waste turned into a catwalk.', link: 'fashionforward.html' },
-  { tick: 'EcoArt', name: 'EcoArt: Turning Trash into Treasure', date: '6–14 Apr 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'HU', 'LT', 'RO'], color: BLUE, meta: '28 participants. Recycling centre visit and junk sculptures.', link: 'ecoart.html' },
-  { tick: 'EYE 2025', name: 'EYE 2025 @ European Parliament', date: '13–14 June 2025', place: 'Strasbourg, France', to: 'strasbourg', from: ['PL', 'LU', 'CY', 'RO'], venue: 'FR', color: GOLD, meta: 'Workshops on deepfakes and democracy, with Digital Dreamers Luxembourg, Waves of Change Cyprus and Colțul Tinerilor din Vest Romania.', link: 'eye2025.html' },
-  { tick: 'Drums', name: 'Follow Your Drums!', date: '17–25 Sept 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'PT', 'HU', 'RO', 'MK'], color: BLUE, meta: 'Waste turned into percussion, and one group song.', link: 'followyourdrums.html' },
-  { tick: 'AI 2.0', name: 'Art Meets AI 2.0: The Next Act', date: '2025 – 2026', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'BG', 'TR', 'MD'], color: BLUE, meta: 'AI-enhanced live theatre for an audience of 1,000+.', link: 'aiart2-blog.html' },
-  { tick: 'Together', name: 'Together Against Addictions', date: '2025 – 2026', place: 'Krosno & Opole, Poland', to: 'opole', from: ['PL'], color: BLUE, meta: '15 local young people, research, a Danger Zone Map and a conference for 350+.', link: 'razemprzeciwuzaleznieniom.html' },
-  { tick: 'First Aid', name: 'First Aid – Don\'t Ignore!', date: '24–31 March 2026', place: 'Murzasichle, Poland', to: 'murzasichle', from: ['PL', 'HU', 'RO'], color: BLUE, meta: '33 participants. CPR, AED and forum theatre.', link: 'firstaid-blog.html' }
+  { tick: 'Art Meets AI', name: 'Art Meets AI', date: '2024', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'RO', 'SK', 'CZ'], color: BLUE, meta: '28 participants. An AI-directed show for 600+ students and teachers.', link: '/aiart/aiartindex.html', pl: { tick: 'Art Meets AI', name: 'Art Meets AI', date: '2024', place: 'Krosno, Polska', meta: '28 uczestników. Spektakl wyreżyserowany przez AI dla ponad 600 uczniów i nauczycieli.' } },
+  { tick: 'Fashion', name: 'Fashion Forward: Recycled Runway', date: '29 Mar – 6 Apr 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'PT', 'MK', 'HU'], color: BLUE, meta: '28 participants. Waste turned into a catwalk.', link: 'fashionforward.html', pl: { tick: 'Fashion', name: 'Fashion Forward: Recycled Runway', date: '29 mar – 6 kwi 2025', place: 'Krosno, Polska', meta: '28 uczestników. Odpady zamienione w pokaz mody.' } },
+  { tick: 'EcoArt', name: 'EcoArt: Turning Trash into Treasure', date: '6–14 Apr 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'HU', 'LT', 'RO'], color: BLUE, meta: '28 participants. Recycling centre visit and junk sculptures.', link: 'ecoart.html', pl: { tick: 'EcoArt', name: 'EcoArt: Turning Trash into Treasure', date: '6–14 kwi 2025', place: 'Krosno, Polska', meta: '28 uczestników. Wizyta w zakładzie recyklingu i rzeźby ze śmieci.' } },
+  { tick: 'EYE 2025', name: 'EYE 2025 @ European Parliament', date: '13–14 June 2025', place: 'Strasbourg, France', to: 'strasbourg', from: ['PL', 'LU', 'CY', 'RO'], venue: 'FR', color: GOLD, meta: 'Workshops on deepfakes and democracy, with Digital Dreamers Luxembourg, Waves of Change Cyprus and Colțul Tinerilor din Vest Romania.', link: 'eye2025.html', pl: { tick: 'EYE 2025', name: 'EYE 2025 w Parlamencie Europejskim', date: '13–14 czerwca 2025', place: 'Strasburg, Francja', meta: 'Warsztaty o deepfake’ach i demokracji z Digital Dreamers Luxembourg, Waves of Change Cyprus i Colțul Tinerilor din Vest Romania.' } },
+  { tick: 'Drums', name: 'Follow Your Drums!', date: '17–25 Sept 2025', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'PT', 'HU', 'RO', 'MK'], color: BLUE, meta: 'Waste turned into percussion, and one group song.', link: 'followyourdrums.html', pl: { tick: 'Drums', name: 'Follow Your Drums!', date: '17–25 wrz 2025', place: 'Krosno, Polska', meta: 'Odpady zamienione w instrumenty perkusyjne i jedną wspólną piosenkę.' } },
+  { tick: 'AI 2.0', name: 'Art Meets AI 2.0: The Next Act', date: '2025 – 2026', place: 'Krosno, Poland', to: 'krosno', from: ['PL', 'BG', 'TR', 'MD'], color: BLUE, meta: 'AI-enhanced live theatre for an audience of 1,000+.', link: 'aiart2-blog.html', pl: { tick: 'AI 2.0', name: 'Art Meets AI 2.0: The Next Act', date: '2025 – 2026', place: 'Krosno, Polska', meta: 'Teatr na żywo wspierany przez AI dla ponad 1000 widzów.' } },
+  { tick: 'Together', name: 'Together Against Addictions', date: '2025 – 2026', place: 'Krosno & Opole, Poland', to: 'opole', from: ['PL'], color: BLUE, meta: '15 local young people, research, a Danger Zone Map and a conference for 350+.', link: 'razemprzeciwuzaleznieniom.html', pl: { tick: 'Razem', name: 'Razem Przeciw Uzależnieniom', date: '2025 – 2026', place: 'Krosno i Opole', meta: '15 młodych ludzi z miasta, badania, Mapa Stref Zagrożenia i konferencja dla ponad 350 osób.' } },
+  { tick: 'First Aid', name: 'First Aid – Don\'t Ignore!', date: '24–31 March 2026', place: 'Murzasichle, Poland', to: 'murzasichle', from: ['PL', 'HU', 'RO'], color: BLUE, meta: '33 participants. CPR, AED and forum theatre.', link: 'firstaid-blog.html', pl: { tick: 'First Aid', name: 'First Aid – Don’t Ignore!', date: '24–31 marca 2026', place: 'Murzasichle, Polska', meta: '33 uczestników. Resuscytacja, AED i teatr forum.' } }
 ];
+
+const COUNTRY_PL = {
+  PL: 'Polska', HU: 'Węgry', LT: 'Litwa', RO: 'Rumunia', PT: 'Portugalia', MK: 'Macedonia Północna', SK: 'Słowacja',
+  CZ: 'Czechy', BG: 'Bułgaria', TR: 'Turcja', MD: 'Mołdawia', LU: 'Luksemburg', CY: 'Cypr', FR: 'Francja'
+};
+const QUOTES_PL = {
+  SK: ['Ten projekt otworzył mi oczy na siłę kreatywności i technologii. Nigdy nie sądziłem, że AI można wykorzystać w sztuce!', 'Lukas, Art Meets AI'],
+  PL: ['EcoArt pokazał mi, że coś tak prostego jak śmieci może stać się sztuką z przesłaniem i że nasze działania naprawdę mogą coś zmienić dla planety.', 'Dawid, EcoArt'],
+  RO: ['Pokaz mody był niezapomniany. Zamienianie odpadów w coś pięknego dało mi nadzieję, że zmiana jest możliwa.', 'Andra, Fashion Forward']
+};
+// the current language (set by i18n.js); English when the switch is not on the page
+const pl = () => !!(window.i18n && window.i18n.lang === 'pl');
+export const L = (p, field) => (pl() && p.pl && p.pl[field]) || p[field];
+const countryName = code => (pl() && COUNTRY_PL[code]) || COUNTRIES[code][0];
+// Polish plural: 1 kraj, 2–4 kraje (but 12–14 krajów), 5+ krajów
+const plPlural = (n, one, few, many) => n === 1 ? one : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? few : many;
 
 const QUOTES = {
   SK: ['This project opened my eyes to the power of creativity and technology. I never imagined AI could be used for art!', 'Lukas, Art Meets AI'],
@@ -132,18 +148,24 @@ export function createMap(section, onCountry) {
   const range = section.querySelector('.map__range');
   const ticks = section.querySelector('.map__ticks');
   const N = PROJECTS.length;
-  PROJECTS.forEach((p, i) => { const s = document.createElement('span'); s.textContent = p.tick; s.style.left = `${(i + .5) / N * 100}%`; ticks.appendChild(s); });
+  PROJECTS.forEach((p, i) => { const s = document.createElement('span'); s.textContent = L(p, 'tick'); s.style.left = `${(i + .5) / N * 100}%`; ticks.appendChild(s); });
   const tickEls = [...ticks.children];
   let active = -1, progress = 0, shown = 0;
+  // redraw the labels when the visitor switches language
+  document.addEventListener('i18n:change', () => {
+    tickEls.forEach((t, i) => { t.textContent = L(PROJECTS[i], 'tick'); });
+    if (active >= 0) setPanel(active);
+    if (lastLit >= 0) updateLit(lastLit);
+  });
 
   const setPanel = i => {
     const p = PROJECTS[i];
     panel.style.setProperty('--c', p.color);
-    panel.querySelector('.map__date').textContent = p.date;
-    panel.querySelector('.map__title').textContent = p.name;
-    panel.querySelector('.map__place').textContent = p.place;
-    panel.querySelector('.map__countries').innerHTML = p.from.map(c => `<li>${COUNTRIES[c][0]}</li>`).join('');
-    panel.querySelector('.map__meta').textContent = p.meta;
+    panel.querySelector('.map__date').textContent = L(p, 'date');
+    panel.querySelector('.map__title').textContent = L(p, 'name');
+    panel.querySelector('.map__place').textContent = L(p, 'place');
+    panel.querySelector('.map__countries').innerHTML = p.from.map(c => `<li>${countryName(c)}</li>`).join('');
+    panel.querySelector('.map__meta').textContent = L(p, 'meta');
     const a = panel.querySelector('.map__link'); a.href = p.link;
     tickEls.forEach((t, j) => t.classList.toggle('on', j === i));
     du.uActCol.value.set(p.color);
@@ -152,13 +174,17 @@ export function createMap(section, onCountry) {
     if (p.venue) actTarget[codeIdx(p.venue)] = 1;
   };
 
-  const counters = { c: section.querySelector('.c-countries'), p: section.querySelector('.c-projects') };
+  let lastLit = -1;
   const updateLit = upto => {
     litTarget.fill(0);
     const set = new Set();
     PROJECTS.slice(0, upto + 1).forEach(p => { p.from.forEach(c => set.add(c)); if (p.venue) set.add(p.venue); });
     set.forEach(c => { litTarget[codeIdx(c)] = 1; });
-    counters.c.textContent = set.size; counters.p.textContent = upto + 1;
+    const c = set.size, n = upto + 1;
+    section.querySelector('.map__counter').innerHTML = pl()
+      ? `<b class="c-countries">${c}</b> ${plPlural(c, 'kraj', 'kraje', 'krajów')} · <b class="c-projects">${n}</b> ${plPlural(n, 'projekt', 'projekty', 'projektów')}`
+      : `<b class="c-countries">${c}</b> ${c === 1 ? 'country' : 'countries'} · <b class="c-projects">${n}</b> ${n === 1 ? 'project' : 'projects'}`;
+    lastLit = upto;
   };
 
   // range ↔ scroll
@@ -203,7 +229,7 @@ export function createMap(section, onCountry) {
     if (!c) return;
     const code = PARTNER_CODES[c];
     const projects = PROJECTS.filter(p => p.from.includes(code) || p.venue === code);
-    onCountry && onCountry({ code, name: COUNTRIES[code][0], projects, quote: QUOTES[code] });
+    onCountry && onCountry({ code, name: countryName(code), projects: projects.map(p => ({ name: L(p, 'name'), link: p.link })), quote: (pl() ? QUOTES_PL : QUOTES)[code] });
   });
 
   const tmp = new THREE.Vector3();

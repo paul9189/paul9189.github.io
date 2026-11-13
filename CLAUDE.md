@@ -95,6 +95,22 @@ sections were lengthened (`--len` on each `.scrolly`). Only two accent colours: 
 - `assets/redesign/vendor/` - three.js r160 + RoomEnvironment, vendored (no CDN).
 - `assets/redesign/img/` - optimised copies of project photos used by the new pages.
 
+## English / Polish (EN | PL switch in the nav)
+- English is the default and stays written in the HTML. Polish lives in `assets/redesign/i18n/pl/<page>.json`,
+  fetched only when Polish is chosen. `<html data-i18n-page="<page>">` names the file.
+- `assets/redesign/js/i18n.js` (loaded in `<head>` of every page) builds the EN | PL switch in `#nav`.
+  Elements with `data-i18n="key"` get their innerHTML swapped. `data-i18n-attr="alt:key;aria-label:key"`
+  swaps attributes. The `@title` and `@description` keys cover the `<head>`.
+- The language is kept ONLY in the URL (`?lang=pl`, added to internal links). It is never kept in cookies or
+  storage (see Privacy below).
+- Scripts can use `window.i18n.lang`, `i18n.t(en, pl)` and the `i18n:change` event. `map.js` keeps the
+  Polish project names, country names, quotes and the plural rule (1 / 2–4 / 5+). The manifesto in
+  `main.js` re-splits its letters when the language changes.
+- When you add or change text: edit the English in the HTML, give the element a `data-i18n` key that the
+  page does not use yet, and add the same key with the Polish text to that page's JSON. Missing keys
+  just stay English.
+- The Reports page is English-first now; its PDFs are in Polish (the page says so).
+
 ## Privacy / GDPR (owner asked for full EU compliance; keep it true)
 - `privacy-policy.html` is a GDPR Art. 13/14 notice that describes what the site ACTUALLY does. If you add
   anything that sends data to a third party (analytics, embeds, fonts, maps, forms, pixels), update the notice
