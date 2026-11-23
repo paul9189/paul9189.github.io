@@ -1,5 +1,5 @@
 // The Living Map: Europe as glass dots, with arcs flying from partner countries to each project.
-import * as THREE from 'three';
+import * as THREE from '../vendor/three.module.min.js';   // file path, no import map (iPhone Safari, Murja Labs 23 Nov 2026)
 import { DOTS, PARTNER_CODES } from './europe-dots.js';
 import { makeRenderer, fit, makeLoop, pointer, clamp, lerp, isSmall } from './util.js';
 

@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from '../vendor/three.module.min.js';   // file path, no import map (iPhone Safari, Murja Labs 23 Nov 2026)
 import { RoomEnvironment } from '../vendor/RoomEnvironment.js';
 
 export const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));

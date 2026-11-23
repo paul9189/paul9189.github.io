@@ -1,5 +1,5 @@
 // Trash → Treasure: a pile of junk that rebuilds itself into each project's result as you scroll.
-import * as THREE from 'three';
+import * as THREE from '../vendor/three.module.min.js';   // file path, no import map (iPhone Safari, Murja Labs 23 Nov 2026)
 import { makeRenderer, envFor, compileScene, fit, makeLoop, pointer, clamp, lerp, smooth, easeInOut, rng, isSmall } from './util.js';
 
 const GROUND = -1.4;

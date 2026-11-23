@@ -10,7 +10,7 @@ import {
  	MeshStandardMaterial,
  	PointLight,
  	Scene,
-} from 'three';
+} from './three.module.min.js';   // file path, no import map (iPhone Safari, Murja Labs 23 Nov 2026)
 
 class RoomEnvironment extends Scene {
 

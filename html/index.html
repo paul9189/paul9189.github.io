@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
   <link rel="stylesheet" href="../assets/redesign/css/fonts.css">
   <link rel="stylesheet" href="../assets/redesign/css/site.css">
-  <script type="importmap">{ "imports": { "three": "../assets/redesign/vendor/three.module.min.js" } }</script>
+  <!-- no import map: every script imports three.js by its file path (iPhone Safari could load the scripts before the map; Murja Labs, 23 Nov 2026) -->
   <!-- fetch the hero's module graph in parallel instead of one import at a time -->
   <link rel="modulepreload" href="../assets/redesign/js/main.js">
   <link rel="modulepreload" href="../assets/redesign/js/util.js">

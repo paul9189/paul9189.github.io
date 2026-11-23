@@ -1,5 +1,5 @@
 // The Glass Eye: a hand-blown Krosno glass eye whose iris is a turning map of Europe.
-import * as THREE from 'three';
+import * as THREE from '../vendor/three.module.min.js';   // file path, no import map (iPhone Safari, Murja Labs 23 Nov 2026)
 import { DOTS } from './europe-dots.js';
 import { makeRenderer, envFor, compileScene, fit, makeLoop, pointer, clamp, lerp, smooth, rng, isSmall } from './util.js';
 
